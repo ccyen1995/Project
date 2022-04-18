@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./nav/nav.css" />
+    <link rel="stylesheet" href="./style/Vic/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <style>
+      .box {
+        box-sizing: border-box;
+      }
+
+      .TopAndBottonSize {
+        margin-top: 1.7rem;
+        margin-bottom: 1.7rem;
+      }
+
+      .BtnWedth {
+        width: 5rem;
+      }
+      /* * {
+        outline: 1px solid blue;
+      } */
+    </style>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- NAV BAR -->
+    <%- include('../nav/nav.html') %>
+    <!-- NAV BAR -->
+    <!-- 旋轉木馬開始 -->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="height: 70vh">
+          <img
+            src="./img/Vic/spotimg/<%= data2[0].spotId %>.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <!-- 圖片尺寸為3038*1008 -->
+          <div class="carousel-caption d-none d-md-block">
+            <p class="middleTitle textShadow"><%= data2[0].spotName %></p>
+            <button
+              style="margin-bottom: 30px; margin-top: -100px"
+              class="ui secondary button"
+              onclick="searchTrip ('<%= data2[0].spotId %>') "
+            >
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit"> 參加行程 </font></font
+              >
+            </button>
+            <button
+              style="margin-bottom: 30px; margin-top: -100px"
+              class="ui secondary button"
+              onclick="goToCaeat('<%= data2[0].spotId %>&x=<%=data2[0].coordinateX%>&y=<%=data2[0].coordinateY%>')"
+            >
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit"> 建立行程 </font></font
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 旋轉木馬結束 -->
+
+    <div class="container navDistance">
+      <!-- 資訊抬頭 -->
+      <div>
+        <p
+          class="twoText title"
+          style="margin-top: 0.1vw; margin-bottom: 10px; text-align: center"
+        >
+          景點資訊
+        </p>
+      </div>
+      <h4 class="ui horizontal divider" style="margin-top: -0.1px">
+        <i class="hand point down icon"></i> 這邊有景點的詳細資訊呦！
+      </h4>
+      <!-- 資訊抬頭 -->
+      <div class="d-flex align-items-start" style="margin-top: 30px">
+        <div
+          class="nav flex-column nav-pills me-3"
+          id="v-pills-tab"
+          role="tablist"
+          aria-orientation="vertical"
+        >
+          <button
+            class="nav-link active BtnWedth"
+            id="v-pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-home"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-home"
+            aria-selected="true"
+          >
+            簡介
+          </button>
+          <button
+            class="nav-link BtnWedth"
+            id="v-pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-profile"
+            aria-selected="false"
+          >
+            歷史
+          </button>
+          <button
+            class="nav-link BtnWedth"
+            id="v-pills-messages-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-messages"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-messages"
+            aria-selected="false"
+          >
+            地理
+          </button>
+          <button
+            class="nav-link BtnWedth"
+            id="v-pills-settings-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-settings"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-settings"
+            aria-selected="false"
+          >
+            景觀
+          </button>
+        </div>
+        <div class="tab-content" id="v-pills-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="v-pills-home"
+            role="tabpanel"
+            aria-labelledby="v-pills-home-tab"
+          >
+            <p><%= data2[0].Introduction %></p>
+          </div>
+
+          <div
+            class="tab-pane fade"
+            id="v-pills-profile"
+            role="tabpanel"
+            aria-labelledby="v-pills-profile-tab"
+          >
+            <p><%= data2[0].history %></p>
+          </div>
+
+          <div
+            class="tab-pane fade"
+            id="v-pills-messages"
+            role="tabpanel"
+            aria-labelledby="v-pills-messages-tab"
+          >
+            <p><%= data2[0].geography %></p>
+          </div>
+
+          <div
+            class="tab-pane fade"
+            id="v-pills-settings"
+            role="tabpanel"
+            aria-labelledby="v-pills-settings-tab"
+          >
+            <p><%= data2[0].landscape %></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 留言板內容渲染 -->
+      <!-- 留言板抬頭 -->
+      <h4
+        class="ui horizontal divider"
+        style="font-size: 30px; margin-top: 5vw; margin-bottom: 3vw"
+      >
+        <i class=""></i> 景點討論區
+      </h4>
+      <!-- 留言板抬頭 -->
+      <% data.forEach(element => { %>
+      <div class="row">
+        <div class="col-auto">
+          <div style="height: 100px; margin-top: 5px; margin-bottom: 5px">
+            <img
+              style="height: 60px; outline: 1px solid; border-radius: 30px"
+              src="./img/yen/photo/<%=element.userId%>.png"
+              class="img-fluid box img-thumbnail"
+              onerror="ASA('<%= element.number %>')"
+              id="imgbox<%= element.number %>"
+            />
+          </div>
+        </div>
+        <div class="col" style="margin-left: -0.5rem">
+          <p class="h5"><%= element.userName %></p>
+          <p><%= element.chatMessage %></p>
+          <div>
+            <img
+              style="max-width: 400px; max-height: 400px; margin-bottom: 20px"
+              src="./upload/photo<%= element.number %>.jpg"
+              alt=""
+            />
+          </div>
+          <p
+            style="
+              font-size: 10px;
+              color: rgb(161, 161, 161);
+              margin-top: -0.5rem;
+            "
+          >
+            <%= moment(element.chatTime).format("yy/MM/DD HH:mm") %>
+          </p>
+        </div>
+      </div>
+      <% }); %>
+      <div id="show"></div>
+      <!-- 留言板內容渲染 -->
+      <div class="input-group">
+        <input
+          name="inputText"
+          id="inputText"
+          type="text"
+          class="form-control"
+          placeholder="請輸入留言的內容.."
+          aria-label="Recipient's username with two button addons"
+        />
+        <!-- 上傳照片 -->
+        <div class="file-upload">
+          <div class="file-select">
+            <div class="file-select-button" id="fileName">選擇圖片</div>
+            <div class="file-select-name" id="noFile">未選擇圖片...</div>
+            <input
+              type="file"
+              name="photo"
+              id="chooseFile"
+              onchange="fileUpload(this)"
+            />
+          </div>
+        </div>
+        <!-- 上傳照片 -->
+        <button onclick="upload()" id="abcc" class="ui secondary button">
+          送出
+        </button>
+        <input
+          type="text"
+          style="display: none"
+          name="getUpLoadId"
+          value="<%= data2[0].spotId %>"
+        />
+        <input
+          type="text"
+          style="display: none"
+          name="getNumber"
+          value="<%= data3[0].number %>"
+        />
+      </div>
+      <!-- </form> -->
+    </div>
+
+    <!-- FOOTER -->
+    <div w3-include-HTML="./footer/footer.html" class="footerDistance"></div>
+    <!-- FOOTER -->
+    <script>
+      w3.includeHTML();
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./nav/nav.js"></script>
+    <script src="./style/vendors/bootstrap-5.1.1/dist/js/bootstrap.bundle.js"></script>
+    <script>
+      src = "./js/Vic/moment.js";
+    </script>
+
+    <script>
+      // 上傳圖片按鈕JS
+      $("#chooseFile").bind("change", function () {
+        var filename = $("#chooseFile").val();
+        if (/^\s*$/.test(filename)) {
+          $(".file-upload").removeClass("active");
+          $("#noFile").text("No file chosen...");
+        } else {
+          $(".file-upload").addClass("active");
+          $("#noFile").text(filename.replace("C:\\fakepath\\", ""));
+        }
+      });
+      // 上傳圖片按鈕JS
+      // 點擊事件
+      // 若使用者無大頭貼則顯示預設圖片
+      function ASA(id) {
+        $("#imgbox" + id).attr("src", "./img/yen/photo/default.png");
+      }
+      // 點擊參加行程引導至參加行程頁面並直接篩選
+      function searchTrip(id) {
+        location.href = `tripsId?id=${id}`;
+      }
+      // 點擊發起行程引導至發起行程頁面並直接篩選
+      function goToCaeat(id) {
+        location.href = `createTrip?id=${id}`;
+      }
+      // 點擊事件
+
+      // navbar彈出視窗
+      var sessionUserId = Number("<%= sessionUserId %>");
+      console.log(sessionUserId);
+      if (sessionUserId == 0) {
+        $("#member").append('<li><a href="/login">登入／註冊</a></li>');
+      } else {
+        $("#member").append(
+          '<li><a href="/profile">個人主頁</a></li>  <li><a href="/tripManage">行程管理</a></li>  <li><a href="/logout">登出</a></li>'
+        );
+      }
+      // navbar彈出視窗
+
+      // 日期格式設定
+      $.date = function (dateObject) {
+        var d = new Date(dateObject);
+        var day = d.getDate();
+        var month = d.getMonth() + 1;
+        var year = d.getFullYear();
+        var hh = d.getHours();
+        var mm = d.getMinutes();
+        if (day < 10) {
+          day = "0" + day;
+        }
+        if (month < 10) {
+          month = "0" + month;
+        }
+        var date = year + "/" + month + "/" + day + " " + hh + ":" + mm;
+
+        return date;
+      };
+      // 日期格式設定
+
+      // 聊天室渲染及送資料至後端;
+      var fileImg;
+      //讀取圖片
+      function fileUpload(_this) {
+        var fileReader = new FileReader(); //創建文件讀取對象
+        fileImg = _this.files[0]; //獲取file組件中的文件
+      }
+      function upload() {
+        console.log("123456");
+        var formData = new FormData();
+        formData.append("file", chooseFile.files[0]);
+        var inputText = $("input[name=inputText]").val();
+
+        $.ajax({
+          url: "/uploadPhoto",
+          data: formData,
+          type: "post",
+          async: true,
+          processData: false,
+          contentType: false,
+          contextType: "application/json",
+          cache: false,
+          success: function () {
+            $.ajax({
+              url: "/uploadText",
+              data: { inputText: inputText },
+              type: "post",
+              success: function (msg) {
+                $("#show").append(`
+      <div class="row">
+        <div class="col-auto">
+          <div style="height: 100px; margin-top: 5px; margin-bottom: 5px">
+            <img
+              style="height: 60px; outline: 1px solid; border-radius: 30px"
+              src="./img/yen/photo/${msg.data5}.png"
+              class="img-fluid box img-thumbnail"
+              onerror="ASA(${msg.data3})"
+              id="imgbox1"/>
+          </div>
+        </div>
+        <div class="col" style="margin-left: -0.5rem">
+          <p class="h5"> ${msg.data1} </p>
+          <p> ${msg.data2} </p>
+          <div>
+            <img
+              style="max-width: 400px; max-height: 400px; margin-bottom: 20px"
+              src="./upload/photo${(msg.data3 -= 1)}.jpg"
+              alt=""/>
+          </div>
+          <p
+            style="
+              font-size: 10px;
+              color: rgb(161, 161, 161);
+              margin-top: -0.5rem;
+            ">
+            ${$.date(msg.data4)}
+          </p>
+        </div>
+      </div>`);
+
+                $("#inputText").val("");
+                $("#chooseFile").val("");
+                $("#noFile").text("未選擇圖片...");
+                $("html, body").scrollTop(50000);
+              },
+            });
+          },
+        });
+      }
+      // 聊天室渲染及送資料至後端;
+    </script>
+  </body>
+</html>

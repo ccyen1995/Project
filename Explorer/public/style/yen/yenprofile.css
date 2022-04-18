@@ -1,0 +1,79 @@
+.ttop{
+  background-image: url(/public/img/yen/082608329.jpg);
+ background-size: 100%;
+ background-repeat: no-repeat;
+}
+#pagename{
+  text-align: center;
+  margin-top: 24vh;
+  color: white;
+  font-size: 2.3em;
+  font-weight: 500;
+}
+/* -----------------大頭貼----------------- */
+.profile {
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(100, 99, 132, 0.4);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#imagegrid {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.profile button {
+  position: absolute;
+  top: 105px;
+  left: 105px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  z-index: 1;
+}
+
+/* 基本資料 */
+
+
+.inputborder input{
+  border-bottom: solid #006c9b 2px;
+  padding: 2px 2px;
+}
+
+#name {
+  border: none;
+  padding-left: 50px;
+  /* background-color: aqua; */
+}
+
+input :focus {
+  border: none;
+}
+
+input {
+  outline-style: none;
+  border: none;
+}
+
+.apple input{
+  margin-bottom: 2vh;
+}
+
+/* -----------------能力表----------------- */
+
+textarea {
+  resize: none;
+  padding: 2px;
+  margin: auto;
+  outline-color: black;
+  outline-style: none;
+}
+
+textarea:focus {
+  outline-color: black;
+}

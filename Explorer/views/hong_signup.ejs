@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>註冊頁面</title>
+  <link rel="stylesheet" href="../public/login/style.css">
+  <!-- <script src="../public/login/script.js"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>會員註冊</header>
+    <form action="/register" method="POST">
+
+      <div class="field text">
+        <div class="input-area">
+          <input type="text" id='username' name="username" placeholder="姓名">
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">姓名不能是空的</div>
+      </div>
+
+      <div class="field email">
+        <div class="input-area">
+          <input type="email"  class="signupEmail" name="useremail" placeholder="E-mail" />
+          <i class="icon fas fa-envelope"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Email不能是空的</div>
+      </div>
+
+      <div class="field password">
+        <div class="input-area">
+          <input type="password" class="signupPassword" name="userpassword" placeholder="密碼">
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas54y1<%- 671 %>  fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">密碼不能是空的</div>
+      </div>
+
+      <a href="/">HOME</a>
+
+      <!-- <div class="pass-txt"><a href="#" class="forget">忘記密碼</a></div> -->
+      <input type="submit"  class="signupBtn" name="signupBtn" value="註冊">
+    </form>
+
+  </div>
+  <!-- <script src="../public/login/script.js"></script> -->
+
+</body>

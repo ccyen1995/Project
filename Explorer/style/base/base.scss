@@ -1,0 +1,40 @@
+$font-size: 50px;
+$font-family: sans-serif;
+.navDistance {
+  //第一段跟nav的距離
+  margin-top: 40px;
+}
+.footerDistance {
+  //最後一段跟footer的距離
+  margin-top: 70px;
+}
+.title {
+  //大標題
+  font: {
+    size: $font-size;
+    weight: bold;
+  }
+  font-family: $font-family;
+}
+.middleTitle {
+  //中標題
+  font-size: $font-size - 10px;
+  font-family: $font-family;
+}
+.smallTitle {
+  //小標題
+  font-size: $font-size - 20px;
+  font-family: $font-family;
+}
+.text {
+  //內文
+  font-size: $font-size - 30px;
+  font-family: $font-family;
+}
+.shadow {
+  //方塊陰影
+  box-shadow: 34px 34px 34px #945050, -34px -34px 34px #ffb2b2;
+}
+.textShadow {
+  text-shadow: 0.1em 0.1em 0.2em black;
+}

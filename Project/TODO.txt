@@ -1,0 +1,8 @@
+  class Name {
+        constructor(arguments) {
+       
+        };
+        methods(){
+            
+        }
+      }

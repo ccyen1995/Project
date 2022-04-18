@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./style/style.css" />-->
+    <link rel="stylesheet" href="../nav/nav.css" />
+    <!-- font-family link start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="../public/style/song_css/song_tripManage.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <%- include('../nav/nav.html') %>
+        <!-- NAV BAR -->
+        <!-- ↓ 把網頁的內容放在NAV BAR 與 FOOTER 的中間 ↓ -->
+
+        <div id="section0">
+            <img src="../public/img/song_img/viewtest.png" alt="">
+        </div>
+
+        <div id="section1" class="container-fluid mx-auto">
+            <div class="row">
+                <!------- Left: trip select Start ------->
+                <div id="tripSelContainer" class="col-3">
+                    <div id="createdTripContainer">
+                        <h4 data-toggle="collapse" data-target="#createTripList">
+                            發起的行程
+                            <img class="downArrow" src="../public/img/song_img/down-arrow.png" alt="">
+                        </h4>
+                        <hr class="divider">
+                        <ul id="createTripList" class="collapse show">
+                            <li> --- </li>
+                        </ul>
+                    </div>
+                    <div id="joinTripContainer">
+                        <h4 data-toggle="collapse" data-target="#joinTripList">參加的行程
+                            <img class="downArrow" src="../public/img/song_img/down-arrow.png" alt="">
+                        </h4>
+                        <hr class="divider">
+                        <ul id="joinTripList" class="collapse show">
+                            <li> --- </li>
+                        </ul>
+                    </div>
+                </div>
+                <!------- Left: trip select End ------->
+
+                <!------- Middle: management Start ------->
+                <div id="managementContainer" class="col-6">
+                    <div class="" style="position:relative">
+                        <h1 id="selTripName">---</h1>
+                        <h6 id="selTripInfo" style="position: absolute; bottom: 0px; right: 0px; margin-bottom: 0px">
+                        </h6>
+                    </div>
+
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a id="chatTab" class="nav-link active" data-toggle="tab"
+                                    href="#textBoardContainer">冒險團留言板</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tripMember">團員／待審核</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#itemList">裝備清單</a>
+                            </li>
+                        </ul>
+                        <div id="tripManageTab" class="tab-content">
+                            <div id="textBoardContainer" class="container tab-pane active">
+                                <div id="textBoard">
+                                    <div class="leftChatBox">
+                                        <div><img class="headshot" src="" alt=""></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="rightChatBox">
+                                        <div><img class="headshot" src="" alt=""></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div id="textSendContainer" action="">
+                                        <label class="col-1" id="uploadImgContainer">
+                                            <input id="chooseImg" class="inputFile uploadImg" type="file"
+                                                accept=".png, .jpg, .jpeg">
+                                            <img class="uploadImg d-block" src="../public/img/song_img/uploadImg.png"
+                                                alt="">
+                                        </label>
+                                        <div class="col-10 d-flex">
+                                            <div id="fileCount">
+                                                <img id="fileCountCancel" class="cancelIcon"
+                                                    src="../public/img/song_img/cancel.png" alt="">
+                                                <span></span>
+                                            </div>
+                                            <input id="chatroomText" class="px-2" type="text" name="typetext"
+                                                placeholder="留言...">
+                                        </div>
+                                        <label class="col-1">
+                                            <input id="sendMessage" class="d-none" type="submit">
+                                            <img class="d-block" class="sendMessageIcon"
+                                                src="../public/img/song_img/send-message.png" alt="">
+                                        </label>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div id="tripMember" class="container tab-pane fade">
+                                <h4 class="tableTitle" data-toggle="collapse" data-target="#joinedMemberContainer">
+                                    已參加團員
+                                    <img class="downArrow" src="../public/img/song_img/down-arrow.png" alt="">
+                                </h4>
+                                <div id="joinedMemberContainer" class="collapse show">
+                                    <table id="joinedMember">
+                                        <thead>
+                                            <tr class="tableRow">
+                                                <th>名字</th>
+                                                <th>提供之公共裝備</th>
+                                                <th>綜合評分</th>
+                                                <th>我要評分&#8194</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h4 class="tableTitle" data-toggle="collapse" data-target="#applyMemberContainer">申請中
+                                    <img class="downArrow" src="../public/img/song_img/down-arrow.png" alt="">
+                                </h4>
+                                <div id="applyMemberContainer" class="collapse show">
+                                    <table id="applyMember">
+                                        <thead>
+                                            <tr class="tableRow">
+                                                <th>名字</th>
+                                                <th>提供之公共裝備</th>
+                                                <th>綜合評分</th>
+                                                <th>同意/拒絕</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="itemList" class="container tab-pane fade">
+                                <h4 id="sharedItemMemberCount" class="tableTitle">公共裝備（團員人數： --- 人）
+                                    <img class="edit" src="../public/img/song_img/edit.png" data-toggle="modal"
+                                        data-target="#publicItemListEdit" title="限發起人編輯">
+                                </h4>
+                                <table id="publicItemList">
+                                    <thead>
+                                        <tr class="tableRow">
+                                            <th>裝備名稱</th>
+                                            <th>已提供總數</th>
+                                            <th>提供人 ／ 數量</th>
+                                            <th>我要提供</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>---</td>
+                                            <td>---</td>
+                                            <td>---</td>
+                                            <td>---</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <h4 class="tableTitle">私人裝備
+                                    <img class="edit" src="../public/img/song_img/edit.png" alt="edit" title="限發起人編輯"
+                                        data-toggle="modal" data-target="#privateItemListEdit">
+                                </h4>
+                                <table id="privateItemList">
+                                    <thead>
+                                        <tr class="tableRow">
+                                            <th>裝備名稱</th>
+                                            <th>個數／１人</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>---</td>
+                                            <td>---</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------- Middle: management End ------->
+                <!------- Rigtht: schedule Start ------->
+                <div id="scheduleContainer" class="col-3">
+                    <h4>
+                        <span id="scheduleTitle">探險計畫</span>
+                        <img class="edit" src="../public/img/song_img/edit.png" alt="edit" title="限發起人編輯"
+                            data-toggle="modal" data-target="#tripScheduleEdit">
+                    </h4>
+                    <hr class="divider">
+                    <div class="scheduleDayContainer px-2">
+                        <div class="scheduleDay">
+                            <h4 data-toggle="collapse" data-target="#DAYCount">
+                                DAY Count <img class="downArrow" src="../public/img/song_img/down-arrow.png" alt="">
+                            </h4>
+                            <div id="DAYCount" class="collapse show">
+                                <table>
+                                    <tr>
+                                        <td>Start time</td>
+                                        <td>Activity name</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div id="noteContainer">
+                        <h4>行程簡介
+                            <img class="edit" src="../public/img/song_img/edit.png" alt="edit" title="限發起人編輯"
+                                data-toggle="modal" data-target="#tripNoteEdit">
+                        </h4>
+                        <div id="noteText">
+                            noteText
+                        </div>
+                    </div>
+
+                    <button id="quitbtn" data-toggle="modal" data-target="#quitTrip">退出行程</button>
+                </div>
+                <!------- Rigtht: schedule End ------->
+            </div>
+        </div>
+
+
+
+
+        <!--------- userStat --------->
+        <!-- <div id="showStat"
+        style="display:none; width:160px; height:160px; position:fixed; background-color: rgb(255, 255, 255);">
+        <canvas id="myChart">9.5</canvas>
+        </div> -->
+        <!-- <a href="#" id="statHover" onmouseover="hoverdiv(event,'showStat')" onmouseout="hoverdiv(event,'showStat')">9.7</a> -->
+
+        <!---------------------------------------------------------------->
+        <!--------------------------- modal ------------------------------>
+        <!---------------------------------------------------------------->
+        <div id="tripNameEdit" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header px-2">
+                        <h5 class="modal-title">冒險團新名稱</h5>
+                    </div>
+                    <div class="modal-body mx-auto">
+                        <input id="tripNameEditInput" style="width:100%" type="text" placeholder="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary okbtn" data-dismiss="modal">完成</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">返回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tripScheduleEdit" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-lg ">
+                <div class="modal-content">
+                    <form action="post">
+                        <div class="modal-header">
+                            <h5 class="modal-title">探險計畫編輯</h5>
+                        </div>
+                        <div class="modal-body px-5">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>天數</th>
+                                        <th>時間</th>
+                                        <th>活動</th>
+                                        <th>新增/刪除</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>DAY ---</td>
+                                        <td>---</td>
+                                        <td>---</td>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>---</td>
+                                        <td>---</td>
+                                        <td>---</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary okbtn" data-dismiss="modal">完成</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">返回</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="tripNoteEdit" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">行程簡介編輯</h5>
+                    </div>
+                    <div class="modal-body">
+                        <textarea type="text" id="newTripNotes" style="width:100%; height:40vh"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary okbtn" data-dismiss="modal">完成</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">返回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="statComment" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">---</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="px-5 mb-4">
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                </tr>
+                                <tr>
+                                    <td>體能</td>
+                                    <td><input type="radio" name="strength" value="1"></td>
+                                    <td><input type="radio" name="strength" value="2"></td>
+                                    <td><input type="radio" name="strength" value="3"></td>
+                                    <td><input type="radio" name="strength" value="4"></td>
+                                    <td><input type="radio" name="strength" value="5"></td>
+                                </tr>
+                                <tr>
+                                    <td>醫術</td>
+                                    <td><input type="radio" name="heal" value="1"></td>
+                                    <td><input type="radio" name="heal" value="2"></td>
+                                    <td><input type="radio" name="heal" value="3"></td>
+                                    <td><input type="radio" name="heal" value="4"></td>
+                                    <td><input type="radio" name="heal" value="5"></td>
+                                </tr>
+                                <tr>
+                                    <td>方向感</td>
+                                    <td><input type="radio" name="direction" value="1"></td>
+                                    <td><input type="radio" name="direction" value="2"></td>
+                                    <td><input type="radio" name="direction" value="3"></td>
+                                    <td><input type="radio" name="direction" value="4"></td>
+                                    <td><input type="radio" name="direction" value="5"></td>
+                                </tr>
+                                <tr>
+                                    <td>求生技能</td>
+                                    <td><input type="radio" name="survival" value="1"></td>
+                                    <td><input type="radio" name="survival" value="2"></td>
+                                    <td><input type="radio" name="survival" value="3"></td>
+                                    <td><input type="radio" name="survival" value="4"></td>
+                                    <td><input type="radio" name="survival" value="5"></td>
+                                </tr>
+                                <tr>
+                                    <td>團隊意識</td>
+                                    <td><input type="radio" name="teamwork" value="1"></td>
+                                    <td><input type="radio" name="teamwork" value="2"></td>
+                                    <td><input type="radio" name="teamwork" value="3"></td>
+                                    <td><input type="radio" name="teamwork" value="4"></td>
+                                    <td><input type="radio" name="teamwork" value="5"></td>
+                                </tr>
+                                <tr>
+                                    <td>領導力</td>
+                                    <td><input type="radio" name="leadership" value="1"></td>
+                                    <td><input type="radio" name="leadership" value="2"></td>
+                                    <td><input type="radio" name="leadership" value="3"></td>
+                                    <td><input type="radio" name="leadership" value="4"></td>
+                                    <td><input type="radio" name="leadership" value="5"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary okbtn" data-dismiss="modal">完成</button>
+                        <button type="reset" class="btn btn-secondary" data-dismiss="modal">返回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="memberApplyReject" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">是否確認拒絕？</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary okbtn" data-dismiss="modal">確認</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">返回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="memberApplyConfirm" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">是否確認同意？</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary okbtn" data-dismiss="modal">確認</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">返回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="publicItemListEdit" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <table id="sharedItemTable" class="table table-bordered text-center"
+                            style="border-color: rgb(58, 109, 154);">
+                            <thead>
+                                <th class="h-100"
+                                    style="background-color: rgb(58, 109, 154); border-right: 1px solid white;">
+                                    <h4 class="m-auto text-white" style="font-size: 1.7rem; font-weight: bolder;">
+                                        編輯公用裝備</h4>
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!-- TODO: 裝備名稱 -->
+                                    <td class="form-td"><input name="shared" type="text"
+                                            class="text-center border-0 h-100 form-input" placeholder="裝備名稱"
+                                            oninput="this.className = 'text-center border-0 h-100 form-input'"
+                                            style="font-size: 1.4rem;">
+                                        <p onclick="deleteSharedItemRow(this)"
+                                            class="d-inline-block rounded-circle add-delete-btn table-btn btn-effect"
+                                            style="position: relative; left: 2.3rem; background-color: rgb(255, 80, 124);">
+                                            x</p>
+                                    </td>
+                                    <!-- TODO: 數量 -->
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <thead>
+                                <th class="h-100"
+                                    style="background-color: rgb(58, 109, 154); border-right: 1px solid white;">
+                                    <h4 class="m-auto text-white" style="font-size: 1.7rem; font-weight: bolder;">
+                                        新增公用裝備</h4>
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td onclick="addSharedItemRow(this)" colspan="2" class="h-100 btn-effect"
+                                        style="background-color: rgb(58, 109, 154)">
+                                        <h5
+                                            style="cursor: pointer; color: whitesmoke; margin: auto; font-size: 1.7rem; font-weight: bolder; position: relative; left: 0.7rem;">
+                                            +</h5>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary okbtn" data-dismiss="modal">確認</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">返回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="privateItemListEdit" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">私人裝備清單編輯</h5>
+                    </div>
+                    <div class="modal-body">
+                        <table id="privateItemTable">
+                            <thead>
+                                <th>
+                                    <h6>物品名稱</h6>
+                                </th>
+                                <th>
+                                    <h6>個數／１人</h6>
+                                </th>
+                                <th>
+                                    <h6>新增／刪除</h6>
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!-- TODO: 裝備名稱 -->
+                                    <td><input placeholder="請輸入裝備名稱..." type="text"></td>
+                                    <!-- TODO: 數量 -->
+                                    <td>
+                                        <div class='ctrl'>
+                                            <div class='ctrl__button ctrl__button--decrement'>&ndash;</div>
+                                            <div class='ctrl__counter'>
+                                                <input class='ctrl__counter-input' maxlength='10' type='text' value='0'>
+                                                <div class='ctrl__counter-num'>0</div>
+                                            </div>
+                                            <div class='ctrl__button ctrl__button--increment'>+</div>
+                                        </div>
+                                    </td>
+                                    <td><img src="../public/img/song_img/cancel.png" class="cancelIcon mr-4" alt="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="plusbg py-2" style="background-color: rgb(230, 230, 230);"><img class="plus"
+                                src="../public/img/song_img/plus.png" alt=""></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary okbtn" data-dismiss="modal">確認</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">返回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="publicItemProvide" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">---</h5>
+                    </div>
+                    <div class="modal-body d-flex" style="justify-content: space-around;">
+                        <ul>
+                            <li><input type="number" min="0"><span style="display: inline-block">&#8194&#8194個</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary okbtn" data-dismiss="modal">確認</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">返回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="quitTrip" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">是否確認退出此行程？</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary okbtn" data-dismiss="modal">確認</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">返回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="chartContainer" class="d-none" style="width:150px; height: 150px">
+            <canvas id="myChart"></canvas>
+        </div>
+
+
+
+
+
+        <!-- ↑ 把網頁的內容放在NAV BAR 與 FOOTER 的中間 ↑ -->
+        <!-- FOOTER -->
+        <div w3-include-HTML="../footer/footer.html" class="footerDistance"></div>
+        <!-- FOOTER -->
+        <script>
+            w3.includeHTML();
+        </script>
+        <script src="../nav/nav.js"></script>
+        <script src="../public/js/song_js/song_tripManage.js"></script>
+
+        <script>
+            var rData = JSON.parse('<%- data %>');
+
+            // 行程日期、目的地
+            $('#selTripInfo').text(`${rData.selectedTrip.tripStartDate} ~ ${rData.selectedTrip.tripEndDate}  ${rData.selectedTrip.spotName}`)
+
+            // 重整行程名稱
+            refreshSelTripName();
+            function refreshSelTripName() {
+                $('#selTripName').html(`${rData.selectedTrip.tripName} <img class="edit" data-toggle="modal" data-target="#tripNameEdit"
+                                src="../public/img/song_img/edit.png" alt="edit" title="限發起人編輯">`);
+                $('#tripNameEditInput').attr('placeholder', rData.selectedTrip.tripName);
+
+                // 參加的行程
+                $('#joinTripList').empty();
+                rData.joinTripList.forEach((element) => {
+                    $('#joinTripList').append(`<li><a href="/tripManage?selectedTripId=${element.tripId}&selectedTripName=${element.tripName}">${element.tripName}</a></li>`)
+                })
+
+                // 發起的行程
+                $('#createTripList').empty();
+                rData.createTripList.forEach((element) => {
+                    $('#createTripList').append(`<li><a href="/tripManage?selectedTripId=${element.tripId}&selectedTripName=${element.tripName}">${element.tripName}</a></li>`)
+                })
+            }
+
+            // 重整人員物品
+            var currentMemberIndex = -1;
+            var currentMemberId = -1;
+            var currentSharedItemIndex = -1;
+            var currentSharedItemName = '';
+            var deleteSharedItemNameArray = [];
+            refreshMemberItem();
+            function refreshMemberItem() {
+                // 行程成員
+                $('#joinedMember tbody').empty();
+                $('#applyMember tbody').empty();
+                rData.tripMember.forEach((element) => {
+                    var statAvg = Math.floor((element.stat.leadership + element.stat.teamwork +
+                        element.stat.strength + element.stat.heal + element.stat.survival +
+                        element.stat.direction) / 6 * 10) / 10;
+
+                    if (element.positionState > 0) {
+                        $('#joinedMember tbody').append(
+                            `<tr class="member">
+                            <td>${element.name}</td>
+                            <td><a href="#" class="itemPopover" data-toggle="popover">裝備清單檢視<ul class="d-none"></ul></a></td>
+                            <td><a href="#" class="statAvg" data-toggle="popover">${statAvg}</a></td>
+                        </tr>`
+                        )
+                        // 成員之公共裝備
+                        rData.sharedItems.forEach((i) => {
+                            i.itemCount.forEach((j) => {
+                                if (j.userId === element.userId && j.itemCount > 0) {
+                                    $('#joinedMember ul').last().append(`<li>${i.sharedItem} &#8194&#8194&#8194 ${j.itemCount}</li>`)
+                                }
+                            })
+                        })
+                        // 評分表
+                        if (element.userId === rData.sessionUserId) {
+                            $('#joinedMember tr').last().append('<td> --- </td>');
+                        } else {
+                            $('#joinedMember tr').last().append('<td><a href="#" class="scoreSheet" data-toggle="modal"data-target="#statComment">我要評分</a></td>')
+                        }
+                    } else {
+                        $('#applyMember tbody').append(
+                            `<tr class="member">
+                            <td>${element.name}</td>
+                            <td><a href="#" class="itemPopover" data-toggle="popover">裝備清單檢視<ul class="d-none"></ul></a></td>
+                            <td><a href="#" class="statAvg" data-toggle="popover">${statAvg}</a></td>
+                            <td>
+                                <div class="checkCancelContainer">
+                                    <img class="checkIcon" 
+                                        src="../public/img/song_img/check.png"
+                                        data-toggle="modal"
+                                        data-target="#memberApplyConfirm">
+                                    <img class="cancelIcon" 
+                                        src="../public/img/song_img/cancel.png"
+                                        data-toggle="modal"
+                                        data-target="#memberApplyReject">
+                                </div>
+                            </td>
+                        </tr>`
+                        )
+                        // 所有人之公共裝備
+                        rData.sharedItems.forEach((i) => {
+                            i.itemCount.forEach((j) => {
+                                if (j.userId === element.userId && j.itemCount > 0) {
+                                    $('#applyMember ul').last().append(`<li>${i.sharedItem} &#8194&#8194&#8194 ${j.itemCount}</li>`)
+                                }
+                            })
+                        })
+                    }
+                })
+
+                // 公共裝備清單
+                $('#sharedItemMemberCount').empty();
+                $('#sharedItemMemberCount').append(
+                    `公共裝備（團員人數： ${rData.memberCount} 人）
+                    <img class="edit" src="../public/img/song_img/edit.png" data-toggle="modal" data-target="#publicItemListEdit" title="限發起人編輯">`
+                )
+                $('#sharedItemTable tbody').empty();
+                $('#publicItemList tbody').empty();
+                rData.sharedItems.forEach((element) => {
+                    var itemCount = 0;
+                    element.itemCount.forEach((i) => {
+                        rData.tripMember.forEach((j) => {
+                            if (i.userId == j.userId && j.positionState > 0) {
+                                itemCount += i.itemCount;
+                            }
+                        })
+                    })
+                    $('#publicItemList tbody').append(
+                        `<tr class="sharedItemDetail" valign="top">
+                        <td>${element.sharedItem}</td>
+                        <td>${itemCount}</td>
+                        <td><ul></ul></td>
+                        <td>
+                            <div class="plusContainer">
+                                <img class="plusIcon"
+                                    src="../public/img/song_img/plus.png" alt=""
+                                    data-toggle="modal"
+                                    data-target="#publicItemProvide">
+                            </div>
+                        </td>
+                    </tr>`
+                    )
+                    rData.tripMember.forEach((i) => {
+                        element.itemCount.forEach((j) => {
+                            if (j.userId === i.userId && i.positionState > 0 && j.itemCount > 0) {
+                                $('#publicItemList ul').last().append(
+                                    `<li class="superLi">
+                                    <span class="superLeft">${i.name}</span>
+                                    <!-- <span class="superSpan">／</span>  -->
+                                    <span class="superRight">${j.itemCount} 個</span>
+                                </li>`
+                                )
+                            }
+                        })
+                    })
+                    $('#sharedItemTable tbody').append(
+                        `<tr>
+                            <td class="form-td">
+                                <input name="shared" type="text" class="text-center border-0 h-100 form-input"
+                                value="${element.sharedItem}" oninput="this.className = 'text-center border-0 h-100 form-input'" style="font-size: 1.4rem;">
+                                <p onclick="deleteSharedItemRow(this)"
+                                class="btn-effect d-inline-block rounded-circle add-delete-btn table-btn"
+                                style="position: relative; left: 2.3rem; background-color: rgb(255, 80, 124);">x
+                                </p>
+                            </td>
+                        </tr>`
+                    );
+                })
+
+                $('img[data-target="#publicItemListEdit"]').click(function () {
+                    deleteSharedItemNameArray = [];
+                    console.log('apple')
+                    refreshMemberItem();
+                });
+
+                // 私人裝備清單
+                $('#privateItemList tbody').empty();
+                rData.privateItems.forEach((element) => {
+                    $('#privateItemList tbody').append(
+                        `<tr class="privateItemDetail" valign="top">
+                        <td>${element.privateItem}</td>
+                        <td>${element.itemCount}個</td>
+                    </tr>`
+                    )
+                })
+
+                // 同意／拒絕申請
+                $('.checkIcon, .cancelIcon').click(function () {
+                    currentMemberIndex = $('.member').index($(this).closest('tr').get(0));
+                    currentMemberId = rData.tripMember[currentMemberIndex].userId;
+                })
+
+                // 評分表
+                $('.scoreSheet').click(function () {
+                    currentMemberIndex = $('.member').index($(this).closest('tr').get(0));
+                    currentMemberId = rData.tripMember[currentMemberIndex].userId;
+                    $('#statComment .modal-title').text(rData.tripMember[currentMemberIndex].name);
+
+                    var ability = ['strength', 'heal', 'direction', 'survival', 'teamwork', 'leadership'];
+                    ability.forEach((elm) => {
+                        $(`input[name=${elm}]`).prop('checked', false);
+                    })
+                })
+
+                // 提供公共裝備
+                $('#publicItemList .plusIcon').click(function () {
+                    currentSharedItemIndex = $('.sharedItemDetail').index($(this).closest('tr').get(0))
+                    currentSharedItemName = $(this).closest('tr').children('td:first-child').text()
+                    $('#publicItemProvide h5').text(currentSharedItemName);
+                })
+            }
+
+
+            // 公共裝備modal
+            function deleteSharedItemRow(p) {
+                if ($(p).closest("table").attr('id') === 'sharedItemTable') {
+                    deleteSharedItemNameArray.push($(p).closest("tr").find('input[name=shared]').val());
+                    console.log(deleteSharedItemNameArray);
+                }
+                $(p).closest("tr").remove();
+            }
+
+            // 行程列表
+            $('.scheduleDayContainer').empty();
+            rData.schedule.forEach((element) => {
+                $('.scheduleDayContainer').append(
+                    `<div class="scheduleDay">
+                        <h4 data-toggle="collapse" data-target="#DAY${element.day}">
+                            DAY ${element.day} <img class="downArrow" src="../public/img/song_img/down-arrow.png" alt="">
+                        </h4>
+                        <div id="DAY${element.day}" class="collapse show">
+                            <table class="activity"><tbody></tbody></table>
+                        </div>
+                    </div>`
+                )
+                element.activity.forEach((i) => {
+                    $(`#DAY${element.day} tbody`).append(
+                        `<tr>
+                            <td>${i.startTime}</td>
+                            <td>${i.activityName}</td>
+                        </tr>`
+                    )
+                })
+            })
+
+            // 注意事項
+            refreshTripNote();
+            function refreshTripNote() {
+                $('#noteText').text(`${rData.tripNotes}`);
+                $('#newTripNotes').val(`${rData.tripNotes}`);
+            }
+
+            // 彈跳視窗okbtn
+            $('.okbtn').click(function () {
+                var modalId = $(this).closest(".modal").attr('id');
+                switch (modalId) {
+                    case 'tripNameEdit':
+                        var newTripName = $(this).closest(".modal").find('input').val();
+                        axios({
+                            method: 'put',
+                            url: '/tripManage',
+                            data: {
+                                userId: rData.sessionUserId,
+                                tripId: rData.selectedTrip.tripId,
+                                action: 'tripNameEdit',
+                                changes: newTripName,
+                            }
+                        }).then(function (res) {
+                            rData.createTripList.forEach((elm) => {
+                                if (elm.tripName === rData.selectedTrip.tripName) {
+                                    elm.tripName = newTripName;
+                                }
+                            })
+                            rData.selectedTrip.tripName = newTripName;
+                            refreshSelTripName();
+                        }).catch(function (err) {
+                            console.log(err)
+                        })
+
+                        break;
+                    case 'tripNoteEdit':
+                        var newTripNotes = $(this).closest(".modal").find('textarea').val();
+                        axios({
+                            method: 'put',
+                            url: '/tripManage',
+                            data: {
+                                userId: rData.sessionUserId,
+                                tripId: rData.selectedTrip.tripId,
+                                action: 'tripNoteEdit',
+                                changes: newTripNotes,
+                            }
+                        }).then(function (res) {
+                            rData.tripNotes = newTripNotes;
+                            refreshTripNote();
+                        }).catch(function (err) {
+                            console.log(err)
+                        })
+                        break;
+                    case 'memberApplyConfirm':
+                        axios({
+                            method: 'put',
+                            url: '/tripManage',
+                            data: {
+                                tripId: rData.selectedTrip.tripId,
+                                currentMemberId: currentMemberId,
+                                action: 'memberApplyConfirm'
+                            }
+                        }).then(function (res) {
+                            rData.tripMember[currentMemberIndex].positionState = 1;
+                            refreshMemberItem();
+                        }).catch(function (err) {
+                            console.log(err);
+                        })
+                        break;
+                    case 'memberApplyReject':
+                        axios({
+                            method: 'put',
+                            url: '/tripManage',
+                            data: {
+                                tripId: rData.selectedTrip.tripId,
+                                currentMemberId: currentMemberId,
+                                action: 'memberApplyReject'
+                            }
+                        }).then(function (res) {
+                            rData.tripMember.splice(currentMemberIndex, 1);
+                            refreshMemberItem();
+                        }).catch(function (err) {
+                            console.log(err);
+                        })
+                        break;
+                    case 'statComment':
+                        var ability = ['strength', 'heal', 'direction', 'survival', 'teamwork', 'leadership'];
+                        var scoreSheetcheck = 1;
+                        ability.forEach((elm) => {
+                            if ($(`input[name=${elm}]:checked`).val() === undefined) {
+                                scoreSheetcheck = 0
+                            }
+                        })
+                        if (scoreSheetcheck === 0) {
+                            alert('請填寫每一筆資料。');
+                            break;
+                        } else {
+                            var stat = rData.tripMember[currentMemberIndex].stat;
+                            stat.strength = Math.floor(((stat.strength * stat.commentCount + parseFloat($(`input[name="strength"]:checked`).val())) / (stat.commentCount + 1) * 10)) / 10;
+                            stat.heal = Math.floor(((stat.heal * stat.commentCount + parseFloat($(`input[name="heal"]:checked`).val())) / (stat.commentCount + 1) * 10) / 10);
+                            stat.direction = Math.floor(((stat.direction * stat.commentCount + parseFloat($(`input[name="direction"]:checked`).val())) / (stat.commentCount + 1) * 10)) / 10;
+                            stat.survival = Math.floor(((stat.survival * stat.commentCount + parseFloat($(`input[name="survival"]:checked`).val())) / (stat.commentCount + 1) * 10)) / 10;
+                            stat.teamwork = Math.floor(((stat.teamwork * stat.commentCount + parseFloat($(`input[name="teamwork"]:checked`).val())) / (stat.commentCount + 1) * 10)) / 10;
+                            stat.leadership = Math.floor(((stat.leadership * stat.commentCount + parseFloat($(`input[name="leadership"]:checked`).val())) / (stat.commentCount + 1) * 10)) / 10;
+                            stat.commentCount = stat.commentCount + 1;
+                            rData.tripMember[currentMemberIndex].stat = stat;
+                            axios({
+                                method: 'put',
+                                url: '/tripManage',
+                                data: {
+                                    tripId: rData.selectedTrip.tripId,
+                                    currentMemberId: currentMemberId,
+                                    action: 'statComment',
+                                    stat: stat
+                                }
+                            }).then(function (res) {
+                                refreshMemberItem();
+                            }).catch(function (err) {
+                                console.log(err)
+                            })
+                        }
+                        break;
+                    case 'publicItemProvide':
+                        var newProvider = true;
+                        var provideVal = parseInt($('#publicItemProvide input').val())
+                        rData.sharedItems[currentSharedItemIndex].itemCount.forEach((elm) => {
+                            if (elm.userId == sessionUserId) {
+                                newProvider = false;
+                                elm.itemCount = provideVal;
+                            }
+                        })
+                        if (newProvider === true && provideVal != 0) {
+                            rData.sharedItems[currentSharedItemIndex].itemCount.push(
+                                { userId: rData.sessionUserId, itemCount: provideVal }
+                            )
+                        }
+                        axios({
+                            method: 'put',
+                            url: '/tripManage',
+                            data: {
+                                action: 'publicItemProvide',
+                                tripId: rData.selectedTrip.tripId,
+                                userId: rData.sessionUserId,
+                                sharedItem: currentSharedItemName,
+                                provideVal: provideVal,
+                                newProvider: newProvider
+                            }
+                        }).then(function (res) {
+                            refreshMemberItem();
+                        }).catch(function (err) {
+                            console.log(err);
+                        })
+                        break;
+                    case 'quitTrip':
+                        axios({
+                            method: 'delete',
+                            url: '/tripManage/quit',
+                            data: {
+                                userId: rData.sessionUserId,
+                                tripId: rData.selectedTrip.tripId
+                            }
+                        }).then(function (res) {
+                            window.location.href = "/tripManage"
+                        }).catch(function (err) {
+                            console.log(err);
+                        })
+                        break;
+                }
+            })
+
+            // 聊天室
+            refreshChat();
+            function refreshChat() {
+                $('#textBoard').empty();
+                var currentChatDate = '';
+                rData.tripChatBoard.forEach((elm, idx) => {
+                    let textChatDate = elm.tripMessageTime.replace("T", " ").split(".")[0].slice(0, 10).replaceAll('-', '/');
+                    let textChatTime = elm.tripMessageTime.replace("T", " ").split(".")[0].slice(11, 16);
+                    if (currentChatDate != textChatDate) {
+                        currentChatDate = textChatDate;
+                        $('#textBoard').append(
+                            `<div class="currentChatDate">${currentChatDate}</div> `
+                        );
+                    }
+
+                    let headshot = `../public/img/yen/photo/${elm.userId}`;
+                    if (elm.userId === rData.sessionUserId) {
+                        $('#textBoard').append(
+                            `<div class="rightChatBox"></div> `
+                        );
+                        (elm.tripMessageText != null) ?
+                            $('div[class$=ChatBox]:last-child').append(
+                                `<div class="d-flex flex-row-reverse">
+                                    <div class="chatText">${elm.tripMessageText}</div>
+                                    <div class="chatTimeBox">
+                                        <div class="chatTime">${textChatTime}</div> 
+                                    </div>    
+                                </div>`) :
+                            $('div[class$=ChatBox]:last-child').append(
+                                `<div class="d-flex flex-row-reverse">
+                                    <div class="chatImgBox"><img class="chatImg" src="../../upload/song_upload/${elm.tripImgName}"></div>
+                                    <div class="chatTimeBox">
+                                        <div class="chatTime">${textChatTime}</div> 
+                                    </div>     
+                                </div>`);
+
+                    } else {
+                        $('#textBoard').append(
+                            `<div class="leftChatBox">
+                                <div class="headshotBox"><img class="headshot" src="../public/img/yen/photo/${elm.userId}.png" alt=""></div>
+                            </div>`
+                        );
+                        (elm.tripMessageText != null) ?
+                            $('div[class$=ChatBox]:last-child').append(
+                                `<div class="d-flex">
+                                    <div class="leftChat">
+                                        <div class="chatUserName">${elm.userName}</div>
+                                        <div class="chatText">${elm.tripMessageText}</div>
+                                    </div>
+                                    <div class="chatTimeBox">
+                                        <div class="chatTime">${textChatTime}</div> 
+                                    </div>      
+                                </div>`) :
+                            $('div[class$=ChatBox]:last-child').append(
+                                `<div>
+                                    <div class="leftChat">
+                                        <div class="chatUserName">${elm.userName}</div>
+                                        <div class="chatImgBox"><img class="chatImg" src="../../upload/song_upload/${elm.tripImgName}"></div>
+                                    </div>
+                                    <div class="chatTimeBox">
+                                        <div class="chatTime">${textChatTime}</div> 
+                                    </div>                        
+                                </div>`);
+
+
+                    }
+                })
+            }
+
+            $('#sendMessage').click(function () {
+                // console.log($('#uploadImg').val()==='');
+                // console.log($('#chatroomText').val()==='');
+                if ($('#chooseImg').val() != '') {
+                    var formData = new FormData();
+                    formData.append('image', chooseImg.files[0])
+                    formData.append('tripId', rData.selectedTrip.tripId)
+                    formData.append('tripName', rData.selectedTrip.tripName)
+                    formData.append('userId', rData.sessionUserId);
+                    formData.append('tripMessageTime', new Date().toISOString().slice(0, 19).replace('T', ' '))
+                    axios({
+                        method: "post",
+                        url: "/tripManage/upload",
+                        data: formData,
+                        headers: {
+                            "Content-Type": "multipart/form-data"
+                        }
+                    }).then(function (res) {
+                        $('#chooseImg').val(null);
+                        $('#fileCount').css({ 'width': '0%', 'opacity': '0' });
+                        setTimeout(() => {
+                            $('#fileCount span').text(``);
+                            $('#chatroomText').css({ 'opacity': '1', 'width': '100%' })
+                        }, 250);
+                    });
+                } else if ($('#chatroomText').val() != '') {
+                    axios({
+                        method: "post",
+                        url: "/tripManage/uploadText",
+                        data: {
+                            text: $('#chatroomText').val(),
+                            tripId: rData.selectedTrip.tripId,
+                            userId: rData.sessionUserId,
+                            tripMessageTime: new Date().toISOString().slice(0, 19).replace('T', ' ')
+                        }
+                    }).then(function (res) {
+                        $('#chatroomText').val('');
+                    })
+                }
+            })
+
+            $('#chooseImg').on('change', function (e) {
+                function showFileCount() {
+                    $('#fileCount').css({ 'width': '100%' });
+                    $('#chatroomText').css(({ 'width': '0%' }));
+                    setTimeout(() => {
+                        $('#fileCount span').text(`已選擇 ${e.target.files.length} 個檔案 `);
+                        $('#fileCount').css({ 'opacity': '1' });
+                        $('#chatroomText').css({ 'opacity': '0' });
+                    }, 250);
+                }
+                function hideFileCount() {
+                    $('#chooseImg').val(null);
+                    $('#fileCount').css({
+                        'width': '0%',
+                        'opacity': '0'
+                    });
+                    setTimeout(() => {
+                        $('#fileCount span').text(``);
+                        $('#chatroomText').css({ 'opacity': '1', 'width': '100%' })
+                    }, 250);
+                }
+
+                if (e.target.files.length > 0) {
+                    showFileCount();
+                    $('#fileCountCancel').on('click', () => {
+                        hideFileCount()
+                    });
+                } else {
+                    hideFileCount();
+                }
+            })
+
+
+            getChat();
+            function getChat() {
+                var myTimeout = function () { };
+                if ($('#chatTab').hasClass('active')) {
+                    axios({
+                        method: 'post',
+                        url: '/tripManage/getChat',
+                        data: {
+                            tripId: rData.selectedTrip.tripId,
+                            userId: rData.sessionUserId,
+                            tripMember: rData.tripMember
+                        },
+                    }).then(function (res) {
+                        rData.tripChatBoard = res.data.chatdata.tripChatBoard;
+                        refreshChat();
+                        console.log('apple')
+                        myTimeout = setTimeout(getChat, 1000);
+                    })
+                } else {
+                    clearTimeout(myTimeout);
+                }
+            }
+            $('#chatTab').click(function () {
+                getChat();
+            })
+
+            // navbar判斷
+            var sessionUserId = Number(`${rData.sessionUserId}`)
+            if (sessionUserId === 0) {
+                $("#member_Hello").text("請登入");
+                $("#member").append('<li><a href="/login">登入／註冊</a></li>');
+            } else {
+                $("#member_Hello").text(`Hi，${rData.userName}`);
+                $("#member").append(
+                    `<li><a href="/profile">個人主頁</a></li>  <li><a href="/tripManage">行程管理</a></li>  <li><a href="/logout">登出</a></li>`
+                );
+            }
+
+        </script>
+
+
+</body>
+
+</html>
