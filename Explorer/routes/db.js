@@ -5,6 +5,7 @@ var connection = mysql.createConnection({
   password: "root",
   database: "explorer",
   multipleStatements: true,
+  port: 3307,
 });
 connection.connect(function (error) {
   if (!!error) {

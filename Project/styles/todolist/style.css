@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2c5364), to(#0f2027));
+  background: linear-gradient(to bottom, #2c5364, #0f2027);
+  /* Chrome 10-25, Safari 5.1-6 */
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */

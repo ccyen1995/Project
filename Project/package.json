@@ -1,14 +1,17 @@
 {
-  "name": "testt",
+  "name": "project",
   "version": "1.0.0",
-  "description": "",
-  "main": "js.js",
+  "description": "demo",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Kenny",
   "license": "ISC",
   "dependencies": {
-    "dat.gui": "^0.7.9"
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

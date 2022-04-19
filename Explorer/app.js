@@ -30,11 +30,6 @@ app.listen(3000, (error) => {
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 
-// =========== body-parser ===========
-var bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
 // ============= mysql ===============
 var connection = require("./routes/db.js");
 
@@ -80,6 +75,7 @@ var bodyParser = require("body-parser");
 const { RejectionError } = require("bluebird");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 // =========== nodemail ===========
 let transporter = nodemailer.createTransport({
   service: "gmail",

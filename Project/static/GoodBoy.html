@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>乖乖章</title>
+    <link rel="stylesheet" href="GoodBoy.css" />
+  </head>
+  <body>
+    <div class="stampdiv">
+      <table class="stamptable"></table>
+      <section>蓋完了~</section>
+    </div>
+    <button id="adddiv">+新的一列</button>
+    <button>蓋章!</button>
+    <script>
+      let tr = document.createElement("tr");
+      function createNewDiv() {
+        for (let i = 0; i < 10; i++) {
+          let td = document.createElement("td");
+          let tr1 = document.createElement("tr");
+          let tr2 = document.createElement("tr");
+          let textNode1 = document.createTextNode("日期");
+          let textNode2 = document.createTextNode("蓋章");
+          tr1.append(textNode1);
+          tr2.append(textNode2);
+          td.append(tr1);
+          td.append(tr2);
+          tr.append(td);
+          let x = document.getElementsByClassName("stamptable");
+        }
+      }
+      createNewDiv();
+      adddiv.onclick = () => {
+        createNewDiv();
+      };
+    </script>
+  </body>
+</html>
