@@ -148,24 +148,7 @@ function loadData() {
       let trashButton = document.createElement("button");
       trashButton.classList.add("trash");
       trashButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
-      // function current() {
-      //   let newArray = myListArray.map((value, index, array) => {
-      //     console.log(value);
-      //     console.log(index);
-      //   });
-      //   newArray.splice(index, 1);
 
-      //   myListArray.map();
-      //   let newList = localStorage.getItem("list");
-      //   newArray = JSON.parse(newList);
-      //   console.log(newArray);
-      //   newArray.forEach((it, indexx) => {
-      //     newArray.splice(indexx, 1);
-      //   });
-      //   let newArray = myListArray;
-      //   console.log(newArray);
-      //   return current;
-      // }
       trashButton.addEventListener("click", (e) => {
         let todoItem = e.target.parentElement;
         myListArray.splice(index, 1);

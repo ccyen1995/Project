@@ -6,22 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      div {
-        font-size: 20px;
-        width: 200px;
-        background-color: #ccc;
-        padding: 20px;
-        border: 20px solid darkcyan;
-        transition: all 1s linear;
+      .section {
+        display: flex;
+        flex-wrap: wrap;
       }
-      div:hover {
-        transform: rotate(20deg);
+
+      .box {
+        height: 200px;
+        width: 200px;
+        margin: 10px;
+        color: white;
+        font-size: 3rem;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+
+      .boxx {
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin: 10px;
+      }
+      .midbox {
+        background-color: #24df32;
+        margin: 10px;
+        display: inline-flex;
+        padding: 10px;
+      }
+      .midbox2 {
+        padding: 10px;
+        background-color: #838383;
+        display: inline-flex;
+        margin: 10px;
+      }
+
+      .box1 {
+        background-color: #037ef3;
+      }
+      .box2 {
+        background-color: #f85a40;
+      }
+      .box3 {
+        background-color: #00c16e;
+      }
+      .box4 {
+        background-color: #f48924;
+      }
+      .box5 {
+        background-color: #ffc845;
+      }
+      .box6 {
+        background-color: #7552cc;
+      }
+      .box7 {
+        background-color: #be0027;
+      }
+      .box8 {
+        background-color: #cf8d2e;
+      }
+      .box9 {
+        background-color: #e4e932;
+      }
+      .box10 {
+        background-color: #2c9f45;
+      }
+      .box11 {
+        background-color: #371777;
+      }
+      .box12 {
+        background-color: #00a4e4;
+      }
+      tr:nth-child(2) {
+        color: #be0027;
       }
     </style>
   </head>
   <body>
-    <div>
-      金魚都能懂一二三四五金魚都搞懂六七八九十金魚懂不懂一二三四五金魚全都懂六七八九十
-    </div>
+    <section class="section">
+      <div class="box box1">第一個</div>
+      <div class="box box2">第二個</div>
+      <div class="box box3">第三個</div>
+      <div class="box box4">第四個</div>
+      <div class="box box5">第五個</div>
+      <div class="box box6">第六個</div>
+    </section>
+    <section class="section2">
+      <div class="midbox">
+        <span class="boxx box7">第一個</span>
+        <span class="boxx box8">第二個</span>
+        <span class="boxx box9">第三個</span>
+      </div>
+      <div class="midbox2">
+        <span class="boxx box10">第四個</span>
+        <span class="boxx box11">第五個</span>
+        <span class="boxx box12">第六個</span>
+      </div>
+    </section>
+
+    <table>
+      <thead>
+        <tr>
+          <th>gggggggg</th>
+        </tr>
+        <tr>
+          <th>gregg</th>
+          <th>gregg</th>
+          <th>gregg</th>
+        </tr>
+        <tr>
+          <td>fff</td>
+          <td>fff</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td>fff</td>
+          <td>fff</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td>fff</td>
+          <td>fff</td>
+          <td>fff</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   </body>
 </html>

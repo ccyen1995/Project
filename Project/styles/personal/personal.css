@@ -168,6 +168,12 @@ section {
   #menu-btn.fa-xmark {
     right: 0;
   }
+  .about .heading span {
+    font-size: 4rem;
+  }
+  .about .heading .biography .bio h3 {
+    font-size: 2rem;
+  }
 }
 
 .home {
@@ -183,10 +189,23 @@ section {
   min-height: 100vh;
 }
 
+.home .image {
+  margin-top: 3rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
 .home .image img {
   height: 65rem;
   padding: 2rem;
   border: var(--border-bold);
+}
+
+.home .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
 }
 
 .home .content h3 {
@@ -221,5 +240,149 @@ section {
 .home .content .btn:hover {
   background-color: var(--black);
   color: var(--white);
+}
+
+.about .heading {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.about .heading span {
+  font-size: 6.5rem;
+  border-bottom: var(--border-bold);
+}
+
+.about .biography {
+  margin: 2rem auto;
+  max-width: 70rem;
+  line-height: 1.5;
+  font-size: 1.7rem;
+}
+
+.about .biography .bio {
+  margin: 1rem 0;
+}
+
+.about .biography .bio h3 {
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin: 1rem;
+  background-color: var(--light-bg);
+  border: var(--border-light);
+  word-break: break-all;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.about .biography .bio h3 span {
+  font-weight: lighter;
+}
+
+.about .biography a.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border: var(--border-light);
+  font-size: 2rem;
+}
+
+.about .biography .btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.about .skills {
+  margin: 3rem 0;
+}
+
+.about .skills .progress {
+  margin-top: 1rem;
+}
+
+.about .skills .progress .bar {
+  margin: 1rem auto;
+  max-width: 70rem;
+  border: var(--border-bold);
+  padding: 1rem;
+}
+
+.about .skills .progress .bar h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--yellow);
+  font-size: 2rem;
+  padding: 1.5rem;
+}
+
+.about .skills .progress .bar h3 span {
+  font-weight: normal;
+}
+
+.about .skills .progress .bar:nth-child(1) h3 {
+  width: 60%;
+}
+
+.about .skills .progress .bar:nth-child(2) h3 {
+  width: 60%;
+}
+
+.about .skills .progress .bar:nth-child(3) h3 {
+  width: 70%;
+}
+
+.about .skills .progress .bar:nth-child(4) h3 {
+  width: 30%;
+}
+
+.about .edu-exp .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.about .edu-exp .row .box-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.about .edu-exp .row .box-container .title {
+  padding: 1.5rem;
+  font-size: 3rem;
+  background-color: var(--yellow);
+}
+
+.about .edu-exp .row .box-container .box {
+  text-align: left;
+  margin: 1.5rem 0;
+  background-color: var(--light-bg);
+  padding: 2rem;
+}
+
+.about .edu-exp .row .box-container .box span {
+  font-size: 1.5rem;
+}
+
+.about .edu-exp .row .box-container .box h3 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.about .edu-exp .row .box-container .box p {
+  line-height: 2;
+  font-size: 1.7rem;
 }
 /*# sourceMappingURL=personal.css.map */
