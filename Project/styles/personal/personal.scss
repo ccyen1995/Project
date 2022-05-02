@@ -42,21 +42,44 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  //強制讓 x 軸的 scrollbar 隱藏起來
   scroll-behavior: smooth;
 }
 body {
   overflow: hidden;
+  //隱藏左邊navbar
   transition: all 0.2s linear;
 }
-body.active {
-  padding-left: 35rem;
-}
+
 section {
   padding: 3rem 2rem;
   margin: 0 auto;
   max-width: 1200px;
   text-align: center;
 }
+
+.heading {
+  margin-bottom: 3rem;
+  text-align: center;
+  span {
+    text-transform: uppercase;
+    font-size: 6.5rem;
+    border-bottom: var(--border-bold);
+  }
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border: var(--border-light);
+  font-size: 2rem;
+}
+.btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+//header
 .header {
   position: fixed;
   top: 0;
@@ -73,6 +96,7 @@ section {
   flex-flow: column;
   transition: all 0.2s linear;
   text-align: center;
+  z-index: 2;
 
   #menu-btn {
     position: absolute;
@@ -121,48 +145,14 @@ section {
 .header.active {
   left: 0;
 }
-
-@media (max-width: 991) {
-  html {
-    font-size: 55%;
-  }
-  body.active {
-    padding-left: 0;
-  }
-}
-
-@media (max-width: 450px) {
-  html {
-    font-size: 50%;
-  }
-  .header.active {
-    padding-top: 7rem;
-  }
-  #menu-btn.fa-xmark {
-    right: 0;
-  }
-  .about {
-    .heading {
-      span {
-        font-size: 4rem;
-      }
-      .biography {
-        .bio {
-          h3 {
-            font-size: 2rem;
-          }
-        }
-      }
-    }
-  }
-}
-
+//home
 .home {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
   min-height: 100vh;
+  //至少一頁
   .image {
     margin-top: 3rem;
     flex: 1 1 40rem;
@@ -181,7 +171,7 @@ section {
     }
     span {
       display: inline-block;
-      padding: 1rem;
+      padding: 1rem 2rem;
       background-color: var(--yellow);
       font-size: 2rem;
       margin: 1rem 0;
@@ -205,17 +195,8 @@ section {
     }
   }
 }
-
+//about
 .about {
-  .heading {
-    margin-bottom: 3rem;
-    text-align: center;
-    span {
-      // text-transform: uppercase;
-      font-size: 6.5rem;
-      border-bottom: var(--border-bold);
-    }
-  }
   .biography {
     margin: 2rem auto;
     max-width: 70rem;
@@ -233,9 +214,10 @@ section {
         //文字斷點
         font-size: 2.5rem;
         font-weight: normal;
-        // text-transform: none;
+        text-transform: none;
         span {
           font-weight: lighter;
+          //這裡的text-transform: none;，不會繼承到?
         }
       }
     }
@@ -319,5 +301,192 @@ section {
         }
       }
     }
+  }
+}
+//services
+.services {
+  .heading {
+    margin-bottom: 3rem;
+    text-align: center;
+    span {
+      // text-transform: uppercase;
+      font-size: 6.5rem;
+      border-bottom: var(--border-bold);
+    }
+  }
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+    .box {
+      padding: 3rem 2rem;
+      border: var(--border-light);
+      i {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+      }
+      h3 {
+        margin: 1rem 0;
+        font-size: 2rem;
+        padding: 1.5rem;
+        background-color: var(--yellow);
+        font-weight: normal;
+      }
+      p {
+        line-height: 2;
+        font-size: 1.7rem;
+      }
+    }
+    .box:hover {
+      background-color: var(--black);
+      i {
+        color: var(--white);
+      }
+      p {
+        color: var(--white);
+      }
+    }
+  }
+}
+//RWD
+@media (max-width: 991) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .header.active {
+    padding-top: 7rem;
+  }
+  #menu-btn.fa-xmark {
+    right: 0;
+  }
+  .about {
+    .heading {
+      span {
+        font-size: 4rem;
+      }
+      .biography {
+        .bio {
+          h3 {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+  .contact form .flex .box {
+    background-color: red;
+    // width: 100%;
+    //純寬度沒反應，要用最小寬度
+    min-width: 100%;
+  }
+}
+
+//portfolio
+
+.portfolio {
+  .box-container:hover {
+    .box {
+      opacity: 0.2;
+    }
+  }
+  //注意box-container hover狀態的擺放順序，hover狀態必須擺前面，不然box-container的內部項目的hover會被覆寫
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+    .box {
+      img {
+        height: 35rem;
+        width: 100%;
+        object-fit: cover;
+      }
+      h3 {
+        margin: 1rem 0;
+        font-size: 2rem;
+        font-weight: normal;
+      }
+      span {
+        font-size: 1.7rem;
+      }
+    }
+    .box:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.contact {
+  form {
+    max-width: 70rem;
+    margin: 0 auto;
+    textarea {
+      height: 20rem;
+      resize: none;
+    }
+    .box {
+      width: 100%;
+      padding: 1.4rem;
+      font-size: 2rem;
+      text-transform: none;
+      border: var(--border-light);
+      margin: 1rem 0;
+    }
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .box {
+        width: 49%;
+      }
+    }
+  }
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    // background-color: #343444;
+    .box {
+      padding: 3rem 2rem;
+      border: var(--border-light);
+      background-color: var(--light-bg);
+      i {
+        font-size: 2rem;
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        color: var(--white);
+        background-color: var(--black);
+        margin-bottom: 0.5rem;
+      }
+      h3 {
+        margin: 1.5rem 0;
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.7rem;
+        text-transform: none;
+      }
+    }
+  }
+}
+
+.credit {
+  text-align: center;
+  background-color: var(--black);
+  padding: 3rem;
+  font-size: 2rem;
+  color: var(--white);
+  span {
+    color: var(--yellow);
   }
 }
