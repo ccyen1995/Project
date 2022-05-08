@@ -13,27 +13,33 @@ body {
   background-attachment: fixed;
 }
 .out-block {
-  overflow: hidden;
   width: 35%;
-  min-width: 600px;
-  margin: 0 auto;
+  overflow: hidden;
   height: 100%;
+  min-width: 450px;
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 //header start
 section.headerr {
-  height: 10%;
+  height: 6rem;
   //---------------height-------------
   width: 100%;
   background-image: url("/切版素材/header/header_bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   img {
-    margin-left: 4rem;
+    display: block;
     object-fit: contain;
+    width: 5rem;
+    margin-left: 1rem;
   }
   button#login {
     cursor: pointer;
@@ -50,12 +56,9 @@ section.headerr {
     border-radius: 2rem;
     color: white;
     height: 3rem;
-    width: 8rem;
+    width: 7rem;
     font-size: 1.6rem;
-    position: absolute;
-    right: 7rem;
-    top: 50%;
-    transform: translateY(-50%);
+    text-align: center;
     box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.9);
   }
   button#menu {
@@ -71,25 +74,23 @@ section.headerr {
       ),
       url("/切版素材/header/header_bg.jpg");
     border-style: none;
-    border-radius: 0.5rem;
+    border-radius: 10px;
     color: white;
     height: 3rem;
     width: 5rem;
+    margin: auto 1rem;
     font-size: 2rem;
-    position: absolute;
-    right: 1.6rem;
-    top: 50%;
-    transform: translateY(-50%);
     box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.9);
   }
-
   section.navbarr {
     position: absolute;
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: calc(100vh * 0.9);
-    top: calc(100vh * 0.1);
+    height: calc(100vh - 6rem);
+    // height: 100vh;
+    top: 6rem;
+    // top: 0;
     right: -50%;
     padding: 2rem;
     z-index: 5;
@@ -140,7 +141,7 @@ section.headerr {
       border-radius: 2rem;
       color: white;
       height: 3rem;
-      width: 8rem;
+      width: 7rem;
       font-size: 1.6rem;
       left: 50%;
       transform: translateX(-50%);
@@ -227,6 +228,7 @@ section.slide-frame {
       img {
         height: 100%;
         width: 100%;
+        object-position: 50% 50%;
         object-fit: cover;
       }
     }
@@ -300,63 +302,59 @@ section.score {
 //中間區start
 section.game {
   height: 15%;
-  //---------------height 54%-------------
-  width: 100%;
-  background-color: black;
   display: flex;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  background-color: #000000;
   .rr {
-    width: 40%;
-    #chart1 {
-      display: block;
-      width: 70%;
-      margin: auto;
-    }
-  }
-  .rr ~ div button {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-size: 1.2rem;
-    border-style: none;
-    background-color: transparent;
+    // background-color: #781a1a;
+    margin: auto;
+    height: 120px;
     img {
-      display: block;
-      width: 80%;
-      margin: auto;
-    }
-    p {
-      color: white;
+      height: 120px;
     }
   }
-  .rr ~ div button:hover {
-    background-color: rgba(218, 234, 245, 0.2);
+  .rrr {
+    // background-color: #8a6101;
+    display: flex;
+    button {
+      //botton font-size不繼承父層?
+      font-size: 1.2rem;
+      color: #fff;
+      border-style: none;
+      background-color: transparent;
+      div {
+        height: 110px;
+        overflow: hidden;
+        img {
+          height: 110px;
+        }
+      }
+      p {
+      }
+    }
+    button + button {
+      border: 1px solid transparent;
+      border-width: 0 0 0 1px;
+      border-image: linear-gradient(
+        180deg,
+        rgba(218, 234, 245, 0) 20%,
+        rgba(218, 234, 245, 0.8) 50%,
+        rgba(249, 145, 189, 0) 80%
+      );
+      border-image-slice: 1;
+      //尚未弄懂border-image-slice
+    }
+    button:hover {
+      background-color: rgba(218, 234, 245, 0.2);
+    }
   }
-  .rr ~ div + div {
-    border: 1px solid transparent;
-    border-width: 0 0 0 1px;
-    border-image: linear-gradient(
-      180deg,
-      rgba(218, 234, 245, 0) 20%,
-      rgba(218, 234, 245, 0.8) 50%,
-      rgba(249, 145, 189, 0) 80%
-    );
-    border-image-slice: 1;
-    //尚未弄懂border-image-slice
-  }
+  // background-color: black;
 }
 //中間區end
 
 //九宮格start
 section.features {
   //   min-height: max-content;
-  max-height: 38%;
+  max-height: 50%;
   width: 100%;
   //---------------height 90%-------------
   background-image: url("/切版素材/layout/bg_index.jpg");
@@ -364,7 +362,7 @@ section.features {
   background-size: cover;
   display: grid;
   grid-template-columns: repeat(3, minmax(30%, 1fr));
-  grid-template-rows: repeat(3, minmax(230px, 1fr));
+  grid-template-rows: repeat(3, minmax(min-content, 1fr));
   grid-gap: 0.5rem 0.5rem;
   justify-items: center;
   align-items: center;
@@ -451,18 +449,12 @@ section.footer {
   div {
     width: 30%;
     text-align: center;
-    font-size: 2rem;
-    line-height: 5rem;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
     //待調整
-  }
-  div:hover {
-    background-image: linear-gradient(
-      180deg,
-      #65d5f8 0%,
-      rgb(110, 178, 246) 2%,
-      transparent 10%
-    );
-    // background-color: rgba(1, 1, 157, 0.338);
+    cursor: pointer;
   }
   img {
     width: 100%;

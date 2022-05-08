@@ -18,11 +18,12 @@ body {
 }
 
 .out-block {
-  overflow: hidden;
   width: 35%;
-  min-width: 600px;
-  margin: 0 auto;
+  overflow: hidden;
   height: 100%;
+  min-width: 450px;
+  max-width: 600px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,19 +34,30 @@ body {
 }
 
 section.headerr {
-  height: 10%;
+  height: 6rem;
   width: 100%;
   background-image: url("/切版素材/header/header_bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section.headerr img {
-  margin-left: 4rem;
+  display: block;
   -o-object-fit: contain;
      object-fit: contain;
+  width: 5rem;
+  margin-left: 1rem;
 }
 
 section.headerr button#login {
@@ -57,13 +69,9 @@ section.headerr button#login {
   border-radius: 2rem;
   color: white;
   height: 3rem;
-  width: 8rem;
+  width: 7rem;
   font-size: 1.6rem;
-  position: absolute;
-  right: 7rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  text-align: center;
   -webkit-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.9);
           box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.9);
 }
@@ -74,16 +82,12 @@ section.headerr button#menu {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(3%, rgba(230, 230, 230, 0.1)), color-stop(10%, rgba(143, 143, 143, 0.1)), color-stop(50%, rgba(86, 86, 86, 0.1)), color-stop(80%, rgba(85, 85, 85, 0.1)), color-stop(95%, rgba(150, 150, 150, 0.1))), url("/切版素材/header/header_bg.jpg");
   background-image: linear-gradient(180deg, rgba(230, 230, 230, 0.1) 3%, rgba(143, 143, 143, 0.1) 10%, rgba(86, 86, 86, 0.1) 50%, rgba(85, 85, 85, 0.1) 80%, rgba(150, 150, 150, 0.1) 95%), url("/切版素材/header/header_bg.jpg");
   border-style: none;
-  border-radius: 0.5rem;
+  border-radius: 10px;
   color: white;
   height: 3rem;
   width: 5rem;
+  margin: auto 1rem;
   font-size: 2rem;
-  position: absolute;
-  right: 1.6rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   -webkit-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.9);
           box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.9);
 }
@@ -98,8 +102,8 @@ section.headerr section.navbarr {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 50%;
-  height: calc(100vh * 0.9);
-  top: calc(100vh * 0.1);
+  height: calc(100vh - 6rem);
+  top: 6rem;
   right: -50%;
   padding: 2rem;
   z-index: 5;
@@ -158,7 +162,7 @@ section.headerr section.navbarr #logout {
   border-radius: 2rem;
   color: white;
   height: 3rem;
-  width: 8rem;
+  width: 7rem;
   font-size: 1.6rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -255,6 +259,8 @@ section.slide-frame .slide-images .img-container {
 section.slide-frame .slide-images .img-container img {
   height: 100%;
   width: 100%;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -346,67 +352,44 @@ section.score .score2 span:nth-child(2) {
 
 section.game {
   height: 15%;
-  width: 100%;
-  background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: white;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
+  background-color: #000000;
 }
 
 section.game .rr {
-  width: 40%;
-}
-
-section.game .rr #chart1 {
-  display: block;
-  width: 70%;
   margin: auto;
+  height: 120px;
 }
 
-section.game .rr ~ div button {
-  position: relative;
+section.game .rr img {
+  height: 120px;
+}
+
+section.game .rrr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
+}
+
+section.game .rrr button {
   font-size: 1.2rem;
+  color: #fff;
   border-style: none;
   background-color: transparent;
 }
 
-section.game .rr ~ div button img {
-  display: block;
-  width: 80%;
-  margin: auto;
+section.game .rrr button div {
+  height: 110px;
+  overflow: hidden;
 }
 
-section.game .rr ~ div button p {
-  color: white;
+section.game .rrr button div img {
+  height: 110px;
 }
 
-section.game .rr ~ div button:hover {
-  background-color: rgba(218, 234, 245, 0.2);
-}
-
-section.game .rr ~ div + div {
+section.game .rrr button + button {
   border: 1px solid transparent;
   border-width: 0 0 0 1px;
   -o-border-image: linear-gradient(180deg, rgba(218, 234, 245, 0) 20%, rgba(218, 234, 245, 0.8) 50%, rgba(249, 145, 189, 0) 80%);
@@ -415,8 +398,12 @@ section.game .rr ~ div + div {
   border-image-slice: 1;
 }
 
+section.game .rrr button:hover {
+  background-color: rgba(218, 234, 245, 0.2);
+}
+
 section.features {
-  max-height: 38%;
+  max-height: 50%;
   width: 100%;
   background-image: url("/切版素材/layout/bg_index.jpg");
   background-repeat: no-repeat;
@@ -425,8 +412,9 @@ section.features {
   display: grid;
   -ms-grid-columns: (minmax(30%, 1fr))[3];
       grid-template-columns: repeat(3, minmax(30%, 1fr));
-  -ms-grid-rows: (minmax(230px, 1fr))[3];
-      grid-template-rows: repeat(3, minmax(230px, 1fr));
+  -ms-grid-rows: (minmax(min-content, 1fr))[3];
+      grid-template-rows: repeat(3, minmax(-webkit-min-content, 1fr));
+      grid-template-rows: repeat(3, minmax(min-content, 1fr));
   grid-gap: 0.5rem 0.5rem;
   justify-items: center;
   -webkit-box-align: center;
@@ -492,13 +480,17 @@ section.footer {
 section.footer div {
   width: 30%;
   text-align: center;
-  font-size: 2rem;
-  line-height: 5rem;
-}
-
-section.footer div:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#65d5f8), color-stop(2%, #6eb2f6), color-stop(10%, transparent));
-  background-image: linear-gradient(180deg, #65d5f8 0%, #6eb2f6 2%, transparent 10%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
 }
 
 section.footer img {
