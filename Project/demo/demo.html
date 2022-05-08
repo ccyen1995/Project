@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="demo.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="out-block">
+      <section class="headerr">
+        <img src="/切版素材/header/LOGO.png" alt="" />
+        <button id="login">登入</button>
+        <button id="menu"><i class="fa-solid fa-bars"></i></button>
+        <div class="box">
+          <section class="navbarr">
+            <div class="account">
+              <h1>test0001</h1>
+              <h1>
+                <i class="fa-solid fa-sack-dollar"></i><span>1000000</span>
+              </h1>
+            </div>
+            <hr />
+            <div class="linkk">
+              <a href="#">出納櫃台</a>
+              <a href="#">修改密碼</a>
+              <a href="#">遊戲介紹</a>
+              <a href="#">聯絡我們</a>
+              <button id="logout">登出</button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="user">
+        <div class="username" id="username"><span>username</span></div>
+        <img src="/切版素材/footer/line.png" alt="" />
+        <div class="usermoney" id="usermoney">
+          <span><i class="fa-solid fa-sack-dollar"></i>1000000</span>
+        </div>
+      </section>
+
+      <section class="slide-frame">
+        <i class="fa-solid fa-angle-left arrow_left"></i>
+        <i class="fa-solid fa-angle-right arrow_right"></i>
+        <div class="slide-images">
+          <input type="radio" name="r" id="r1" checked="true" />
+          <input type="radio" name="r" id="r2" />
+          <input type="radio" name="r" id="r3" />
+          <input type="radio" name="r" id="r4" />
+          <input type="radio" name="r" id="r5" />
+          <div class="img-container s1" id="s1">
+            <img src="./切版素材/banner/banner01.jpg" alt="" />
+          </div>
+          <div class="img-container">
+            <img src="./切版素材/banner/banner02.jpg" alt="" />
+          </div>
+          <div class="img-container">
+            <img src="./切版素材/banner/banner03.jpg" alt="" />
+          </div>
+          <div class="img-container">
+            <img src="./切版素材/banner/banner04.jpg" alt="" />
+          </div>
+          <div class="img-container">
+            <img src="./切版素材/banner/banner05.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="pointer">
+          <label for="r1" class="point"></label>
+          <label for="r2" class="point"></label>
+          <label for="r3" class="point"></label>
+          <label for="r4" class="point"></label>
+          <label for="r5" class="point"></label>
+        </div>
+      </section>
+      <section class="score">
+        <div class="score1"><span>EGT JP</span><span>100000</span></div>
+        <div class="score2"><span>15輪 JP</span><span>100000</span></div>
+      </section>
+      <section class="game">
+        <!-- 格線-------------------------------- -->
+        <div class="rr">
+          <img src="/切版素材/button/icon_leaderboard.png" alt="" id="chart1" />
+        </div>
+        <!-- 格線-------------------------------- -->
+        <div>
+          <button class="gamebtn feature" data-modal-target="#modal">
+            <img src="/切版素材/button/icon_slotgame.png" alt="" id="game1" />
+            <p>老虎機</p>
+          </button>
+        </div>
+        <div>
+          <button class="gamebtn feature" data-modal-target="#modal">
+            <img src="/切版素材/button/icon_r220.png" alt="" id="game2" />
+            <p>百家樂</p>
+          </button>
+        </div>
+        <div>
+          <button class="gamebtn feature" data-modal-target="#modal">
+            <img src="/切版素材/button/icon_15w.png" alt="" id="game3" />
+            <p>15輪</p>
+          </button>
+        </div>
+      </section>
+      <section class="features">
+        <div class="feature feature1">
+          <img src="/切版素材/game/card-effect.png" alt="" />
+        </div>
+        <div class="feature feature2">
+          <img src="/切版素材/game/electronic.png" alt="" />
+        </div>
+        <div class="feature feature3">
+          <img src="/切版素材/game/esports.png" alt="" />
+        </div>
+        <div class="feature feature4">
+          <img src="/切版素材/game/fish.png" alt="" />
+        </div>
+        <div class="feature feature5">
+          <img src="/切版素材/game/fish_icon.png" alt="" />
+        </div>
+        <div class="feature feature6">
+          <img src="/切版素材/game/live.png" alt="" />
+        </div>
+        <div class="feature feature7">
+          <img src="/切版素材/game/lottory.png" alt="" />
+        </div>
+        <div class="feature feature8">
+          <img src="/切版素材/game/mechine.png" alt="" />
+        </div>
+        <div class="feature feature9">
+          <img src="/切版素材/game/sports.png" alt="" />
+        </div>
+      </section>
+      <section class="footer">
+        <img src="/切版素材/footer/bg_topline.png" alt="" />
+        <div class="">優惠活動</div>
+        <div class="">會員中心</div>
+        <div class="">線上客服</div>
+      </section>
+    </div>
+    <!-- <button data-modal-target="#modal">Open Modal</button> -->
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">提示訊息</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">請登入</div>
+    </div>
+    <div id="overlay"></div>
+    <script src="demo.js"></script>
+  </body>
+</html>

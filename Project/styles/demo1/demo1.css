@@ -1,0 +1,153 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* ===== Colors ===== */
+  --primary-color: #0e4bf1;
+  --panel-color: #fff;
+  --text-color: #000;
+  --black-light-color: #707070;
+  --border-color: #e6e5e5;
+  --toggle-color: #ddd;
+  --box1-color: #4da3ff;
+  --box2-color: #ffe6ac;
+  --box3-color: #e7d1fc;
+  --title-icon-color: #fff;
+  /* ====== Transition ====== */
+  --tran-05: all 0.5s ease;
+  --tran-03: all 0.3s ease;
+  --tran-03: all 0.2s ease;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--primary-color);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: var(--panel-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .logo-name {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .logo-name .logo-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 45px;
+}
+
+nav .logo-name .logo-image img {
+  width: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20%;
+}
+
+nav .logo-name .logo_name {
+  margin-left: 14px;
+  font-size: 22px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+nav .menu-items {
+  margin-top: 40px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .menu-items ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 50px;
+  list-style: none;
+}
+
+nav .menu-items ul li a {
+  border-radius: 5px;
+  margin: auto 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  padding: 0.25rem 1rem;
+}
+
+nav .menu-items ul li a i {
+  font-size: 1.2rem;
+  padding: 0 0.5rem 0 0;
+}
+
+nav .menu-items ul li a span {
+  font-size: 1.2rem;
+  padding: 0 2rem 0 0;
+}
+
+nav .menu-items .nav-links li {
+  list-style: none;
+}
+
+nav .menu-items .nav-links li a:hover {
+  color: var(--panel-color);
+  background-color: var(--box1-color);
+}
+
+nav .menu-items .logout-mode .mode {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+nav .menu-items .logout-mode .mode a span {
+  white-space: nowrap;
+}
+/*# sourceMappingURL=demo1.css.map */

@@ -1,0 +1,582 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#002672), to(#005583));
+  background-image: linear-gradient(0deg, #002672, #005583);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.out-block {
+  overflow: hidden;
+  width: 35%;
+  min-width: 600px;
+  margin: 0 auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.headerr {
+  height: 10%;
+  width: 100%;
+  background-image: url("/切版素材/header/header_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+section.headerr img {
+  margin-left: 4rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+section.headerr button#login {
+  cursor: pointer;
+  background-color: #08268b;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #3860e3), color-stop(10%, #08268b), color-stop(50%, #031964), color-stop(80%, #001554), color-stop(95%, #183594));
+  background-image: linear-gradient(180deg, #3860e3 3%, #08268b 10%, #031964 50%, #001554 80%, #183594 95%);
+  border-style: none;
+  border-radius: 2rem;
+  color: white;
+  height: 3rem;
+  width: 8rem;
+  font-size: 1.6rem;
+  position: absolute;
+  right: 7rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.9);
+          box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.9);
+}
+
+section.headerr button#menu {
+  cursor: pointer;
+  background-color: #08268b;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(3%, rgba(230, 230, 230, 0.1)), color-stop(10%, rgba(143, 143, 143, 0.1)), color-stop(50%, rgba(86, 86, 86, 0.1)), color-stop(80%, rgba(85, 85, 85, 0.1)), color-stop(95%, rgba(150, 150, 150, 0.1))), url("/切版素材/header/header_bg.jpg");
+  background-image: linear-gradient(180deg, rgba(230, 230, 230, 0.1) 3%, rgba(143, 143, 143, 0.1) 10%, rgba(86, 86, 86, 0.1) 50%, rgba(85, 85, 85, 0.1) 80%, rgba(150, 150, 150, 0.1) 95%), url("/切版素材/header/header_bg.jpg");
+  border-style: none;
+  border-radius: 0.5rem;
+  color: white;
+  height: 3rem;
+  width: 5rem;
+  font-size: 2rem;
+  position: absolute;
+  right: 1.6rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.9);
+          box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.9);
+}
+
+section.headerr section.navbarr {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  height: calc(100vh * 0.9);
+  top: calc(100vh * 0.1);
+  right: -50%;
+  padding: 2rem;
+  z-index: 5;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+section.headerr section.navbarr .account {
+  color: white;
+  margin: 1rem 0;
+}
+
+section.headerr section.navbarr .account h1 {
+  font-size: 2rem;
+}
+
+section.headerr section.navbarr .account h1 i {
+  font-size: 1.5rem;
+}
+
+section.headerr section.navbarr hr {
+  border: 2px solid #fff;
+  background-color: #fff;
+}
+
+section.headerr section.navbarr .linkk {
+  font-style: italic;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: larger;
+}
+
+section.headerr section.navbarr .linkk a {
+  margin: 1rem 0;
+  text-decoration: none;
+  color: white;
+}
+
+section.headerr section.navbarr .linkk a:hover {
+  color: goldenrod;
+}
+
+section.headerr section.navbarr #logout {
+  position: absolute;
+  cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #e35d38), color-stop(10%, #8b0f08), color-stop(50%, #641003), color-stop(80%, #540700), color-stop(95%, #942618));
+  background-image: linear-gradient(180deg, #e35d38 3%, #8b0f08 10%, #641003 50%, #540700 80%, #942618 95%);
+  border-style: none;
+  border-radius: 2rem;
+  color: white;
+  height: 3rem;
+  width: 8rem;
+  font-size: 1.6rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 10rem;
+}
+
+section.headerr section.active {
+  right: 0;
+  opacity: 1;
+}
+
+section.user {
+  height: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left top, right top, from(#000042), color-stop(30%, #001777), color-stop(50%, #001d94), color-stop(70%, #001777), to(#000042));
+  background: linear-gradient(90deg, #000042 0%, #001777 30%, #001d94 50%, #001777 70%, #000042 100%);
+}
+
+section.user #username,
+section.user #usermoney {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bolder;
+  color: #fff;
+}
+
+section.user #usermoney span {
+  color: gold;
+}
+
+section.slide-frame {
+  height: 25%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+section.slide-frame i {
+  position: absolute;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  line-height: 3rem;
+  padding: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 3;
+}
+
+section.slide-frame i.arrow_left {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  left: 10px;
+}
+
+section.slide-frame i.arrow_right {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  right: 10px;
+}
+
+section.slide-frame .slide-images {
+  width: 500%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+section.slide-frame .slide-images input {
+  display: none;
+}
+
+section.slide-frame .slide-images .img-container {
+  width: 20%;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+section.slide-frame .slide-images .img-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section.slide-frame .pointer {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.slide-frame .pointer .point {
+  background-color: white;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 0 8px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+section.slide-frame .pointer .point:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.8);
+          box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.8);
+  background-color: #183964;
+}
+
+#r1[checked] ~ .s1 {
+  margin-left: 0;
+}
+
+#r2[checked] ~ .s1 {
+  margin-left: -20%;
+}
+
+#r3[checked] ~ .s1 {
+  margin-left: -40%;
+}
+
+#r4[checked] ~ .s1 {
+  margin-left: -60%;
+}
+
+#r5[checked] ~ .s1 {
+  margin-left: -80%;
+}
+
+section.score {
+  height: 4%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("/切版素材/footer/jp_bg.jpg");
+}
+
+section.score .score1,
+section.score .score2 {
+  font-size: 1.2rem;
+  border: solid 1px #8a6101;
+  line-height: 2rem;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bolder;
+}
+
+section.score .score1 span:first-child,
+section.score .score2 span:first-child {
+  color: #8a6101;
+}
+
+section.score .score1 span:nth-child(2),
+section.score .score2 span:nth-child(2) {
+  color: #781a1a;
+}
+
+section.game {
+  height: 15%;
+  width: 100%;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+section.game .rr {
+  width: 40%;
+}
+
+section.game .rr #chart1 {
+  display: block;
+  width: 70%;
+  margin: auto;
+}
+
+section.game .rr ~ div button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  font-size: 1.2rem;
+  border-style: none;
+  background-color: transparent;
+}
+
+section.game .rr ~ div button img {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+
+section.game .rr ~ div button p {
+  color: white;
+}
+
+section.game .rr ~ div button:hover {
+  background-color: rgba(218, 234, 245, 0.2);
+}
+
+section.game .rr ~ div + div {
+  border: 1px solid transparent;
+  border-width: 0 0 0 1px;
+  -o-border-image: linear-gradient(180deg, rgba(218, 234, 245, 0) 20%, rgba(218, 234, 245, 0.8) 50%, rgba(249, 145, 189, 0) 80%);
+     border-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(218, 234, 245, 0)), color-stop(50%, rgba(218, 234, 245, 0.8)), color-stop(80%, rgba(249, 145, 189, 0)));
+     border-image: linear-gradient(180deg, rgba(218, 234, 245, 0) 20%, rgba(218, 234, 245, 0.8) 50%, rgba(249, 145, 189, 0) 80%);
+  border-image-slice: 1;
+}
+
+section.features {
+  max-height: 38%;
+  width: 100%;
+  background-image: url("/切版素材/layout/bg_index.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30%, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(30%, 1fr));
+  -ms-grid-rows: (minmax(230px, 1fr))[3];
+      grid-template-rows: repeat(3, minmax(230px, 1fr));
+  grid-gap: 0.5rem 0.5rem;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 1rem;
+  overflow: scroll;
+}
+
+section.features .feature {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+section.features .feature img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.feature.login_ {
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+}
+
+.feature.login_::before {
+  content: "敬請期待";
+  width: 100%;
+  height: 20%;
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 900s;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(227, 93, 56, 0)), color-stop(25%, #b50900), color-stop(75%, #b50900), color-stop(90%, rgba(227, 93, 56, 0)));
+  background-image: linear-gradient(90deg, rgba(227, 93, 56, 0) 10%, #b50900 25%, #b50900 75%, rgba(227, 93, 56, 0) 90%);
+  position: absolute;
+  bottom: 40%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+section.features::-webkit-scrollbar {
+  display: none;
+}
+
+section.footer {
+  position: relative;
+  height: 8%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0268ad), to(#00229b));
+  background-image: linear-gradient(180deg, #0268ad 0%, #00229b 100%);
+}
+
+section.footer div {
+  width: 30%;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 5rem;
+}
+
+section.footer div:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#65d5f8), color-stop(2%, #6eb2f6), color-stop(10%, transparent));
+  background-image: linear-gradient(180deg, #65d5f8 0%, #6eb2f6 2%, transparent 10%);
+}
+
+section.footer img {
+  width: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  border: 1px solid black;
+  z-index: 10;
+  background-color: white;
+  /* 不設背景顏色會被fixed顏色穿透? */
+  width: 500px;
+  max-width: 80%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.modal .modal-header {
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal .modal-header .title {
+  font-size: 1.5rem;
+}
+
+.modal .modal-header button.close-button {
+  width: 2rem;
+  line-height: 2rem;
+  font-size: 2rem;
+}
+
+.modal .modal-body {
+  padding: 10px 15px;
+  font-size: 2rem;
+}
+
+.modal.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  /* transform記得全部都要再次設置，否則全部果將不會保留 */
+}
+
+#overlay {
+  z-index: 4;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+/*# sourceMappingURL=demo.css.map */

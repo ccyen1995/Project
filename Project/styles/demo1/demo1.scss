@@ -1,0 +1,118 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* ===== Colors ===== */
+  --primary-color: #0e4bf1;
+  --panel-color: #fff;
+  --text-color: #000;
+  --black-light-color: #707070;
+  --border-color: #e6e5e5;
+  --toggle-color: #ddd;
+  --box1-color: #4da3ff;
+  --box2-color: #ffe6ac;
+  --box3-color: #e7d1fc;
+  --title-icon-color: #fff;
+
+  /* ====== Transition ====== */
+  --tran-05: all 0.5s ease;
+  --tran-03: all 0.3s ease;
+  --tran-03: all 0.2s ease;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--primary-color);
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: var(--panel-color);
+  display: flex;
+  flex-direction: column;
+
+  .logo-name {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo-image {
+      display: flex;
+      justify-content: center;
+      min-width: 45px;
+      img {
+        width: 40px;
+        object-fit: cover;
+        border-radius: 20%;
+      }
+    }
+    .logo_name {
+      margin-left: 14px;
+      font-size: 22px;
+      color: var(--text-color);
+      font-weight: 600;
+    }
+  }
+  .menu-items {
+    margin-top: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    ul {
+      li {
+        display: flex;
+        flex-direction: column;
+        // background-color: darkgreen;
+        height: 50px;
+        list-style: none;
+        a {
+          border-radius: 5px;
+          margin: auto 2rem;
+          display: flex;
+          text-decoration: none;
+          padding: 0.25rem 1rem;
+          i {
+            font-size: 1.2rem;
+            padding: 0 0.5rem 0 0;
+          }
+          span {
+            font-size: 1.2rem;
+            padding: 0 2rem 0 0;
+          }
+        }
+      }
+    }
+    .nav-links {
+      li {
+        list-style: none;
+        a:hover {
+          color: var(--panel-color);
+          background-color: var(--box1-color);
+        }
+      }
+    }
+    .logout-mode {
+      .mode {
+        position: relative;
+        display: inline-flex;
+        a {
+          i {
+          }
+          span {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        border: 1px solid black;
+        z-index: 10;
+        background-color: aqua;
+        /* 不設背景顏色會被fixed顏色穿透? */
+        width: 500px;
+        max-width: 80%;
+        transition: 2s ease-in-out;
+      }
+      .modal.active {
+        transform: translate(-50%, -50%) scale(1);
+        /* transform記得全部都要再次設置，否則全部果將不會保留 */
+      }
+      .modal-header {
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid black;
+      }
+
+      .modal-header .title {
+        font-size: 2rem;
+      }
+      .modal-body {
+        padding: 10px 15px;
+      }
+      #overlay {
+        position: fixed;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+        transition: 2s ease-in-out;
+      }
+      #overlay.active {
+        opacity: 1;
+        pointer-events: all;
+      }
+    </style>
+  </head>
+  <body>
+    <button data-modal-har="#modal">Open Modal</button>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">Example Modal</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias
+        ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis
+        quae quia soluta totam doloribus quos nesciunt necessitatibus,
+        consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum
+        voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet
+        assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur
+        sint officiis perferendis atque! Voluptatem maxime eius eum dolorem
+        dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi
+        iure! Eligendi, eius libero. Ex, repellat sapiente!
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <script>
+      const openmodalbtn = document.querySelectorAll("[data-modal-har]");
+      const closemodalbtn = document.querySelectorAll("[data-close-button]");
+      const oveylay = document.getElementById("overlay");
+      // console.log(openmodalbtn);
+      openmodalbtn.forEach((button) => {
+        // console.log(button);
+        button.addEventListener("click", () => {
+          const modal = document.querySelector(button.dataset.modalHar);
+          //dataset用法
+          //在javascript會將data-*屬性進行轉變，去掉 -(dash)。並將 dash 後面的字母轉為大寫後將data-*後綴字合併，也就是駝峰形式
+          //因此dataset後面要接的單字必須是轉變後的單字
+          // console.log(button.dataset.modalHar);
+          // console.log(modal);
+          openmodal(modal);
+        });
+      });
+      closemodalbtn.forEach((button) => {
+        button.addEventListener("click", () => {
+          const modal = button.closest(".modal");
+          closemodal(modal);
+        });
+      });
+
+      overlay.addEventListener("click", () => {
+        const modals = document.querySelectorAll(".modal.active");
+        modals.forEach((modal) => {
+          closemodal(modal);
+        });
+      });
+
+      function openmodal(modal) {
+        if (modal == null) return;
+        modal.classList.add("active");
+        overlay.classList.add("active");
+      }
+      function closemodal(modal) {
+        if (modal == null) return;
+        modal.classList.remove("active");
+        overlay.classList.remove("active");
+      }
+    </script>
+  </body>
+</html>

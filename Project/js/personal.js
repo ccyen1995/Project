@@ -43,3 +43,5 @@ window.onscroll = () => {
     }
   });
 };
+
+console.log(document.querySelector("html"));
