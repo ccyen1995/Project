@@ -20,9 +20,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
+    <div id="tip">
+      <ol style="margin-left: 2rem">
+        <li>只有Javascript、HTML、CSS，無框架(還不會使用)</li>
+        <hr />
+        <li>
+          點擊登入，判斷登入登出狀態，按鈕會有所改變，是用localstorage儲存狀態的
+        </li>
+        <hr />
+        <li>自動輪播，也可以按左右方向鍵及下方白點控制</li>
+        <hr />
+        <li>九宮格遊戲區使用grid排版</li>
+        <hr />
+        <li>RWD做的很差，尚在學習中</li>
+      </ol>
+    </div>
     <div class="out-block">
       <section class="headerr">
-        <img src="/切版素材/header/LOGO.png" alt="" />
+        <img src="./切版素材/header/LOGO.png" alt="" />
         <div>
           <button id="login">登入</button>
           <button id="menu"><i class="fa-solid fa-bars"></i></button>
@@ -45,7 +60,7 @@
 
       <section class="user">
         <div class="username" id="username"><span>username</span></div>
-        <img src="/切版素材/footer/line.png" alt="" />
+        <img src="./切版素材/footer/line.png" alt="" />
         <div class="usermoney" id="usermoney">
           <span><i class="fa-solid fa-sack-dollar"></i>1000000</span>
         </div>
@@ -92,25 +107,33 @@
       <section class="game">
         <!-- 格線-------------------------------- -->
         <div class="rr">
-          <img src="/切版素材/button/icon_leaderboard.png" alt="" id="chart1" />
+          <img
+            src="./切版素材/button/icon_leaderboard.png"
+            alt=""
+            id="chart1"
+          />
         </div>
         <!-- 格線-------------------------------- -->
         <div class="rrr">
           <button class="gamebtn feature" data-modal-target="#modal">
             <div>
-              <img src="/切版素材/button/icon_slotgame.png" alt="" id="game1" />
+              <img
+                src="./切版素材/button/icon_slotgame.png"
+                alt=""
+                id="game1"
+              />
             </div>
             <p>老虎機</p>
           </button>
           <button class="gamebtn feature" data-modal-target="#modal">
             <div>
-              <img src="/切版素材/button/icon_r220.png" alt="" id="game2" />
+              <img src="./切版素材/button/icon_r220.png" alt="" id="game2" />
             </div>
             <p>百家樂</p>
           </button>
           <button class="gamebtn feature" data-modal-target="#modal">
             <div>
-              <img src="/切版素材/button/icon_15w.png" alt="" id="game3" />
+              <img src="./切版素材/button/icon_15w.png" alt="" id="game3" />
             </div>
             <p>15輪</p>
           </button>
@@ -118,35 +141,35 @@
       </section>
       <section class="features">
         <div class="feature feature1">
-          <img src="/切版素材/game/card-effect.png" alt="" />
+          <img src="./切版素材/game/card-effect.png" alt="" />
         </div>
         <div class="feature feature2">
-          <img src="/切版素材/game/electronic.png" alt="" />
+          <img src="./切版素材/game/electronic.png" alt="" />
         </div>
         <div class="feature feature3">
-          <img src="/切版素材/game/esports.png" alt="" />
+          <img src="./切版素材/game/esports.png" alt="" />
         </div>
         <div class="feature feature4">
-          <img src="/切版素材/game/fish.png" alt="" />
+          <img src="./切版素材/game/fish.png" alt="" />
         </div>
         <div class="feature feature5">
-          <img src="/切版素材/game/fish_icon.png" alt="" />
+          <img src="./切版素材/game/fish_icon.png" alt="" />
         </div>
         <div class="feature feature6">
-          <img src="/切版素材/game/live.png" alt="" />
+          <img src="./切版素材/game/live.png" alt="" />
         </div>
         <div class="feature feature7">
-          <img src="/切版素材/game/lottory.png" alt="" />
+          <img src="./切版素材/game/lottory.png" alt="" />
         </div>
         <div class="feature feature8">
-          <img src="/切版素材/game/mechine.png" alt="" />
+          <img src="./切版素材/game/mechine.png" alt="" />
         </div>
         <div class="feature feature9">
-          <img src="/切版素材/game/sports.png" alt="" />
+          <img src="./切版素材/game/sports.png" alt="" />
         </div>
       </section>
       <section class="footer">
-        <img src="/切版素材/footer/bg_topline.png" alt="" />
+        <img src="./切版素材/footer/bg_topline.png" alt="" />
         <div class="">優惠活動</div>
         <div class="">會員中心</div>
         <div class="">線上客服</div>

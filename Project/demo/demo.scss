@@ -27,7 +27,7 @@ section.headerr {
   height: 6rem;
   //---------------height-------------
   width: 100%;
-  background-image: url("/切版素材/header/header_bg.jpg");
+  background-image: url("./切版素材/header/header_bg.jpg");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -72,7 +72,7 @@ section.headerr {
         rgba(85, 85, 85, 0.1) 80%,
         rgba(150, 150, 150, 0.1) 95%
       ),
-      url("/切版素材/header/header_bg.jpg");
+      url("./切版素材/header/header_bg.jpg");
     border-style: none;
     border-radius: 10px;
     color: white;
@@ -277,7 +277,7 @@ section.score {
   //---------------height 39%-------------
   width: 100%;
   display: flex;
-  background-image: url("/切版素材/footer/jp_bg.jpg");
+  background-image: url("./切版素材/footer/jp_bg.jpg");
   .score1,
   .score2 {
     font-size: 1.2rem;
@@ -357,7 +357,7 @@ section.features {
   max-height: 50%;
   width: 100%;
   //---------------height 90%-------------
-  background-image: url("/切版素材/layout/bg_index.jpg");
+  background-image: url("./切版素材/layout/bg_index.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -519,4 +519,11 @@ section.footer {
 #overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+
+#tip {
+  position: absolute;
+  width: 200px;
+  height: 600px;
+  background-color: #fff;
 }

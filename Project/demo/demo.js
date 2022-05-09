@@ -83,7 +83,7 @@ y.forEach((item) => {
   item.addEventListener("mouseover", () => {
     let imgName = item.children[0].getAttribute("src");
     let yy = imgName.split(".");
-    let yyy = yy[0] + "-on." + yy[1];
+    let yyy = "." + yy[1] + "-on." + yy[2];
     item.children[0].setAttribute("src", yyy);
   });
   item.addEventListener("mouseout", () => {
