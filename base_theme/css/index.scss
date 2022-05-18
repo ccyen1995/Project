@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url(../css/about.css);
+:root {
+  --line: #b39f61;
+  --font1: #5e1f28;
+  --link-hover: #dcce84;
+  --black: #000000;
+  --grey: #ececec;
+  --divcolor: #707070;
+  --btn: rgba(255, 255, 255, 0.7);
+}
+
+body {
+  width: 100%;
+}
+
+button.readbtn {
+  border: var(--font1) solid 2px;
+  border-radius: 8px;
+  height: 35px;
+  width: 189px;
+  color: var(--font1);
+  font-size: 24px;
+  background-color: var(--btn);
+  transition: all 0.1s linear;
+}
+button.readbtn:hover {
+  color: white;
+  background-color: var(--font1);
+}
+
+// -----header-----
+
+.header {
+  color: var(--font1);
+  #toptop {
+    height: 2rem;
+    background-color: var(--font1);
+    border-bottom: var(--line) solid 10px;
+  }
+  .navbar {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      margin-left: 5%;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        p:first-of-type {
+          font-size: 2rem;
+          font-weight: 600;
+        }
+      }
+    }
+    .links {
+      display: flex;
+      font-size: 1.5rem;
+      color: var(--font1);
+      a {
+        text-decoration: none;
+        margin: 3rem 1rem auto 1rem;
+        padding: 0.5rem;
+      }
+      a:link{
+        text-decoration:none;
+        color: var(--font1);
+        }
+      a:visited {
+        color: var(--font1);
+      }
+      a:hover {
+        color: var(--link-hover);
+        border-bottom: var(--link-hover) solid 4px;
+      }
+
+    }
+    .community {
+      margin-right: 3%;
+      font-size: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      i {
+        margin: 3rem 0.5rem auto 0.5rem;
+      }
+    }
+  }
+}
+// -----header-----
+
+// -----carousel_area-----
+.carousel_area {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 844px;
+  background-image: url("./../img/LINE_ALBUM_茶葉桌巾形象照_211229_11.jpg");
+  background: no-repeat center cover;
+  p {
+    margin: 1.5rem;
+  }
+  button {
+    margin: 1rem;
+    background-color: var(--btn);
+  }
+}
+// -----carousel_area-----
+
+// -----about_area-----
+.about_area {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 4rem 0;
+  div {
+    width: 50%;
+    height: 539px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--grey);
+    .textarea {
+      font-size: 1.5rem;
+      width: 60%;
+      height: 80%;
+      // background-color: #707070;
+      margin: auto;
+      //margin-top無作用
+      h1 {
+        margin-bottom: 1.5rem;
+        img {
+          width: 60px;
+          vertical-align: sub;
+          margin-right: 0.5rem;
+        }
+      }
+      button {
+        position: relative;
+        top: 2rem;
+        left: 65%;
+      }
+    }
+  }
+
+  .div1 {
+    background-image: url("./../img/about枕頭.jpg");
+  }
+  .div4 {
+    background-image: url("./../img/about客廳.jpg");
+  }
+}
+// -----about_area-----
+
+// -----product_area-----
+.product_area {
+  text-align: center;
+  .product_area_bigimg {
+    height: 518px;
+    background-image: url("./../img/商品服務大圖.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 17rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .product_area_icon {
+      position: relative;
+      top: 20rem;
+      flex-direction: column;
+      text-align: center;
+      p {
+        font-size: 2rem;
+        color: var(--font1);
+        font-weight: 600;
+      }
+    }
+  }
+  .product_list {
+    margin: auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    .product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 30px;
+      color: var(--font1);
+      p {
+        margin-top: 2rem;
+      }
+    }
+  }
+  button {
+    margin-top: 2rem;
+  }
+}
+// -----product_area-----
+
+// -----QA-----
+.QA {
+  margin-top: 4rem;
+  height: 1157px;
+  background-image: url("./../img/buttomImg.jpg");
+  //背景img該怎麼條明暗
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey);
+  font-weight: 600;
+  text-align: center;
+  font-size: 3rem;
+  .QAimg {
+    margin-bottom: 2rem;
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+  .question {
+    display: flex;
+    flex-direction: column;
+    color: var(--font1);
+    width: 991px;
+    font-size: 1.5rem;
+    height: 50%;
+    .QAbox {
+      text-align: start;
+      margin: 1rem;
+      background-color: rgba($color: white, $alpha: 0.85);
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      position: relative;
+      p {
+        line-height: 3rem;
+      }
+      i {
+        position: absolute;
+        right: 2rem;
+        font-size: 2rem;
+      }
+    }
+    margin-bottom: 2rem;
+  }
+}
+// -----QA-----
+
+// -----footer-----
+footer {
+  .contact_area {
+    margin: 2rem auto;
+    width: 991px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--font1);
+    .logo {
+      display: flex;
+    }
+    div {
+
+    }
+    .icon_area {
+      margin-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+      justify-content: center;
+      text-align: center;
+      :nth-child(1) {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      :nth-child(2) {
+        font-size: 0.5rem;
+      }
+      :nth-child(3) {
+        font-size: 20px;
+        //icon大小不一
+      }
+    }
+  }
+  .maker {
+    text-align: center;
+    background-color: var(--font1);
+    border-top: var(--line) 10px solid;
+    color: #ffffff;
+    line-height: 28px;
+    padding: 5px 0;
+  }
+}
+// -----footer-----
+
+

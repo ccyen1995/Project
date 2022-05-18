@@ -1,0 +1,19 @@
+.page_About_topimg {
+  background-image: url("../img/about/about_topimg.jpg");
+  height: 282px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page_About_topimg h1 {
+  color: white;
+  font-size: 49px;
+}
+/*# sourceMappingURL=about.css.map */
