@@ -360,7 +360,7 @@ footer.footer_ {
   }
 }
 // -----footer-----
-
+// -----media-----
 @media screen and (max-width: 991px) {
   .about_area {
     .about_area_1,
@@ -390,13 +390,6 @@ footer.footer_ {
     }
   }
 }
-@media screen and (min-width: 1550px) {
-  footer.footer_ {
-    .contact_area {
-      width: 60%;
-    }
-  }
-}
 @media screen and (min-width: 1300px) and (max-width: 1549px) {
   footer.footer_ {
     .contact_area {
@@ -404,3 +397,16 @@ footer.footer_ {
     }
   }
 }
+@media screen and (min-width: 1550px) {
+  footer.footer_ {
+    .contact_area {
+      width: 60%;
+    }
+  }
+}
+// Extra small (<576px)
+// Small (>=576px)
+// Medium (>=768px)
+// Large (>=992px)
+// Extra Large (>=1200px)
+// XXL (>=1400px)

@@ -494,15 +494,15 @@ footer.footer_ .maker_ p {
   }
 }
 
-@media screen and (min-width: 1550px) {
-  footer.footer_ .contact_area {
-    width: 60%;
-  }
-}
-
 @media screen and (min-width: 1300px) and (max-width: 1549px) {
   footer.footer_ .contact_area {
     width: 75%;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  footer.footer_ .contact_area {
+    width: 60%;
   }
 }
 /*# sourceMappingURL=index.css.map */
