@@ -62,7 +62,7 @@ setInterval(() => {
     bb.removeAttribute("checked");
     bb.nextElementSibling.setAttribute("checked", true);
   }
-}, 2000);
+}, 4000);
 //輪播區end============================
 
 // menu====================
