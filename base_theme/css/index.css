@@ -22,7 +22,7 @@ body {
 }
 
 button.readbtn {
-  border: var(--font1) solid 2px;
+  border: var(--font1) solid 1px;
   border-radius: 8px;
   height: 35px;
   width: 189px;
@@ -31,6 +31,7 @@ button.readbtn {
   background-color: var(--btn);
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
+  cursor: pointer;
 }
 
 button.readbtn:hover {
@@ -38,19 +39,21 @@ button.readbtn:hover {
   background-color: var(--font1);
 }
 
-.header {
+header.header_ {
   color: var(--font1);
+  width: 100%;
 }
 
-.header #toptop {
+header.header_ #toptop {
   height: 2rem;
   background-color: var(--font1);
   border-bottom: var(--line) solid 10px;
 }
 
-.header .navbar {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+header.header_ .navbar_ {
+  width: 90%;
+  margin: auto;
+  padding: 0.8rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,14 +62,22 @@ button.readbtn:hover {
           justify-content: space-between;
 }
 
-.header .navbar .logo {
+header.header_ .navbar_ .logo {
+  min-width: 18rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.header .navbar .logo div {
+header.header_ .navbar_ .logo img {
+  height: 7rem;
+  width: 7rem;
+}
+
+header.header_ .navbar_ .logo div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,44 +88,56 @@ button.readbtn:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 0.5rem;
 }
 
-.header .navbar .logo div p:first-of-type {
+header.header_ .navbar_ .logo div p:first-of-type {
   font-size: 2rem;
+  line-height: 2rem;
   font-weight: 600;
+  margin-bottom: 0.4rem;
 }
 
-.header .navbar .links {
+header.header_ .navbar_ .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 1.5rem;
-  color: var(--font1);
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 0.5rem;
 }
 
-.header .navbar .links a {
+header.header_ .navbar_ .links a {
+  margin: 0 1rem;
+  color: var(--font1);
   text-decoration: none;
-  margin: 3rem 1rem auto 1rem;
-  padding: 0.5rem;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  height: 2rem;
 }
 
-.header .navbar .links a:link {
+header.header_ .navbar_ .links a:link {
+  color: var(--font1);
   text-decoration: none;
+}
+
+header.header_ .navbar_ .links a:visited {
   color: var(--font1);
 }
 
-.header .navbar .links a:visited {
-  color: var(--font1);
-}
-
-.header .navbar .links a:hover {
+header.header_ .navbar_ .links a:hover {
   color: var(--link-hover);
   border-bottom: var(--link-hover) solid 4px;
 }
 
-.header .navbar .community {
-  margin-right: 3%;
+header.header_ .navbar_ .community {
   font-size: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,10 +148,21 @@ button.readbtn:hover {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  padding-bottom: 1rem;
 }
 
-.header .navbar .community i {
-  margin: 3rem 0.5rem auto 0.5rem;
+header.header_ .navbar_ .community i {
+  cursor: pointer;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+header.header_ .navbar_ .community i:hover {
+  color: var(--link-hover);
+}
+
+header.header_ .navbar_ .community i:not(:first-child) {
+  margin-left: 0.8rem;
 }
 
 .carousel_area {
@@ -148,9 +182,8 @@ button.readbtn:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 844px;
-  background-image: url("./../img/LINE_ALBUM_茶葉桌巾形象照_211229_11.jpg");
-  background: no-repeat center cover;
+  height: 700px;
+  background: url("./../img/LINE_ALBUM_茶葉桌巾形象照_211229_11.jpg") no-repeat 50% 50%/cover;
 }
 
 .carousel_area p {
@@ -172,43 +205,58 @@ button.readbtn:hover {
   margin: 4rem 0;
 }
 
-.about_area div {
+.about_area .about_area_1,
+.about_area .about_area_2,
+.about_area .about_area_3,
+.about_area .about_area_4 {
   width: 50%;
   height: 539px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: var(--grey);
 }
 
-.about_area div .textarea {
-  font-size: 1.5rem;
-  width: 60%;
-  height: 80%;
-  margin: auto;
-}
-
-.about_area div .textarea h1 {
-  margin-bottom: 1.5rem;
-}
-
-.about_area div .textarea h1 img {
-  width: 60px;
-  vertical-align: sub;
-  margin-right: 0.5rem;
-}
-
-.about_area div .textarea button {
-  position: relative;
-  top: 2rem;
-  left: 65%;
-}
-
-.about_area .div1 {
+.about_area .about_area_1 {
   background-image: url("./../img/about枕頭.jpg");
 }
 
-.about_area .div4 {
+.about_area .about_area_4 {
   background-image: url("./../img/about客廳.jpg");
+}
+
+.about_area .about_area_2,
+.about_area .about_area_3 {
+  background-color: var(--grey);
+}
+
+.about_area .about_area_2 .about_area_text,
+.about_area .about_area_3 .about_area_text {
+  font-size: 1.5rem;
+  width: 60%;
+  height: 60%;
+  margin: 10% auto;
+}
+
+.about_area .about_area_2 .about_area_text h1,
+.about_area .about_area_3 .about_area_text h1 {
+  color: var(--font1);
+  margin-bottom: 1.5rem;
+}
+
+.about_area .about_area_2 .about_area_text h1 img,
+.about_area .about_area_3 .about_area_text h1 img {
+  height: 4.5rem;
+  margin-right: 0.5rem;
+  vertical-align: sub;
+}
+
+.about_area .about_area_2 .about_area_text p,
+.about_area .about_area_3 .about_area_text p {
+  line-height: 1.5;
+}
+
+.about_area .about_area_2 .about_area_text button,
+.about_area .about_area_3 .about_area_text button {
+  position: relative;
+  top: 2rem;
+  left: 65%;
 }
 
 .product_area {
@@ -217,24 +265,13 @@ button.readbtn:hover {
 
 .product_area .product_area_bigimg {
   height: 518px;
-  background-image: url("./../img/商品服務大圖.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url("./../img/商品服務大圖.jpg") no-repeat 50% 50%/cover;
   margin-bottom: 17rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .product_area .product_area_bigimg .product_area_icon {
   position: relative;
-  top: 20rem;
+  top: 25rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -246,6 +283,7 @@ button.readbtn:hover {
   font-size: 2rem;
   color: var(--font1);
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .product_area .product_list {
@@ -254,11 +292,14 @@ button.readbtn:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 .product_area .product_list .product {
+  width: 22%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,6 +312,10 @@ button.readbtn:hover {
           align-items: center;
   font-size: 30px;
   color: var(--font1);
+}
+
+.product_area .product_list .product img {
+  width: 100%;
 }
 
 .product_area .product_list .product p {
@@ -324,7 +369,6 @@ button.readbtn:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   color: var(--font1);
-  width: 991px;
   font-size: 1.5rem;
   height: 50%;
   margin-bottom: 2rem;
@@ -332,7 +376,6 @@ button.readbtn:hover {
 
 .QA .question .QAbox {
   text-align: start;
-  margin: 1rem;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 4px;
   padding: 0.5rem 1rem;
@@ -349,26 +392,35 @@ button.readbtn:hover {
   font-size: 2rem;
 }
 
-footer .contact_area {
-  margin: 2rem auto;
-  width: 991px;
+footer.footer_ .contact_area {
+  margin: 0.8rem auto;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   color: var(--font1);
 }
 
-footer .contact_area .logo {
+footer.footer_ .contact_area .logo_ {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-width: 16rem;
 }
 
-footer .contact_area .icon_area {
-  margin-left: 2rem;
+footer.footer_ .contact_area .logo_ img {
+  height: 7rem;
+  width: 7rem;
+}
+
+footer.footer_ .contact_area .logo_ .icon_area {
+  margin-left: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,32 +428,81 @@ footer .contact_area .icon_area {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  white-space: nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  white-space: nowrap;
 }
 
-footer .contact_area .icon_area :nth-child(1) {
+footer.footer_ .contact_area .logo_ .icon_area p {
+  margin: 0;
+}
+
+footer.footer_ .contact_area .logo_ .icon_area p:nth-child(1) {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-footer .contact_area .icon_area :nth-child(2) {
+footer.footer_ .contact_area .logo_ .icon_area p:nth-child(2) {
   font-size: 0.5rem;
 }
 
-footer .contact_area .icon_area :nth-child(3) {
-  font-size: 20px;
+footer.footer_ .contact_area .logo_ .icon_area p:nth-child(3) {
+  font-size: 1.5rem;
 }
 
-footer .maker {
+footer.footer_ .contact_area .logo_ .icon_area p:nth-child(3) i {
+  cursor: pointer;
+}
+
+footer.footer_ .contact_area .contact_infor p {
+  margin: 0;
+}
+
+footer.footer_ .maker_ {
   text-align: center;
   background-color: var(--font1);
   border-top: var(--line) 10px solid;
   color: #ffffff;
   line-height: 28px;
   padding: 5px 0;
+}
+
+footer.footer_ .maker_ p {
+  margin: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .about_area .about_area_1,
+  .about_area .about_area_2,
+  .about_area .about_area_3,
+  .about_area .about_area_4 {
+    width: 100%;
+  }
+  .product_list .product {
+    min-width: 44%;
+  }
+  .product_list .product img {
+    min-width: 220px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  header.header_ .navbar_ .links a {
+    margin: 0 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  footer.footer_ .contact_area {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1549px) {
+  footer.footer_ .contact_area {
+    width: 75%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

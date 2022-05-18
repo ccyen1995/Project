@@ -22,8 +22,7 @@
                 ?>">
 
     <link rel="shortcut icon" href="favicon.ico">
-
-    <!-- <link rel="stylesheet" href="css/bootstrap4.min.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap4.min.css" />
     <link rel="stylesheet" href="css/external_p.css" />
     <link rel="stylesheet" href="css/external_p2.css" />
     <link rel="stylesheet" href="css/slick.css" />
@@ -40,9 +39,9 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header_">
         <div id="toptop"></div>
-        <div class="navbar">
+        <div class="navbar_">
             <div class="logo">
                 <img src="./img/logo.png" alt="" />
                 <div>

@@ -1,6 +1,6 @@
-<footer class="footer">
+<footer class="footer_">
 	<div class="contact_area">
-		<div class="logo">
+		<div class="logo_">
 			<img src="./img/logo.png" alt="" />
 			<div class="icon_area">
 				<p>艾芬波斯館</p>
@@ -13,20 +13,22 @@
 				</p>
 			</div>
 		</div>
-		<div>
+		<div class="contact_infor">
 			<p>台中新光館</p>
 			<p>407台中市西屯區台灣大道三段301號號7樓
 				<br>(台中新光三越中港店 7樓)
 			</p>
 			<p>TEL： 04 777 6527</p>
 		</div>
-		<div>
+		<div class="contact_infor">
 			<p>鹿港館</p>
-			<p>505彰化縣鹿港鎮文開路32巷1號(鹿港老街)</p>
+			<p>505彰化縣鹿港鎮文開路32巷1號
+				<br>(鹿港老街)
+			</p>
 			<p>TEL： 04 777 6527</p>
 		</div>
 	</div>
-	<div class="maker">
+	<div class="maker_">
 		<p>Copyright&copy;艾芬波斯茶館, All rights reserved. </i>網站設計：橘野數位設計</p>
 	</div>
 </footer>

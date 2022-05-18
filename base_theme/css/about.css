@@ -1,5 +1,8 @@
 .page_About_topimg {
   background-image: url("../img/about/about_topimg.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 282px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,5 +18,77 @@
 .page_About_topimg h1 {
   color: white;
   font-size: 49px;
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.page_About_title {
+  width: 991px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.page_About_title h1 {
+  color: var(--font1);
+}
+
+.page_About_title h1 img {
+  margin-right: 1rem;
+  height: 3rem;
+}
+
+.wrap {
+  width: 991px;
+  margin: auto;
+  font-size: 0;
+}
+
+.wrap h1 {
+  text-align: center;
+  color: black;
+}
+
+.wrap .row {
+  height: 23rem;
+}
+
+.wrap .row .pic,
+.wrap .row .text {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+  direction: ltr;
+}
+
+.wrap .row .pic {
+  height: 70%;
+  width: 40%;
+}
+
+.wrap .row .pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wrap .row .text {
+  height: 70%;
+  width: 60%;
+  padding-left: 1rem;
+  overflow-y: scroll;
+}
+
+.wrap .row .text p {
+  line-height: 1.7;
+}
+
+.wrap .row:nth-child(even) {
+  direction: rtl;
+}
+
+.wrap .row:nth-child(even) .text {
+  padding-left: 0;
+  width: calc(60% - 1rem);
+  margin-right: 1rem;
 }
 /*# sourceMappingURL=about.css.map */
