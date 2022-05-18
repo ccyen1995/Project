@@ -319,7 +319,7 @@ header.header_ .navbar_ .community i:not(:first-child) {
 }
 
 .product_area .product_list .product p {
-  margin-top: 2rem;
+  margin: 1.5rem 0 2rem 0;
 }
 
 .product_area button {
@@ -383,7 +383,8 @@ header.header_ .navbar_ .community i:not(:first-child) {
 }
 
 .QA .question .QAbox p {
-  line-height: 3rem;
+  margin: 0;
+  line-height: 2.5rem;
 }
 
 .QA .question .QAbox i {
