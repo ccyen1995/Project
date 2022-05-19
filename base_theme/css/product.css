@@ -1,0 +1,76 @@
+.page_product_topimg {
+  background: url("../img/product/product_topimg.jpg") no-repeat center/cover;
+  height: 282px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page_product_topimg h1 {
+  color: white;
+  font-size: 49px;
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.page_product_area {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+}
+
+.page_product_area .page_product_list .nav-item {
+  margin: 0 1rem;
+}
+
+.page_product_area .page_product_list .nav-item .nav-link {
+  background-color: var(--btn);
+  border: var(--font1) solid 1px;
+  color: var(--font1);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.page_product_area .page_product_list .nav-item .nav-link.active {
+  color: white;
+  background-color: var(--font1);
+}
+
+.page_product_area .tab-content {
+  margin-top: 3rem;
+  background-color: aqua;
+}
+
+.page_product_area .tab-content #home div.items_list {
+  background-color: darkcyan;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (250px)[auto-fill];
+      grid-template-rows: repeat(auto-fill, 250px);
+  -ms-grid-columns: (250px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 250px);
+}
+
+.page_product_area .tab-content #home div.items_list div.items img {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+/*# sourceMappingURL=product.css.map */

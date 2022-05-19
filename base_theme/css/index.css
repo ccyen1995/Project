@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url(../css/about.css);
+@import url(../css/service.css);
+@import url(../css/case.css);
+@import url(../css/QA.css);
+@import url(../css/product.css);
 * {
   margin: 0;
   padding: 0;
@@ -22,10 +26,10 @@ body {
 }
 
 button.readbtn {
+  height: 3.2rem;
+  width: 12rem;
   border: var(--font1) solid 1px;
   border-radius: 8px;
-  height: 35px;
-  width: 189px;
   color: var(--font1);
   font-size: 24px;
   background-color: var(--btn);
@@ -35,6 +39,26 @@ button.readbtn {
 }
 
 button.readbtn:hover {
+  color: white;
+  background-color: var(--font1);
+}
+
+button.goback {
+  display: block;
+  border: var(--font1) solid 1px;
+  border-radius: 8px;
+  height: 2.5rem;
+  width: 8rem;
+  color: var(--font1);
+  font-size: 1.5rem px;
+  background-color: var(--btn);
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  cursor: pointer;
+  margin: 2rem auto;
+}
+
+button.goback:hover {
   color: white;
   background-color: var(--font1);
 }
@@ -254,9 +278,9 @@ header.header_ .navbar_ .community i:not(:first-child) {
 
 .about_area .about_area_2 .about_area_text button,
 .about_area .about_area_3 .about_area_text button {
+  float: right;
   position: relative;
   top: 2rem;
-  left: 65%;
 }
 
 .product_area {
@@ -324,15 +348,32 @@ header.header_ .navbar_ .community i:not(:first-child) {
 
 .product_area button {
   margin-top: 2rem;
+  position: relative;
+}
+
+.product_area button::before {
+  content: url("../img/arrow.png");
+  position: absolute;
+  display: block;
+  left: -4rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.product_area button::after {
+  content: url("../img/arrow.png");
+  position: absolute;
+  display: block;
+  left: 13.2rem;
+  top: 0.75rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .QA {
+  background: url("./../img/buttomImg.jpg") no-repeat center/cover;
   margin-top: 4rem;
-  height: 1157px;
-  background-image: url("./../img/buttomImg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,51 +387,79 @@ header.header_ .navbar_ .community i:not(:first-child) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: var(--grey);
-  font-weight: 600;
   text-align: center;
-  font-size: 3rem;
-}
-
-.QA .QAimg {
-  margin-bottom: 2rem;
+  color: var(--font1);
 }
 
 .QA .QAimg p {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--grey);
   margin-bottom: 2rem;
+  text-shadow: 0.1em 0.1em 0.2em black;
 }
 
 .QA .question {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: var(--font1);
-  font-size: 1.5rem;
-  height: 50%;
-  margin-bottom: 2rem;
+  margin: 1rem auto;
+  width: 60%;
+  height: 450px;
 }
 
 .QA .question .QAbox {
-  text-align: start;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 1rem;
+  background-color: var(--btn);
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  border: #707070 solid 1px;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.QA .question .QAbox img {
   position: relative;
+  float: right;
+  top: 0.8rem;
+  right: 0.5rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .QA .question .QAbox p {
+  text-align: start;
+  font-size: 1.5rem;
   margin: 0;
-  line-height: 2.5rem;
+  padding: 0.8rem;
+  position: relative;
 }
 
-.QA .question .QAbox i {
+.QA .question .QAbox p span:first-child {
   position: absolute;
-  right: 2rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+
+.QA .question .QAbox p span:nth-child(2) {
+  padding-left: 5rem;
+}
+
+.QA .question .QAbox p:first-of-type {
+  padding-bottom: 1rem;
+}
+
+.QA .question .QAbox hr {
+  margin: 0;
+}
+
+.QA .question .QAbox.active {
+  height: 118px;
+}
+
+.QA .question .QAbox.active img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 footer.footer_ .contact_area {

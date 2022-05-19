@@ -72,34 +72,34 @@
     </div>
     <div class="question">
         <div class="QAbox">
-            <i class="fa-regular fa-angle-down"></i>
-            <p>Q dsafdsafdssafsda</p>
+            <img src="./img/arrow.png" alt="">
+            <p><span>Q1</span><span>波斯地毯如何做選擇</span></p>
             <hr />
-            <p>A dsafdsafdssafsda</p>
+            <p><span>A1</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
         </div>
         <div class="QAbox">
-            <i class="fa-regular fa-angle-down"></i>
-            <p>Q dsafdsafdssafsda</p>
+            <img src="./img/arrow.png" alt="">
+            <p><span>Q2</span><span>波斯地毯如何做選擇</span></p>
             <hr />
-            <p>A dsafdsafdssafsda</p>
+            <p><span>A2</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
         </div>
         <div class="QAbox">
-            <i class="fa-regular fa-angle-down"></i>
-            <p>Q dsafdsafdssafsda</p>
+            <img src="./img/arrow.png" alt="">
+            <p><span>Q3</span><span>波斯地毯如何做選擇</span></p>
             <hr />
-            <p>A dsafdsafdssafsda</p>
+            <p><span>A3</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
         </div>
         <div class="QAbox">
-            <i class="fa-regular fa-angle-down"></i>
-            <p>Q dsafdsafdssafsda</p>
+            <img src="./img/arrow.png" alt="">
+            <p><span>Q4</span><span>波斯地毯如何做選擇</span></p>
             <hr />
-            <p>A dsafdsafdssafsda</p>
+            <p><span>A4</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
         </div>
         <div class="QAbox">
-            <i class="fa-regular fa-angle-down"></i>
-            <p>Q dsafdsafdssafsda</p>
+            <img src="./img/arrow.png" alt="">
+            <p><span>Q5</span><span>波斯地毯如何做選擇</span></p>
             <hr />
-            <p>A dsafdsafdssafsda</p>
+            <p><span>A5</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
         </div>
     </div>
     <button class="readbtn">READ MORE</button>

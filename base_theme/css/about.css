@@ -1,8 +1,5 @@
-.page_About_topimg {
-  background-image: url("../img/about/about_topimg.jpg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+.page_about_topimg {
+  background-image: url("../img/about/about_topimg.jpg") no-repeat center/cover;
   height: 282px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,29 +12,29 @@
           justify-content: center;
 }
 
-.page_About_topimg h1 {
+.page_about_topimg h1 {
   color: white;
   font-size: 49px;
   text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-.page_About_title {
-  width: 991px;
+.page_about_title {
+  width: 60%;
   margin: auto;
   padding: 2rem 0;
 }
 
-.page_About_title h1 {
+.page_about_title h1 {
   color: var(--font1);
 }
 
-.page_About_title h1 img {
+.page_about_title h1 img {
   margin-right: 1rem;
   height: 3rem;
 }
 
 .wrap {
-  width: 991px;
+  width: 60%;
   margin: auto;
   font-size: 0;
 }
@@ -48,7 +45,7 @@
 }
 
 .wrap .row {
-  height: 23rem;
+  height: 21rem;
 }
 
 .wrap .row .pic,
@@ -57,10 +54,11 @@
   font-size: 16px;
   vertical-align: middle;
   direction: ltr;
+  height: 80%;
 }
 
 .wrap .row .pic {
-  height: 70%;
+  padding-left: 1rem;
   width: 40%;
 }
 
@@ -72,9 +70,8 @@
 }
 
 .wrap .row .text {
-  height: 70%;
-  width: 60%;
   padding-left: 1rem;
+  width: calc(60% - 1rem);
   overflow-y: scroll;
 }
 
@@ -89,6 +86,14 @@
 .wrap .row:nth-child(even) .text {
   padding-left: 0;
   width: calc(60% - 1rem);
-  margin-right: 1rem;
+}
+
+.wrap .row:nth-child(even) .pic {
+  padding-left: 1rem;
+}
+
+.htmledit {
+  margin: auto;
+  width: 60%;
 }
 /*# sourceMappingURL=about.css.map */

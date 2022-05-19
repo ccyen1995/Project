@@ -32,9 +32,9 @@
 		<p>Copyright&copy;艾芬波斯茶館, All rights reserved. </i>網站設計：橘野數位設計</p>
 	</div>
 </footer>
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script src="./js/jsjs.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
