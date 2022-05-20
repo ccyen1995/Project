@@ -1,0 +1,71 @@
+.page_contract_topimg {
+  background: url("../img/contract/contract-topimg.jpg") no-repeat center /
+    cover;
+  height: 282px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: white;
+    font-size: 49px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+  }
+}
+
+.contract {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--font1);
+  align-items: center;
+  margin: auto;
+  > p {
+    margin: 2.5rem 0;
+  }
+  .form_box {
+    display: flex;
+    justify-content: center;
+    .form_input,
+    .form_img {
+      margin: 0 1rem;
+    }
+    .form_img {
+      background: url("../img/contract/contract-left.jpg") no-repeat center /
+        cover;
+      width: 25rem;
+      height: 30rem;
+    }
+    .form_input {
+      form {
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+          margin: 0;
+          font-size: 1.2rem;
+          padding: 0.4rem 0;
+        }
+        textarea,
+        input {
+          border: var(--divcolor) solid 1px;
+          line-height: 1.8rem;
+          color: var(--font1);
+        }
+        input {
+          padding: 0 0.5rem;
+        }
+        textarea {
+          padding: 0.5rem;
+          resize: none;
+        }
+      }
+    }
+  }
+  .not_robot {
+    background: url("../img/contract/not_robot.jpg") no-repeat center / cover;
+    width: 20rem;
+    height: 5rem;
+    margin-top: 2.5rem;
+  }
+}

@@ -1,5 +1,5 @@
 .page_qa_topimg {
-  background-image: url("../img/QA/qa_topimg.jpg") no-repeat center/cover;
+  background: url("../img/QA/qa_topimg.jpg") no-repeat center/cover;
   height: 282px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,8 +19,6 @@
 }
 
 .page_qa {
-  width: 90%;
-  margin: auto;
   margin-top: 3rem;
   background-color: var(--grey);
   display: -webkit-box;
@@ -107,4 +105,3 @@
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-/*# sourceMappingURL=QA.css.map */

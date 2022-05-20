@@ -1,6 +1,5 @@
 .page_about_topimg {
-  background-image: url("../img/about/about_topimg.jpg") no-repeat center /
-    cover;
+  background: url("../img/about/about_topimg.jpg") no-repeat center / cover;
   height: 282px;
   display: flex;
   align-items: center;
@@ -12,8 +11,6 @@
   }
 }
 .page_about_title {
-  width: 60%;
-  margin: auto;
   padding: 2rem 0;
   h1 {
     color: var(--font1);
@@ -24,7 +21,6 @@
   }
 }
 .wrap {
-  width: 60%;
   margin: auto;
   font-size: 0;
   h1 {
@@ -73,9 +69,4 @@
       padding-left: 1rem;
     }
   }
-}
-
-.htmledit {
-  margin: auto;
-  width: 60%;
 }

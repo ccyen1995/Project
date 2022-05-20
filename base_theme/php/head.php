@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="./css/index.css">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/bootstrap4.min.css" />
+    <!-- <link rel="stylesheet" href="css/bootstrap4.min.css" /> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/external_p.css" />
     <link rel="stylesheet" href="css/external_p2.css" />
@@ -36,7 +36,8 @@
     <script src="js/js.js"></script>
     <script src="https://kit.fontawesome.com/71cf4654e7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" /> -->
+    <link rel="stylesheet" type="text/css" href="./js/slick.js" />
 </head>
 
 <body>
@@ -65,5 +66,31 @@
                 <i class="fa-brands fa-instagram-square"></i>
                 <i class="fa-brands fa-facebook-square"></i>
             </div>
+            <button class="btn btn-primary burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
+    <div class="offcanvas offcanvas-end burger_nav" id="demo">
+
+        <!-- <h1 class="offcanvas-title"></h1> -->
+        <button type="button" class="close_" data-bs-dismiss="offcanvas"><i class="fa-solid fa-xmark"></i></button>
+
+        <div class="offcanvas-body">
+            <div class="links">
+                <a href="#">首頁</a>
+                <a href="#">關於</a>
+                <a href="#">服務項目</a>
+                <a href="#">商品內容</a>
+                <a href="#">實際案例</a>
+                <a href="#">常見問題</a>
+                <a href="#">銷售據點</a>
+                <a href="#">聯絡我們</a>
+            </div>
+            <div class="community">
+                <i class="fa-brands fa-line"></i>
+                <i class="fa-brands fa-instagram-square"></i>
+                <i class="fa-brands fa-facebook-square"></i>
+            </div>
+        </div>
+    </div>

@@ -5,11 +5,16 @@
 @import url(../css/QA.css);
 @import url(../css/product.css);
 @import url(../css/place.css);
+@import url(../css/contract.css);
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 :root {
@@ -20,10 +25,6 @@
   --grey: #ececec;
   --divcolor: #707070;
   --btn: rgba(255, 255, 255, 0.7);
-}
-
-body {
-  width: 100%;
 }
 
 button.readbtn {
@@ -65,14 +66,20 @@ button.goback:hover {
 }
 
 header.header_ {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
   color: var(--font1);
-  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 header.header_ #toptop {
   height: 2rem;
   background-color: var(--font1);
-  border-bottom: var(--line) solid 10px;
+  border-bottom: var(--line) solid 8px;
 }
 
 header.header_ .navbar_ {
@@ -98,8 +105,8 @@ header.header_ .navbar_ .logo {
 }
 
 header.header_ .navbar_ .logo img {
-  height: 7rem;
-  width: 7rem;
+  height: 6rem;
+  width: 6rem;
 }
 
 header.header_ .navbar_ .logo div {
@@ -122,7 +129,7 @@ header.header_ .navbar_ .logo div {
 header.header_ .navbar_ .logo div p:first-of-type {
   font-size: 2rem;
   line-height: 2rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 0.4rem;
 }
 
@@ -143,8 +150,8 @@ header.header_ .navbar_ .links a {
   margin: 0 1rem;
   color: var(--font1);
   text-decoration: none;
-  -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+  -webkit-transition: color 0.1s linear;
+  transition: color 0.1s linear;
   height: 2rem;
 }
 
@@ -173,7 +180,7 @@ header.header_ .navbar_ .community {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding-bottom: 1rem;
+  padding-bottom: 0.8rem;
 }
 
 header.header_ .navbar_ .community i {
@@ -190,9 +197,130 @@ header.header_ .navbar_ .community i:not(:first-child) {
   margin-left: 0.8rem;
 }
 
-.carousel_area {
+header.header_ .navbar_ .burger {
+  margin: auto 0;
+  font-size: 2rem;
+  height: 3rem;
+  display: none;
+  background-color: white;
+  border: var(--font1) solid 1px;
+  color: var(--font1);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+header.header_ .navbar_ .burger i {
+  display: block;
+  margin: auto;
+}
+
+header.header_ .navbar_ .burger:hover {
+  background-color: var(--font1);
   color: white;
-  font-size: 3rem;
+}
+
+.burger_nav {
+  position: relative;
+}
+
+.burger_nav .close_ {
+  position: absolute;
+  top: 30px;
+  left: -60px;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--font1);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  height: 2rem;
+  width: 2rem;
+  border: var(--font1) solid 1px;
+  border: none;
+  -webkit-transition: background-color 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: background-color 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: background-color 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
+  transition: background-color 0.1s ease, box-shadow 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
+}
+
+.burger_nav .close_ i {
+  display: block;
+  margin: auto;
+}
+
+.burger_nav .close_:hover {
+  background-color: var(--font1);
+  color: white;
+  -webkit-box-shadow: 0 0 0.2rem white;
+          box-shadow: 0 0 0.2rem white;
+}
+
+.burger_nav .offcanvas-body .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.burger_nav .offcanvas-body .links a {
+  color: var(--font1);
+  text-decoration: none;
+  -webkit-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  margin: 0.5rem 0;
+  height: 2rem;
+}
+
+.burger_nav .offcanvas-body .links a:link {
+  color: var(--font1);
+  text-decoration: none;
+}
+
+.burger_nav .offcanvas-body .links a:visited {
+  color: var(--font1);
+}
+
+.burger_nav .offcanvas-body .links a:hover {
+  color: var(--link-hover);
+  border-bottom: var(--link-hover) solid 4px;
+}
+
+.burger_nav .offcanvas-body .community {
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0 0 1.5rem;
+  color: var(--font1);
+}
+
+.burger_nav .offcanvas-body .community i {
+  cursor: pointer;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.burger_nav .offcanvas-body .community i:hover {
+  color: var(--link-hover);
+}
+
+.burger_nav .offcanvas-body .community i:not(:first-child) {
+  margin-left: 0.8rem;
+}
+
+.carousell_area {
+  height: 726px;
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.carousell_area .carousell_area_text {
+  position: absolute;
+  color: white;
   text-shadow: 0.1em 0.1em 0.2em black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,23 +329,59 @@ header.header_ .navbar_ .community i:not(:first-child) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 700px;
-  background: url("./../img/LINE_ALBUM_茶葉桌巾形象照_211229_11.jpg") no-repeat 50% 50%/cover;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  z-index: 1;
+  top: 30rem;
+  left: 4%;
 }
 
-.carousel_area p {
-  margin: 1.5rem;
+.carousell_area .carousell_area_text p {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.carousel_area button {
-  margin: 1rem;
-  background-color: var(--btn);
+.carousell_area .carousell_area_text p:nth-child(2) {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+.carousell_area .carousell_area_text button {
+  margin-top: 1rem;
+}
+
+.carousell_area .carousell_area_img {
+  height: 100%;
+}
+
+.carousell_area .carousell_area_img .imgg img {
+  width: 100%;
+  height: 726px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.carousell_area .carousell_area_img .slick-dots {
+  top: 755px;
+}
+
+.carousell_area .carousell_area_img .slick-dots li {
+  margin: 0 17px;
+}
+
+.carousell_area .carousell_area_img .slick-dots li button {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.carousell_area #carousell_light {
+  position: absolute;
+  top: 0;
+  left: 30%;
 }
 
 .about_area {
@@ -226,7 +390,6 @@ header.header_ .navbar_ .community i:not(:first-child) {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
   margin: 4rem 0;
 }
 
@@ -239,11 +402,11 @@ header.header_ .navbar_ .community i:not(:first-child) {
 }
 
 .about_area .about_area_1 {
-  background-image: url("./../img/about枕頭.jpg");
+  background: url("./../img/about枕頭.jpg") no-repeat center/cover;
 }
 
 .about_area .about_area_4 {
-  background-image: url("./../img/about客廳.jpg");
+  background: url("./../img/about客廳.jpg") no-repeat center/cover;
 }
 
 .about_area .about_area_2,
@@ -311,20 +474,8 @@ header.header_ .navbar_ .community i:not(:first-child) {
   margin-bottom: 1rem;
 }
 
-.product_area .product_list {
-  margin: auto;
-  width: 95%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 .product_area .product_list .product {
-  width: 22%;
+  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,7 +491,7 @@ header.header_ .navbar_ .community i:not(:first-child) {
 }
 
 .product_area .product_list .product img {
-  width: 100%;
+  width: 300px;
 }
 
 .product_area .product_list .product p {
@@ -349,26 +500,6 @@ header.header_ .navbar_ .community i:not(:first-child) {
 
 .product_area button {
   margin-top: 2rem;
-  position: relative;
-}
-
-.product_area button::before {
-  content: url("../img/arrow.png");
-  position: absolute;
-  display: block;
-  left: -4rem;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.product_area button::after {
-  content: url("../img/arrow.png");
-  position: absolute;
-  display: block;
-  left: 13.2rem;
-  top: 0.75rem;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
 }
 
 .QA {
@@ -486,8 +617,8 @@ footer.footer_ .contact_area .logo_ {
 }
 
 footer.footer_ .contact_area .logo_ img {
-  height: 7rem;
-  width: 7rem;
+  height: 6rem;
+  width: 6rem;
 }
 
 footer.footer_ .contact_area .logo_ .icon_area {
@@ -534,7 +665,7 @@ footer.footer_ .contact_area .contact_infor p {
 footer.footer_ .maker_ {
   text-align: center;
   background-color: var(--font1);
-  border-top: var(--line) 10px solid;
+  border-top: var(--line) solid 8px;
   color: #ffffff;
   line-height: 28px;
   padding: 5px 0;
@@ -542,6 +673,34 @@ footer.footer_ .maker_ {
 
 footer.footer_ .maker_ p {
   margin: 0;
+}
+
+@media screen and (min-width: 1550px) {
+  footer.footer_ .contact_area {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  header.header_ .navbar_ .links,
+  header.header_ .navbar_ .community {
+    display: none;
+  }
+  header.header_ .navbar_ .burger {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1549px) {
+  footer.footer_ .contact_area {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  header.header_ .navbar_ .links a {
+    margin: 0 0.5rem;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -557,23 +716,30 @@ footer.footer_ .maker_ p {
   .product_list .product img {
     min-width: 220px;
   }
-}
-
-@media screen and (max-width: 1050px) {
-  header.header_ .navbar_ .links a {
-    margin: 0 0.5rem;
+  .QA .question {
+    width: 80%;
   }
 }
 
-@media screen and (min-width: 1300px) and (max-width: 1549px) {
+@media screen and (max-width: 940px) {
   footer.footer_ .contact_area {
-    width: 75%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  footer.footer_ .contact_area .logo_ {
+    margin-bottom: 1rem;
+  }
+  footer.footer_ .contact_area .contact_infor {
+    margin: 1rem 0;
+  }
+  .QA .question {
+    width: 100%;
   }
 }
-
-@media screen and (min-width: 1550px) {
-  footer.footer_ .contact_area {
-    width: 60%;
-  }
-}
-/*# sourceMappingURL=index.css.map */

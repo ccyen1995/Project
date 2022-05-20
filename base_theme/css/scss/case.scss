@@ -1,5 +1,5 @@
 .page_case_topimg {
-  background-image: url("../img/case/case_topimg.jpg") no-repeat center / cover;
+  background: url("../img/case/case_topimg.jpg") no-repeat center / cover;
   height: 282px;
   display: flex;
   align-items: center;
@@ -10,23 +10,19 @@
     text-shadow: 0.1em 0.1em 0.2em black;
   }
 }
-.page_case_title {
-  width: 60%;
-  margin: auto;
+
+.case > h1 {
   padding: 2rem 0;
+  color: var(--font1);
   border-bottom: var(--font1) solid 1px;
-  margin-bottom: 1rem;
-  h1 {
-    color: var(--font1);
-    img {
-      margin-right: 1rem;
-      height: 3rem;
-    }
+  img {
+    margin-right: 1rem;
+    height: 4rem;
+    vertical-align: baseline;
   }
 }
+
 .page_case_topitem {
-  width: 60%;
-  margin: auto;
   margin-bottom: 1rem;
   display: flex;
   div {
@@ -41,8 +37,6 @@
   }
 }
 .page_case_items {
-  width: 60%;
-  margin: auto;
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
@@ -64,10 +58,8 @@
   }
 }
 
-// -------------page_case_child--------------
-.page_case_child {
-  width: 60%;
-  margin: auto;
+// -------------page_case_contant--------------
+.page_case_contant {
   .page_case_carousel {
     display: flex;
     height: 500px;

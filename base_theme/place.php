@@ -1,11 +1,8 @@
 <?php include_once("php/head.php"); ?>
 <div class="page_place_topimg">
-    <h1>Sales office</h1>
-</div>
-
-<div class="page_place_box">
     <h1>銷售據點</h1>
-    <img src="./img/logo2.png" alt="">
+</div>
+<div class="container">
     <div class="places">
         <div class="frt_place">
             <h2>台中新光館</h2>
@@ -32,7 +29,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 <?php include_once("php/foot.php"); ?>

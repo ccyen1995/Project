@@ -1,6 +1,5 @@
 .page_service_topimg {
-  background-image: url("../img/service/service_topimg.jpg") no-repeat center /
-    cover;
+  background: url("../img/service/service_topimg.jpg") no-repeat center / cover;
   height: 282px;
   display: flex;
   align-items: center;
@@ -12,20 +11,19 @@
   }
 }
 .page_service_title {
-  width: 60%;
-  margin: auto;
   padding: 2rem 0;
+  color: var(--font1);
   h1 {
     color: var(--font1);
     img {
       margin-right: 1rem;
-      height: 3rem;
+      height: 4rem;
+      vertical-align: baseline;
     }
   }
 }
 
 .page_service_item {
-  width: 60%;
   margin: 0 auto 1rem;
   display: flex;
   background-color: var(--grey);
@@ -33,7 +31,6 @@
     padding: 1rem;
   }
   div {
-    //   background-color: aqua;
     padding: 2rem 1.5rem;
   }
   button {
@@ -44,8 +41,6 @@
 }
 
 .page_service_product {
-  margin: auto;
-  width: 60%;
   img {
     width: 100%;
     height: 500px;
