@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
 body {
-  overflow-x: hidden;
+  // width: 100%;
+  // width: calc(100% - 2rem);
+  // overflow-x: hidden;
 }
 :root {
   --line: #b39f61;
@@ -45,10 +47,10 @@ button.goback {
   display: block;
   border: var(--font1) solid 1px;
   border-radius: 8px;
-  height: 2.5rem;
-  width: 8rem;
+  height: 3rem;
+  width: 9rem;
   color: var(--font1);
-  font-size: 1.5rem px;
+  font-size: 1.5rem;
   background-color: var(--btn);
   transition: all 0.1s linear;
   cursor: pointer;
@@ -75,31 +77,31 @@ header.header_ {
   .navbar_ {
     width: 90%;
     margin: auto;
-    padding: 0.8rem 0;
+    padding: 0.5rem 0;
     display: flex;
     justify-content: space-between;
     .logo {
       min-width: 18rem;
-      // height: 7rem;
+      // width: 18rem; 會被壓縮?
       display: flex;
       align-items: center;
-      // background-color: #f34351;
       img {
         height: 6rem;
         width: 6rem;
       }
       div {
-        // background-color: #707070;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-left: 0.5rem;
+        p {
+          margin: 0;
+          font-size: 1.2rem;
+        }
         p:first-of-type {
-          font-size: 2rem;
           line-height: 2rem;
-          font-weight: 400;
-          margin-bottom: 0.4rem;
+          font-size: 2rem;
         }
       }
     }
@@ -110,7 +112,8 @@ header.header_ {
       align-items: flex-end;
       padding-bottom: 0.5rem;
       a {
-        margin: 0 1rem;
+        // margin: 0 1rem;
+        padding: 0 1rem;
         color: var(--font1);
         text-decoration: none;
         transition: color 0.1s linear;
@@ -166,10 +169,16 @@ header.header_ {
   }
 }
 // -----header-----
+
+// -----burger-----
+.offcanvas.offcanvas-end {
+  width: 300px;
+}
 .burger_nav {
-  position: relative;
   .close_ {
-    position: absolute;
+    // position: absolute;
+    // 為何外層不設定 relative, absolute一樣是以父元素的相對位置放置
+    position: relative;
     top: 30px;
     left: -60px;
     border-radius: 50%;
@@ -182,13 +191,14 @@ header.header_ {
     border: none;
     transition: background-color 0.1s ease, box-shadow 0.1s ease,
       color 0.1s ease;
-    //有簡寫嗎?
+    //有簡寫嗎? 沒有
     i {
       display: block;
       margin: auto;
     }
   }
   .close_:hover {
+    background-color: var(--link-hover);
     background-color: var(--font1);
     color: white;
     box-shadow: 0 0 0.2rem white;
@@ -237,13 +247,12 @@ header.header_ {
     }
   }
 }
+// -----burger-----
 
 // -----carousel_area-----
 .carousell_area {
-  // margin-top: ;
-  height: 726px;
   position: relative;
-  margin-bottom: 6rem;
+  overflow-x: hidden;
   .carousell_area_text {
     position: absolute;
     color: white;
@@ -254,45 +263,47 @@ header.header_ {
     z-index: 1;
     top: 30rem;
     left: 4%;
-    // left: 2rem;
     p {
       font-size: 3rem;
       font-weight: bold;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     p:nth-child(2) {
       font-size: 1.8rem;
       font-weight: normal;
     }
     button {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
   }
   .carousell_area_img {
-    height: 100%;
+    padding-bottom: 3rem;
     .imgg {
       img {
-        width: 100%;
         height: 726px;
+        width: 100%;
         object-fit: cover;
         object-position: center;
       }
     }
-    .slick-dots {
-      top: 755px;
+    ul.slick-dots {
       li {
-        margin: 0 17px;
-        button {
-          transform: scale(2);
+        margin: 0 1rem;
+        button:before {
+          font-size: 30px;
         }
       }
     }
   }
-  #carousell_light {
-    position: absolute;
-    top: 0;
-    left: 30%;
-  }
+  // #carousell_light {
+  //   height: 726px;
+  //   width: 100%;
+  //   object-fit: cover;
+  //   object-position: center;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 30%;
+  // }
 }
 // -----carousel_area-----
 
@@ -301,7 +312,7 @@ header.header_ {
 .about_area {
   display: flex;
   flex-wrap: wrap;
-  margin: 4rem 0;
+  margin: 3rem 0 4rem;
   .about_area_1,
   .about_area_2,
   .about_area_3,
@@ -314,6 +325,10 @@ header.header_ {
   }
   .about_area_4 {
     background: url("./../img/about客廳.jpg") no-repeat center / cover;
+    order: 2;
+  }
+  .about_area_3 {
+    order: 1;
   }
   .about_area_2,
   .about_area_3 {
@@ -349,6 +364,7 @@ header.header_ {
 // -----about_area-----
 
 // -----product_area-----
+
 .product_area {
   text-align: center;
   .product_area_bigimg {
@@ -371,45 +387,48 @@ header.header_ {
 
   .product_list {
     .product {
-      width: 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
       font-size: 30px;
       color: var(--font1);
+      padding: 1rem;
       img {
-        width: 300px;
-        // min-width: 200px;
+        width: 100%;
       }
       p {
-        margin: 1.5rem 0 2rem 0;
+        margin: 1.5rem 0;
       }
     }
   }
-  button {
+  #hahah {
     margin-top: 2rem;
-    // position: relative;
+    padding: 1rem;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    button.slick-prev:before {
+      content: url("../../img/arrow.png");
+      display: block;
+      rotate: 270deg;
+      transform: rotate(90deg) translate(-2%, 50%);
+      width: fit-content;
+      // background-color: #b39f61;
+    }
+    button.slick-next:before {
+      content: url("../../img/arrow.png");
+      display: block;
+      rotate: 270deg;
+      transform: rotate(270deg) translate(3%, -50%);
+      width: fit-content;
+      // background-color: #b39f61;
+    }
   }
-  // button::before {
-  //   content: url("../img/arrow.png");
-  //   position: absolute;
-  //   display: block;
-  //   left: -4rem;
-  //   transform: rotate(90deg);
-  //   // 不是block不能轉?
-  // }
-  // button::after {
-  //   content: url("../img/arrow.png");
-  //   position: absolute;
-  //   display: block;
-  //   left: 13.2rem;
-  //   top: 0.75rem;
-  //   transform: rotate(-90deg);
-  // }
 }
 // -----product_area-----
 
 // -----QA-----
+
 .QA {
   //背景img該怎麼條明暗
   background: url("./../img/buttomImg.jpg") no-repeat center / cover;
@@ -418,7 +437,8 @@ header.header_ {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  padding: 4rem;
   text-align: center;
   color: var(--font1);
   .QAimg {
@@ -430,19 +450,18 @@ header.header_ {
       text-shadow: 0.1em 0.1em 0.2em black;
     }
   }
+
   .question {
-    margin: 1rem auto;
     width: 60%;
-    height: 450px;
+    padding: 2rem;
     .QAbox {
       width: 100%;
-      height: 60px;
+      height: min-content;
       margin-bottom: 1rem;
       background-color: var(--btn);
       padding: 0.4rem 0.6rem;
       border-radius: 5px;
       border: #707070 solid 1px;
-      overflow: hidden;
       transition: all 0.2s ease;
       cursor: pointer;
       img {
@@ -452,35 +471,52 @@ header.header_ {
         right: 0.5rem;
         transition: all 0.2s ease;
       }
+
       p {
         text-align: start;
         font-size: 1.5rem;
         margin: 0;
-        padding: 0.8rem;
+        padding: 0.5rem;
         position: relative;
+        width: 90%;
         span:first-child {
           position: absolute;
           font-size: 1.8rem;
         }
         span:nth-child(2) {
+          display: block;
           padding-left: 5rem;
         }
       }
       p:first-of-type {
-        padding-bottom: 1rem;
+        padding-bottom: 0.8rem;
+      }
+      p:nth-of-type(2) {
+        display: none;
       }
       hr {
+        display: none;
         margin: 0;
       }
     }
     .QAbox.active {
       // height: fit-content;
       // fit-content不納入transition的範圍內嗎?
-      height: 118px;
+      // height: min-content;
+      p {
+        display: block;
+      }
+      hr {
+        display: block;
+      }
       img {
         transform: rotate(180deg);
       }
     }
+  }
+  button {
+    // margin-top: 4rem;
+    min-height: 3.2rem;
   }
 }
 // -----QA-----
@@ -559,12 +595,18 @@ footer.footer_ {
 @media screen and (max-width: 1500px) {
   header.header_ {
     .navbar_ {
-      .links,
-      .community {
-        display: none;
+      .links {
+        font-size: 1.3rem;
+        a {
+          padding: 0 0.6rem;
+        }
       }
-      .burger {
-        display: block;
+      .community {
+        font-size: 2.2rem;
+        padding-bottom: 0.8rem;
+        i {
+          margin-left: 0.6rem;
+        }
       }
     }
   }
@@ -573,6 +615,12 @@ footer.footer_ {
   footer.footer_ {
     .contact_area {
       width: 75%;
+    }
+  }
+}
+@media screen and (max-width: 1300px) {
+  header.header_ {
+    .navbar_ {
     }
   }
 }
@@ -589,6 +637,30 @@ footer.footer_ {
   }
 }
 @media screen and (max-width: 991px) {
+  header.header_ {
+    .navbar_ {
+      .logo {
+        img {
+          height: 5rem;
+          width: 5rem;
+        }
+        div {
+          margin-left: 0.4rem;
+          p:first-of-type {
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+          }
+        }
+      }
+      .links,
+      .community {
+        display: none;
+      }
+      .burger {
+        display: block;
+      }
+    }
+  }
   .about_area {
     .about_area_1,
     .about_area_2,
@@ -596,12 +668,35 @@ footer.footer_ {
     .about_area_4 {
       width: 100%;
     }
+    .about_area_4 {
+      order: 1;
+    }
+    .about_area_3 {
+      order: 2;
+    }
   }
-  .product_list {
-    .product {
-      min-width: 44%;
-      img {
-        min-width: 220px;
+  .product_area {
+    .product_area_bigimg {
+      height: 350px;
+      margin-bottom: 14rem;
+      .product_area_icon {
+        top: 17rem;
+        img {
+          width: 10rem;
+        }
+        img:nth-of-type(2) {
+          width: 6rem;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .product_list {
+      .product {
+        img {
+          // min-width: 220px;
+        }
       }
     }
   }
@@ -626,13 +721,119 @@ footer.footer_ {
       }
     }
   }
+}
+
+@media screen and (max-width: 767px) {
   .QA {
+    .QAimg {
+      p {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+      img {
+        height: 4rem;
+      }
+    }
     .question {
       width: 100%;
+      .QAbox {
+        img {
+          transform: scale(0.8);
+        }
+        p {
+          font-size: 1.2rem;
+          span:first-child {
+            font-size: 1.5rem;
+          }
+          span:nth-child(2) {
+            width: 90%;
+            padding-left: 3rem;
+          }
+        }
+      }
+      .QAbox.active {
+        img {
+          transform: scale(0.8) rotate(180deg);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  button.goback {
+    height: 2.4rem;
+    width: 8rem;
+    font-size: 18px;
+  }
+
+  button.readbtn {
+    height: 2.4rem;
+    width: 8rem;
+    border: var(--font1) solid 1px;
+    border-radius: 6px;
+    color: var(--font1);
+    font-size: 18px;
+  }
+  .offcanvas.offcanvas-end {
+    width: 50%;
+  }
+  .about_area {
+    margin: 2rem 0;
+    .about_area_2,
+    .about_area_3 {
+      .about_area_text {
+        font-size: 1.5rem;
+        h1 {
+          margin-bottom: 1.5rem;
+          img {
+            height: 3.5rem;
+            margin-right: 0.5rem;
+            vertical-align: sub;
+          }
+        }
+        p {
+          line-height: 1.2;
+        }
+        button {
+          float: right;
+          position: relative;
+          top: 1rem;
+        }
+      }
+    }
+  }
+  .QA {
+    height: 120vh;
+    .question {
+      .QAbox {
+        position: relative;
+        img {
+          float: none;
+          position: absolute;
+          top: 1rem;
+        }
+        p {
+          display: flex;
+          flex-direction: column;
+          span:first-child {
+            width: 90%;
+            position: static;
+            margin-bottom: 0.5rem;
+          }
+          span:nth-child(2) {
+            padding: 0;
+          }
+        }
+      }
     }
   }
 }
 
+@media screen and (max-width: 425px) {
+  .QA {
+    height: 150vh;
+  }
+}
 // Extra small (<576px)
 // Small (>=576px)
 // Medium (>=768px)

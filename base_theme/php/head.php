@@ -20,17 +20,19 @@
 
     <base href="<?php //echo base_url(); 
                 ?>">
-
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../css/bootstrap5.min.css">
     <link rel="shortcut icon" href="favicon.ico">
-    <!-- <link rel="stylesheet" href="css/bootstrap4.min.css" /> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/external_p.css" />
     <link rel="stylesheet" href="css/external_p2.css" />
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/slick-theme.css" />
     <link rel="stylesheet" href="css/gs.css?<?php echo time(); ?>" />
+    <link rel="stylesheet" href="./css/index.css">
 
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+    <script src="../js/bootstrap5.bundle.min.js"></script>
     <script language="javascript" src="js/jquery-1.12.3.min.js"></script>
     <script language="javascript" src="js/slick.min.js"></script>
     <script src="js/js.js"></script>
@@ -66,16 +68,14 @@
                 <i class="fa-brands fa-instagram-square"></i>
                 <i class="fa-brands fa-facebook-square"></i>
             </div>
-            <button class="btn btn-primary burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+            <button class="btn btn-primary burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
     </header>
-    <div class="offcanvas offcanvas-end burger_nav" id="demo">
-
-        <!-- <h1 class="offcanvas-title"></h1> -->
-        <button type="button" class="close_" data-bs-dismiss="offcanvas"><i class="fa-solid fa-xmark"></i></button>
-
+    <div class="offcanvas offcanvas-end burger_nav" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <button type="button" class="close_" data-bs-dismiss="offcanvas" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i></button>
         <div class="offcanvas-body">
             <div class="links">
                 <a href="#">首頁</a>

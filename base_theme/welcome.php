@@ -15,7 +15,7 @@
         <div class="sec_img imgg"><img src="./img/carousell_img2.jpg" alt=""></div>
         <div class="thr_img imgg"><img src="./img/carousell_img3.jpg" alt=""></div>
     </div>
-    <img src="./img/light.png" alt="" id="carousell_light">
+    <!-- <img src="./img/light.png" alt="" id="carousell_light"> -->
 </section>
 <!-- -----carousel_area----- -->
 
@@ -87,7 +87,11 @@
             <p>零下11度</p>
         </div>
     </div>
-    <button class="readbtn" id="readbtn">READ MORE</button>
+    <div id="hahah">
+        <div id="haha">
+            <button class="readbtn" id="readbtn">READ MORE</button>
+        </div>
+    </div>
 </section>
 <!-- -----product_area----- -->
 
@@ -102,31 +106,31 @@
             <img src="./img/arrow.png" alt="">
             <p><span>Q1</span><span>波斯地毯如何做選擇</span></p>
             <hr />
-            <p><span>A1</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
+            <p><span>A</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
         </div>
         <div class="QAbox">
             <img src="./img/arrow.png" alt="">
             <p><span>Q2</span><span>波斯地毯如何做選擇</span></p>
             <hr />
-            <p><span>A2</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
+            <p><span>A</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
         </div>
         <div class="QAbox">
             <img src="./img/arrow.png" alt="">
             <p><span>Q3</span><span>波斯地毯如何做選擇</span></p>
             <hr />
-            <p><span>A3</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
+            <p><span>A</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
         </div>
         <div class="QAbox">
             <img src="./img/arrow.png" alt="">
-            <p><span>Q4</span><span>波斯地毯如何做選擇</span></p>
+            <p><span>Q4</span><span>波斯地毯如何做選擇波斯地毯如何做選擇波斯地毯如何做選擇</span></p>
             <hr />
-            <p><span>A4</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
+            <p><span>A</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
         </div>
         <div class="QAbox">
             <img src="./img/arrow.png" alt="">
             <p><span>Q5</span><span>波斯地毯如何做選擇</span></p>
             <hr />
-            <p><span>A5</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
+            <p><span>A</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!只要選擇艾芬波斯茶館，絕對是最好的選擇!只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
         </div>
     </div>
     <button class="readbtn">READ MORE</button>

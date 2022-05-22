@@ -116,12 +116,15 @@
             justify-content: center;
   }
   .page_product_area .tab-content .items_list .items {
-    width: 400px;
+    width: 80%;
   }
 }
 
 @media screen and (max-width: 575px) {
   .page_product_area .page_product_types .nav-item {
     width: 80%;
+  }
+  .page_product_area .tab-content .items_list .items {
+    width: 100%;
   }
 }

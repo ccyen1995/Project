@@ -1,3 +1,5 @@
+console.log("hi");
+console.log(window.innerWidth);
 let qaboxs = document.querySelectorAll(".qabox");
 qaboxs.forEach((qabox, index) => {
   qabox.addEventListener("click", () => {
@@ -37,63 +39,90 @@ QAboxs.forEach((QAbox, index) => {
 //     lightbox.show();
 //   })
 // );
+window.onchange = () => {
+  let viewwitdh = window.innerWidth;
+};
 $(document).ready(function () {
   $(".carousell_area_img").slick({
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 900,
     slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    easing: "ease",
-  });
-  $(".product_list").slick({
-    dots: false,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
     // autoplay: true,
     // autoplaySpeed: 2000,
     easing: "ease",
-    appendArrows: $("#readbtn"),
+  });
+  $(".product_list").slick({
+    dots: false,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    easing: "ease",
+    // arrows: true,
+    // appendArrows: $("#haha"),
+    // appendArrows: $("#readbtn"),
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 1017,
+        // 991會轉換(-26)
         settings: {
           slidesToShow: 2,
-          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true,
+          appendArrows: $("#haha"),
+        },
+      },
+      {
+        breakpoint: 576,
+        // 575會轉換
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          appendArrows: $("#haha"),
         },
       },
     ],
-    // centerMode: true,
-    // centerPadding: "60px",
-    // slidesToShow: 3,
-    // responsive: [
-    //   {
-    //     breakpoint: 768,
-    //     settings: {
-    //       arrows: false,
-    //       centerMode: true,
-    //       centerPadding: "40px",
-    //       slidesToShow: 3,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       arrows: false,
-    //       centerMode: true,
-    //       centerPadding: "40px",
-    //       slidesToShow: 1,
-    //     },
-    //   },
-    // ],
   });
 });
 // You can unslick at a given breakpoint now by adding:
 // settings: "unslick"
 // instead of a settings object
+// function a() {
+//   $(".product_list").slick({
+//     dots: false,
+//     infinite: true,
+//     speed: 1000,
+//     slidesToShow: 4,
+//     slidesToScroll: 1,
+//     easing: "ease",
+//     appendArrows: $("#readbtn"),
+//     responsive: [
+//       {
+//         breakpoint: 991,
+//         settings: {
+//           slidesToShow: 2,
+//           slidesToShow: 2,
+//         },
+//       },
+//     ],
+//   });
+//   let arrowss = false;
+//   if (window.innerWidth <= 991) {
+//     arrowss = true;
+
+//     return [arrowss];
+//   } else {
+//     arrowss = false;
+//     return [arrowss];
+//   }
+// }
+// window.addEventListener("resize", start);
+
+// function start() {
+//   if (window.innerWidth <= 991) {
+//   }
+// }
