@@ -1,13 +1,13 @@
 <?php include_once("php/head.php"); ?>
 
 <div class="page_case_topimg">
-    <h1>實際案例</h1>
+    <h1>Actual case</h1>
 </div>
-<div class="container case">
-    <h1><img src="./img/logo2.png" alt="" />實際案例</h1>
-
+<div class="container">
+    <h1 class="page_case_contant_title"><img src="./img/logo2.png" alt="" />實際案例</h1>
     <section class="page_case_contant">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, aliquam ea corrupti quisquam veniam dolorum nisi reiciendis ab maxime voluptate, illum dignissimos ipsa ullam provident voluptas voluptates consequuntur ad obcaecati. Quod vero consectetur vitae quos deserunt accusamus fugiat sed, maxime earum nobis illum iure eaque ducimus veniam velit nostrum soluta beatae facilis. Consequatur, velit ea corporis sunt dolor earum quaerat esse. Voluptatem, quos ab exercitationem aut non numquam id laborum facilis vero fuga, voluptate error officia. Vero ab officia rerum. Quibusdam, ullam hic iusto nihil eum doloribus facilis eos mollitia corrupti velit! Quaerat dolores eligendi labore architecto maxime possimus at!</p>
+        <h3>實際案例標題名稱</h3>
+        <p>內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述...內容敘述</p>
         <div class="page_case_carousel">
             <div class="page_case_carousel_big">
                 <img src="./img/case/case_child_item1.jpg" alt="" id="">
@@ -19,6 +19,10 @@
             </div>
         </div>
         <div class="page_case_imgs">
+            <img src="./img/case/case_child_item4.jpg" alt="">
+            <img src="./img/case/case_child_item4.jpg" alt="">
+            <img src="./img/case/case_child_item4.jpg" alt="">
+            <img src="./img/case/case_child_item4.jpg" alt="">
             <img src="./img/case/case_child_item4.jpg" alt="">
             <img src="./img/case/case_child_item4.jpg" alt="">
             <img src="./img/case/case_child_item4.jpg" alt="">

@@ -1,12 +1,13 @@
 .page_qa_topimg {
+  position: relative;
   background: url("../img/QA/qa_topimg.jpg") no-repeat center/cover;
   height: 282px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -16,6 +17,23 @@
   color: white;
   font-size: 49px;
   text-shadow: 0.1em 0.1em 0.2em black;
+  padding-bottom: 1rem;
+}
+
+.page_qa_topimg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.page_qa_topimg:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
 }
 
 .page_qa {
@@ -36,7 +54,7 @@
           justify-content: center;
   text-align: center;
   color: var(--font1);
-  padding: 3rem;
+  padding: 3rem 0;
 }
 
 .page_qa .qaimg p {
@@ -44,64 +62,129 @@
   font-weight: 600;
 }
 
+.page_qa .qaimg img {
+  height: 4rem;
+}
+
 .page_qa .question {
-  margin: 1rem auto;
-  width: 60%;
+  width: 100%;
 }
 
 .page_qa .question .qabox {
-  width: 100%;
-  height: 60px;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
+  width: 70%;
   background-color: var(--btn);
-  padding: 0.4rem 0.6rem;
   border-radius: 5px;
   border: #707070 solid 1px;
-  overflow: hidden;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 1rem;
 }
 
-.page_qa .question .qabox img {
-  position: relative;
-  float: right;
-  top: 0.8rem;
-  right: 0.5rem;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+.page_qa .question .qabox .Q,
+.page_qa .question .qabox .A {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
-.page_qa .question .qabox p {
+.page_qa .question .qabox .Q span:first-child,
+.page_qa .question .qabox .A span:first-child {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-left: 0.3rem;
+  font-size: 2rem;
   text-align: start;
-  margin: 0;
-  font-size: 1.5rem;
-  padding: 0.8rem;
-  position: relative;
+  width: 15%;
 }
 
-.page_qa .question .qabox p span:first-child {
-  position: absolute;
-  font-size: 1.8rem;
+.page_qa .question .qabox .Q :nth-child(2),
+.page_qa .question .qabox .A :nth-child(2) {
+  text-align: start;
+  width: 75%;
 }
 
-.page_qa .question .qabox p span:nth-child(2) {
-  padding-left: 5rem;
+.page_qa .question .qabox .Q :nth-child(3),
+.page_qa .question .qabox .A :nth-child(3) {
+  width: 10%;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 }
 
-.page_qa .question .qabox p:first-of-type {
-  padding-bottom: 1rem;
+.page_qa .question .qabox .A span {
+  display: none;
 }
 
 .page_qa .question .qabox hr {
-  margin: 0;
+  margin: 0.5rem 0;
+  display: none;
 }
 
-.page_qa .question .qabox.active {
-  height: 118px;
-}
-
-.page_qa .question .qabox.active img {
+.page_qa .question .qabox.active .Q :nth-child(3) {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.page_qa .question .qabox.active .A span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.page_qa .question .qabox.active hr {
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+  .page_qa_topimg {
+    height: 180px;
+  }
+  .page_qa .question .qabox {
+    width: 80%;
+  }
+  .page_qa .question .qabox .Q,
+  .page_qa .question .qabox .A {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  .page_qa .question .qabox .Q span:first-child,
+  .page_qa .question .qabox .A span:first-child {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page_qa .qaimg p {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .page_qa .qaimg img {
+    height: 4rem;
+  }
+  .page_qa .question .qabox {
+    width: 90%;
+  }
+  .page_qa .question .qabox .Q,
+  .page_qa .question .qabox .A {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  .page_qa .question .qabox .Q span:first-child,
+  .page_qa .question .qabox .A span:first-child {
+    padding-left: 0;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .page_qa .question .qabox {
+    width: 95%;
+  }
 }

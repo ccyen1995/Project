@@ -1,6 +1,6 @@
 <?php include_once("php/head.php"); ?>
 <div class="page_place_topimg">
-    <h1>銷售據點</h1>
+    <h1>Sales office</h1>
 </div>
 <div class="container">
     <div class="places">

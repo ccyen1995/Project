@@ -1,7 +1,7 @@
 <?php include_once("php/head.php"); ?>
 
 <div class="page_product_topimg">
-    <h1>商品內容</h1>
+    <h1>Product desciption</h1>
 </div>
 <div class="container">
     <div class="page_product_area">

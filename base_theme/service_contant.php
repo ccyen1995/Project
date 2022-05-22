@@ -1,6 +1,6 @@
 <?php include_once("php/head.php"); ?>
 <div class="page_service_topimg">
-    <h1>服務項目</h1>
+    <h1>Service items</h1>
 </div>
 <div class="container service_contant">
     <div class="page_service_title">

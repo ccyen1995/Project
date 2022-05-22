@@ -103,34 +103,48 @@
     </div>
     <div class="question">
         <div class="QAbox">
-            <img src="./img/arrow.png" alt="">
-            <p><span>Q1</span><span>波斯地毯如何做選擇</span></p>
+            <div class="Q">
+                <span>Q1.</span>
+                <span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span>
+                <span><i class="fa-solid fa-angle-down"></i></span>
+            </div>
             <hr />
-            <p><span>A</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
+            <div class="A">
+                <span>A：</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span>
+            </div>
         </div>
         <div class="QAbox">
-            <img src="./img/arrow.png" alt="">
-            <p><span>Q2</span><span>波斯地毯如何做選擇</span></p>
+            <div class="Q">
+                <span>Q1.</span>
+                <span>只要選擇艾芬波斯茶館，只要選擇艾芬波斯茶館，絕對是最好的選擇絕對是最好的選擇!</span>
+                <span><i class="fa-solid fa-angle-down"></i></span>
+            </div>
             <hr />
-            <p><span>A</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
+            <div class="A">
+                <span>A：</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span>
+            </div>
         </div>
         <div class="QAbox">
-            <img src="./img/arrow.png" alt="">
-            <p><span>Q3</span><span>波斯地毯如何做選擇</span></p>
+            <div class="Q">
+                <span>Q1.</span>
+                <span>只要選擇艾芬波斯茶館，芬波斯茶館，絕對絕對是最好的選擇!</span>
+                <span><i class="fa-solid fa-angle-down"></i></span>
+            </div>
             <hr />
-            <p><span>A</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
+            <div class="A">
+                <span>A：</span><span>只要選擇艾芬波斯茶館，絕對芬波斯茶館，絕對芬波斯茶館，絕對是最好的選擇!</span>
+            </div>
         </div>
         <div class="QAbox">
-            <img src="./img/arrow.png" alt="">
-            <p><span>Q4</span><span>波斯地毯如何做選擇波斯地毯如何做選擇波斯地毯如何做選擇</span></p>
+            <div class="Q">
+                <span>Q1.</span>
+                <span>只要選擇艾芬波斯茶館，絕只要選擇艾芬波斯茶館，絕對是最好的選擇對是最好的選擇!</span>
+                <span><i class="fa-solid fa-angle-down"></i></span>
+            </div>
             <hr />
-            <p><span>A</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
-        </div>
-        <div class="QAbox">
-            <img src="./img/arrow.png" alt="">
-            <p><span>Q5</span><span>波斯地毯如何做選擇</span></p>
-            <hr />
-            <p><span>A</span><span>只要選擇艾芬波斯茶館，絕對是最好的選擇!只要選擇艾芬波斯茶館，絕對是最好的選擇!只要選擇艾芬波斯茶館，絕對是最好的選擇!</span></p>
+            <div class="A">
+                <span>A：</span><span>只要選擇艾芬只要選擇艾芬波斯茶館，絕對是最好的選擇芬波斯茶館，絕對波斯茶館，絕對是最好的選擇!</span>
+            </div>
         </div>
     </div>
     <button class="readbtn">READ MORE</button>

@@ -1,12 +1,12 @@
 <?php include_once("php/head.php"); ?>
 <div class="page_contract_topimg">
-    <h1>聯絡我們</h1>
+    <h1>Contact us</h1>
 </div>
 
 <div class="container contract">
-    <p>若您有任何問題或意見，歡迎填寫表單給我們，謝謝</p>
+    <p>若您有任何問題或意見，歡迎填寫表單給我們，謝謝!</p>
     <div class="form_box">
-        <div class="form_img">XD</div>
+        <div class="form_img"></div>
         <div class="form_input">
             <form action="" id="form_">
                 <p>姓名</p>

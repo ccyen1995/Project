@@ -1,12 +1,13 @@
 .page_about_topimg {
+  position: relative;
   background: url("../img/about/about_topimg.jpg") no-repeat center/cover;
   height: 282px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -16,6 +17,23 @@
   color: white;
   font-size: 49px;
   text-shadow: 0.1em 0.1em 0.2em black;
+  padding-bottom: 1rem;
+}
+
+.page_about_topimg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.page_about_topimg:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
 }
 
 .page_about_title {
@@ -111,6 +129,9 @@
 }
 
 @media screen and (max-width: 991px) {
+  .page_about_topimg {
+    height: 180px;
+  }
   .about_wrap .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

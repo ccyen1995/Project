@@ -1,12 +1,13 @@
 .page_contract_topimg {
+  position: relative;
   background: url("../img/contract/contract-topimg.jpg") no-repeat center/cover;
   height: 282px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -16,10 +17,27 @@
   color: white;
   font-size: 49px;
   text-shadow: 0.1em 0.1em 0.2em black;
+  padding-bottom: 1rem;
+}
+
+.page_contract_topimg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.page_contract_topimg:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
 }
 
 .contract {
-  margin-top: 3rem;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,14 +49,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: auto;
 }
 
 .contract > p {
+  font-size: 1.4rem;
   margin: 2.5rem 0;
+  line-height: 1.8rem;
 }
 
 .contract .form_box {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,13 +69,19 @@
 
 .contract .form_box .form_input,
 .contract .form_box .form_img {
-  margin: 0 1rem;
+  border-radius: 8px;
+  width: 40%;
+  max-width: 25rem;
+  height: 30rem;
 }
 
 .contract .form_box .form_img {
+  margin-right: 1rem;
   background: url("../img/contract/contract-left.jpg") no-repeat center/cover;
-  width: 25rem;
-  height: 30rem;
+}
+
+.contract .form_box .form_input {
+  margin-left: 1rem;
 }
 
 .contract .form_box .form_input form {
@@ -81,15 +107,19 @@
 .contract .form_box .form_input form textarea,
 .contract .form_box .form_input form input {
   border: var(--divcolor) solid 1px;
-  line-height: 1.8rem;
+  border-radius: 5px;
   color: var(--font1);
 }
 
 .contract .form_box .form_input form input {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
   padding: 0 0.5rem;
 }
 
 .contract .form_box .form_input form textarea {
+  line-height: 1.8rem;
+  font-size: 1.3rem;
   padding: 0.5rem;
   resize: none;
 }
@@ -99,4 +129,38 @@
   width: 20rem;
   height: 5rem;
   margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 991px) {
+  .page_contract_topimg {
+    height: 180px;
+  }
+  .contract .form_box .form_input,
+  .contract .form_box .form_img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contract > p {
+    padding: 0 1rem;
+  }
+  .contract .form_box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contract .form_box .form_input,
+  .contract .form_box .form_img {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .contract .form_box .form_img {
+    height: 15rem;
+  }
 }

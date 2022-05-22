@@ -1,5 +1,3 @@
-console.log("hi");
-console.log(window.innerWidth);
 let qaboxs = document.querySelectorAll(".qabox");
 qaboxs.forEach((qabox, index) => {
   qabox.addEventListener("click", () => {
@@ -50,8 +48,8 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     easing: "ease",
   });
   $(".product_list").slick({
@@ -62,8 +60,6 @@ $(document).ready(function () {
     slidesToScroll: 1,
     easing: "ease",
     // arrows: true,
-    // appendArrows: $("#haha"),
-    // appendArrows: $("#readbtn"),
     responsive: [
       {
         breakpoint: 1017,
@@ -91,38 +87,3 @@ $(document).ready(function () {
 // You can unslick at a given breakpoint now by adding:
 // settings: "unslick"
 // instead of a settings object
-// function a() {
-//   $(".product_list").slick({
-//     dots: false,
-//     infinite: true,
-//     speed: 1000,
-//     slidesToShow: 4,
-//     slidesToScroll: 1,
-//     easing: "ease",
-//     appendArrows: $("#readbtn"),
-//     responsive: [
-//       {
-//         breakpoint: 991,
-//         settings: {
-//           slidesToShow: 2,
-//           slidesToShow: 2,
-//         },
-//       },
-//     ],
-//   });
-//   let arrowss = false;
-//   if (window.innerWidth <= 991) {
-//     arrowss = true;
-
-//     return [arrowss];
-//   } else {
-//     arrowss = false;
-//     return [arrowss];
-//   }
-// }
-// window.addEventListener("resize", start);
-
-// function start() {
-//   if (window.innerWidth <= 991) {
-//   }
-// }

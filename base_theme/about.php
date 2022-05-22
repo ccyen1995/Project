@@ -1,6 +1,6 @@
 <?php include_once("php/head.php");  ?>
 <div class="page_about_topimg">
-    <h1>關於我們</h1>
+    <h1>About</h1>
 </div>
 <div class="container">
     <div class="page_about_title">
