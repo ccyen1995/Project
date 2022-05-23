@@ -1,0 +1,1225 @@
+
+
+@font-face {
+  font-family: 'Vicky';
+  src: url('../myicons_v/icons.eot');
+  src: url('../myicons_v/icons.eot?#iefix') format('embedded-opentype'),
+       url('../myicons_v/icons.woff2') format('woff2'),
+       url('../myicons_v/icons.woff') format('woff'),
+       url('../myicons_v/icons.ttf') format('truetype'),
+       url('../myicons_v/icons.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+.fav {
+    display: inline-block;
+    font: normal normal normal 14px/1 'Vicky';
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+  .fa-lg {
+      font-size: 1.33333333em;
+      line-height: 0.75em;
+      vertical-align: -15%;
+  }
+
+  .fa-2x {
+      font-size: 2em;
+  }
+
+  .fa-3x {
+      font-size: 3em;
+  }
+
+  .fa-4x {
+      font-size: 4em;
+  }
+
+  .fa-5x {
+      font-size: 5em;
+  }
+
+
+
+  .fa-fw {
+      width: 1.28571429em;
+      text-align: center;
+  }
+
+
+
+  .fa-ul {
+      padding-left: 0;
+      margin-left: 2.14285714em;
+      list-style-type: none;
+  }
+
+  .fa-ul> li {
+      position: relative;
+  }
+
+  .fa-li {
+      position: absolute;
+      left: -2.14285714em;
+      width: 2.14285714em;
+      top: 0.14285714em;
+      text-align: center;
+  }
+
+  .fa-li.fa-lg {
+      left: -1.85714286em;
+  }
+
+
+
+  .fa-border {
+      padding: .2em .25em .15em;
+      border: solid 0.08em #eeeeee;
+      border-radius: .1em;
+  }
+
+  .pull-right {
+      float: right;
+  }
+
+  .pull-left {
+      float: left;
+  }
+
+  .fa.pull-left {
+      margin-right: .3em;
+  }
+
+  .fa.pull-right {
+      margin-left: .3em;
+  }
+
+
+
+  .fa-spin {
+      -webkit-animation: fa-spin 2s infinite linear;
+      animation: fa-spin 2s infinite linear;
+  }
+
+  .fa-pulse {
+      -webkit-animation: fa-spin 1s infinite steps(8);
+      animation: fa-spin 1s infinite steps(8);
+  }
+
+  @-webkit-keyframes fa-spin {
+      0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+      }
+      100% {
+          -webkit-transform: rotate(359deg);
+          transform: rotate(359deg);
+      }
+  }
+
+  @keyframes fa-spin {
+      0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+      }
+      100% {
+          -webkit-transform: rotate(359deg);
+          transform: rotate(359deg);
+      }
+  }
+
+
+
+  .fa-rotate-90 {
+      filter: "progid: DXImageTransform.Microsoft.BasicImage(rotation=1)";
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+  }
+
+  .fa-rotate-180 {
+      filter: "progid: DXImageTransform.Microsoft.BasicImage(rotation=2)";
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+  }
+
+  .fa-rotate-270 {
+      filter: "progid: DXImageTransform.Microsoft.BasicImage(rotation=3)";
+      -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      transform: rotate(270deg);
+  }
+
+  .fa-flip-horizontal {
+      filter: "progid: DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+      -webkit-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+  }
+
+  .fa-flip-vertical {
+      filter: "progid: DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+      -webkit-transform: scale(1, -1);
+      -ms-transform: scale(1, -1);
+      transform: scale(1, -1);
+  }
+
+  :root .fa-rotate-90,
+  :root .fa-rotate-180,
+  :root .fa-rotate-270,
+  :root .fa-flip-horizontal,
+  :root .fa-flip-vertical {
+      filter: none;
+  }
+
+
+
+  .fa-stack {
+      position: relative;
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+      vertical-align: middle;
+  }
+
+  .fa-stack-1x,
+  .fa-stack-2x {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      text-align: center;
+  }
+
+  .fa-stack-1x {
+      line-height: inherit;
+  }
+
+  .fa-stack-2x {
+      font-size: 2em;
+  }
+
+  .fa-inverse {
+      color: #ffffff;
+  }
+
+
+
+  .fa-search:before {
+      content: '\f000';
+  }
+
+  .fa-star:before {
+      content: '\f001';
+  }
+
+  .fa-user:before {
+      content: '\f002';
+  }
+
+  .fa-check:before {
+      content: '\f003';
+  }
+
+  .fa-times:before {
+      content: '\f004';
+  }
+
+  .fa-home:before {
+      content: '\f005';
+  }
+
+  .fa-comment:before {
+      content: '\f006';
+  }
+
+  .fa-chevron-up:before {
+      content: '\f007';
+  }
+
+  .fa-phone:before {
+      content: '\f008';
+  }
+
+  .fa-twitter:before {
+      content: '\f009';
+  }
+
+  .fa-bars:before {
+      content: '\f00a';
+  }
+
+  .fa-google-plus:before {
+      content: '\f00b';
+  }
+
+  .fa-envelope:before {
+      content: '\f00c';
+  }
+
+  .fa-linkedin:before {
+      content: '\f00d';
+  }
+
+  .fa-facebook-official:before {
+      content: '\f00e';
+  }
+
+  .fa-ggg:before {
+      content: '\f00f';
+  }
+
+  .fa-angles-down:before {
+      content: '\f010';
+  }
+
+  .fa-next:before {
+      content: '\f011';
+  }
+
+  .fa-previous:before {
+      content: '\f012';
+  }
+
+  .fa-spinner:before {
+      content: '\f013';
+  }
+
+  .fa-121212:before {
+      content: '\f014';
+  }
+
+  .fa-131313:before {
+      content: '\f015';
+  }
+
+  .fa-151515:before {
+      content: '\f016';
+  }
+
+  .fa-franchise:before {
+      content: '\f017';
+  }
+
+  .fa-papaya21:before {
+      content: '\f019';
+  }
+
+  .fa-tc:before {
+      content: '\f01a';
+  }
+
+  .fa-no7:before {
+      content: '\f01b';
+  }
+
+  .fa-new:before {
+      content: '\f01c';
+  }
+
+  .fa-woken0618:before {
+      content: '\f01d';
+  }
+
+  .fa-woken0618-2:before {
+      content: '\f01e';
+  }
+
+  .fa-woken0618-3:before {
+      content: '\f01f';
+  }
+
+  .fa-woken0618-4:before {
+      content: '\f020';
+  }
+
+  .fa-woken0618-5:before {
+      content: '\f021';
+  }
+
+  .fa-woken0618-6:before {
+      content: '\f022';
+  }
+
+  .fa-woken0618-7:before {
+      content: '\f023';
+  }
+
+  .fa-woken0618-8:before {
+      content: '\f024';
+  }
+
+  .fa-3080-1:before {
+      content: '\f025';
+  }
+
+  .fa-3080-2:before {
+      content: '\f026';
+  }
+
+  .fa-3080-3:before {
+      content: '\f027';
+  }
+
+  .fa-3080-4:before {
+      content: '\f028';
+  }
+
+  .fa-3080-5:before {
+      content: '\f029';
+  }
+
+  .fa-3080-6:before {
+      content: '\f02a';
+  }
+
+  .fa-3080-7:before {
+      content: '\f02b';
+  }
+
+  .fa-3080-8:before {
+      content: '\f02c';
+  }
+
+  .fa-3080-9:before {
+      content: '\f02d';
+  }
+
+  .fa-3080-10:before {
+      content: '\f02e';
+  }
+
+  .fa-3080-11:before {
+      content: '\f02f';
+  }
+
+  .fa-3080-12:before {
+      content: '\f030';
+  }
+
+  .fa-3080-13:before {
+      content: '\f031';
+  }
+
+  .fa-3080-14:before {
+      content: '\f032';
+  }
+
+  .fa-kjkjiji:before {
+      content: '\f033';
+  }
+
+  .fa-77777:before {
+      content: '\f034';
+  }
+
+  .fa-vicky:before {
+      content: '\f035';
+  }
+
+  .fa-xiangyang01:before {
+      content: '\f036';
+  }
+
+  .fa-xiangyang02:before {
+      content: '\f037';
+  }
+
+  .fa-xiangyang04:before {
+      content: '\f038';
+  }
+
+  .fa-xiangyang03:before {
+      content: '\f039';
+  }
+
+  .fa-xiangyang05:before {
+      content: '\f03a';
+  }
+
+  .fa-xiangyang06:before {
+      content: '\f03b';
+  }
+
+  .fa-xiangyang07:before {
+      content: '\f03c';
+  }
+
+  .fa-xiangyang08:before {
+      content: '\f03d';
+  }
+
+  .fa-xiangyang09:before {
+      content: '\f03e';
+  }
+
+  .fa-xiangyang10:before {
+      content: '\f03f';
+  }
+
+  .fa-xiangyang11:before {
+      content: '\f040';
+  }
+
+  .fa-xiangyang12:before {
+      content: '\f041';
+  }
+
+  .fa-xiangyang13:before {
+      content: '\f042';
+  }
+
+  .fa-xiangyang14:before {
+      content: '\f043';
+  }
+
+  .fa-xiangyang15:before {
+      content: '\f044';
+  }
+
+  .fa-xiangyang16:before {
+      content: '\f045';
+  }
+
+  .fa-xiangyang17:before {
+      content: '\f046';
+  }
+
+  .fa-xiangyang18:before {
+      content: '\f047';
+  }
+
+  .fa-ponplus1:before {
+      content: '\f048';
+  }
+
+  .fa-ponplus2:before {
+      content: '\f049';
+  }
+
+  .fa-ponplus3:before {
+      content: '\f04a';
+  }
+
+  .fa-ponplus4:before {
+      content: '\f04b';
+  }
+
+  .fa-ponplus5:before {
+      content: '\f04c';
+  }
+
+  .fa-ponplus6:before {
+      content: '\f04d';
+  }
+
+  .fa-ponplus7:before {
+      content: '\f04e';
+  }
+
+  .fa-ponplus8:before {
+      content: '\f04f';
+  }
+
+  .fa-ponplus9:before {
+      content: '\f050';
+  }
+
+  .fa-ponplus10:before {
+      content: '\f051';
+  }
+
+  .fa-ponplus11:before {
+      content: '\f052';
+  }
+
+  .fa-ponplus12:before {
+      content: '\f053';
+  }
+
+  .fa-ponplus13:before {
+      content: '\f054';
+  }
+
+  .fa-ponplus14:before {
+      content: '\f055';
+  }
+
+  .fa-ponplus15:before {
+      content: '\f056';
+  }
+
+  .fa-ponplus16:before {
+      content: '\f057';
+  }
+
+  .fa-ponplus17:before {
+      content: '\f058';
+  }
+
+  .fa-ponplus18:before {
+      content: '\f059';
+  }
+
+  .fa-ponplus19:before {
+      content: '\f05a';
+  }
+
+  .fa-ponplus20:before {
+      content: '\f05b';
+  }
+
+  .fa-ponplus21:before {
+      content: '\f05c';
+  }
+
+  .fa-ponplus22:before {
+      content: '\f05d';
+  }
+
+  .fa-xiangyang20:before {
+      content: '\f05e';
+  }
+
+  .fa-xiangyang21:before {
+      content: '\f05f';
+  }
+
+  .fa-alert111:before {
+      content: '\f060';
+  }
+
+  .fa-breadplus89:before {
+      content: '\f061';
+  }
+
+  .fa-uncle01:before {
+      content: '\f063';
+  }
+
+  .fa-uncle03:before {
+      content: '\f065';
+  }
+
+  .fa-uncle05:before {
+      content: '\f066';
+  }
+
+  .fa-uncle06:before {
+      content: '\f067';
+  }
+
+  .fa-uncle02:before {
+      content: '\f06c';
+  }
+
+  .fa-uncle04:before {
+      content: '\f06d';
+  }
+
+  .fa-uncle07:before {
+      content: '\f06e';
+  }
+
+  .fa-uncle08:before {
+      content: '\f06f';
+  }
+
+  .fa-uncle09:before {
+      content: '\f070';
+  }
+
+  .fa-uncle10:before {
+      content: '\f071';
+  }
+
+  .fa-uncle12:before {
+      content: '\f073';
+  }
+
+  .fa-uncle13:before {
+      content: '\f074';
+  }
+
+  .fa-uncle14:before {
+      content: '\f075';
+  }
+
+  .fa-uuz1:before {
+      content: '\f076';
+  }
+
+  .fa-uuz2:before {
+      content: '\f077';
+  }
+
+  .fa-uuz3:before {
+      content: '\f078';
+  }
+
+  .fa-j0001:before {
+      content: '\f079';
+  }
+
+  .fa-j0002:before {
+      content: '\f07a';
+  }
+
+  .fa-j0003:before {
+      content: '\f07b';
+  }
+
+  .fa-j0004:before {
+      content: '\f07c';
+  }
+
+  .fa-j0006:before {
+      content: '\f07d';
+  }
+
+  .fa-j0005:before {
+      content: '\f07e';
+  }
+
+  .fa-j0007:before {
+      content: '\f07f';
+  }
+
+  .fa-j0008:before {
+      content: '\f080';
+  }
+
+  .fa-j0009:before {
+      content: '\f081';
+  }
+
+  .fa-kaeiway-1:before {
+      content: '\f082';
+  }
+
+  .fa-kaeiway-2:before {
+      content: '\f083';
+  }
+
+  .fa-kaeiway-3:before {
+      content: '\f084';
+  }
+
+  .fa-kaeiway-4:before {
+      content: '\f085';
+  }
+
+  .fa-kaeiway-5:before {
+      content: '\f086';
+  }
+
+  .fa-kaeiway-6:before {
+      content: '\f087';
+  }
+
+  .fa-lanchan-3:before {
+      content: '\f088';
+  }
+
+  .fa-lanchan-5:before {
+      content: '\f089';
+  }
+
+  .fa-lanchan-4:before {
+      content: '\f08a';
+  }
+
+  .fa-lanchan-2:before {
+      content: '\f08b';
+  }
+
+  .fa-lanchan-1:before {
+      content: '\f08c';
+  }
+
+  .fa-hecheng-1:before {
+      content: '\f08d';
+  }
+
+  .fa-hecheng-2:before {
+      content: '\f08e';
+  }
+
+  .fa-hecheng-3:before {
+      content: '\f08f';
+  }
+
+  .fa-hecheng-4:before {
+      content: '\f090';
+  }
+
+  .fa-hecheng-5:before {
+      content: '\f091';
+  }
+
+  .fa-hecheng-6:before {
+      content: '\f092';
+  }
+
+  .fa-joe-1:before {
+      content: '\f093';
+  }
+
+  .fa-jyecheng-1:before {
+      content: '\f094';
+  }
+
+  .fa-jyecheng-2:before {
+      content: '\f095';
+  }
+
+  .fa-jyecheng-3:before {
+      content: '\f096';
+  }
+
+  .fa-jyecheng-4:before {
+      content: '\f097';
+  }
+
+  .fa-jyecheng-5:before {
+      content: '\f098';
+  }
+
+  .fa-jyecheng-6:before {
+      content: '\f099';
+  }
+
+  .fa-jyecheng-7:before {
+      content: '\f09a';
+  }
+
+  .fa-jyecheng-8:before {
+      content: '\f09b';
+  }
+
+  .fa-see-1:before {
+      content: '\f09c';
+  }
+
+  .fa-see-2:before {
+      content: '\f09d';
+  }
+
+  .fa-see-3:before {
+      content: '\f09e';
+  }
+
+  .fa-see-4:before {
+      content: '\f09f';
+  }
+
+  .fa-see-5:before {
+      content: '\f0a0';
+  }
+
+  .fa-see-6:before {
+      content: '\f0a1';
+  }
+
+  .fa-see-7:before {
+      content: '\f0a2';
+  }
+
+  .fa-see-8:before {
+      content: '\f0a3';
+  }
+
+  .fa-see-9:before {
+      content: '\f0a4';
+  }
+
+  .fa-see-10:before {
+      content: '\f0a5';
+  }
+
+  .fa-ino-1:before {
+      content: '\f0a6';
+  }
+
+  .fa-minas-1:before {
+      content: '\f0a7';
+  }
+
+  .fa-minas-2:before {
+      content: '\f0a8';
+  }
+
+  .fa-minas-3:before {
+      content: '\f0a9';
+  }
+
+  .fa-sun-1:before {
+      content: '\f0aa';
+  }
+
+  .fa-621211:before {
+      content: '\f0ab';
+  }
+
+  .fa-sun-2:before {
+      content: '\f0ac';
+  }
+
+  .fa-11234:before {
+      content: '\f0ad';
+  }
+
+  .fa-11236:before {
+      content: '\f0af';
+  }
+
+  .fa-11235:before {
+      content: '\f0b0';
+  }
+
+  .fa-11237:before {
+      content: '\f0b1';
+  }
+
+  .fa-deerpoint-2:before {
+      content: '\f0b2';
+  }
+
+  .fa-deerpoint-3:before {
+      content: '\f0b3';
+  }
+
+  .fa-deerpoint-4:before {
+      content: '\f0b4';
+  }
+
+  .fa-deerpoint-1:before {
+      content: '\f0b5';
+  }
+
+  .fa-deerpoint-5:before {
+      content: '\f0b6';
+  }
+
+  .fa-hcd-1:before {
+      content: '\f0b7';
+  }
+
+  .fa-hcd-2:before {
+      content: '\f0b8';
+  }
+
+  .fa-hcd-3:before {
+      content: '\f0b9';
+  }
+
+  .fa-hcd-4:before {
+      content: '\f0ba';
+  }
+
+  .fa-hcd-5:before {
+      content: '\f0bb';
+  }
+
+  .fa-hcd-6:before {
+      content: '\f0bc';
+  }
+
+  .fa-hcd-7:before {
+      content: '\f0bd';
+  }
+
+  .fa-minas-4:before {
+      content: '\f0be';
+  }
+
+  .fa-minas-5:before {
+      content: '\f0bf';
+  }
+
+  .fa-benshi-1:before {
+      content: '\f0c0';
+  }
+
+  .fa-benshi-2:before {
+      content: '\f0c1';
+  }
+
+  .fa-benshi-3:before {
+      content: '\f0c2';
+  }
+
+  .fa-benshi-4:before {
+      content: '\f0c3';
+  }
+
+  .fa-benshi-5:before {
+      content: '\f0c4';
+  }
+
+  .fa-benshi-6:before {
+      content: '\f0c5';
+  }
+
+  .fa-benshi-7:before {
+      content: '\f0c6';
+  }
+
+  .fa-benshi-8:before {
+      content: '\f0c7';
+  }
+
+  .fa-benshi-9:before {
+      content: '\f0c8';
+  }
+
+  .fa-benshi-10:before {
+      content: '\f0c9';
+  }
+
+  .fa-benshi-11:before {
+      content: '\f0ca';
+  }
+
+  .fa-icon1:before {
+      content: '\f0cb';
+  }
+
+  .fa-icon2:before {
+      content: '\f0cc';
+  }
+
+  .fa-nd-1:before {
+      content: '\f0cd';
+  }
+
+  .fa-fsh-4:before {
+      content: '\f0d3';
+  }
+
+  .fa-minas-6:before {
+      content: '\f0d4';
+  }
+
+  .fa-nan01:before {
+      content: '\f0d5';
+  }
+
+  .fa-nan02:before {
+      content: '\f0d6';
+  }
+
+  .fa-nan03:before {
+      content: '\f0d7';
+  }
+
+  .fa-burner01:before {
+      content: '\f0d8';
+  }
+
+  .fa-nan04:before {
+      content: '\f0d9';
+  }
+
+  .fa-nan05:before {
+      content: '\f0da';
+  }
+
+  .fa-nan06:before {
+      content: '\f0db';
+  }
+
+  .fa-nan07:before {
+      content: '\f0dc';
+  }
+
+  .fa-minas-7:before {
+      content: '\f0df';
+  }
+
+  .fa-l1:before {
+      content: '\f0e0';
+  }
+
+  .fa-seejoytea01:before {
+      content: '\f0e1';
+  }
+
+  .fa-seejoytea02:before {
+      content: '\f0e2';
+  }
+
+  .fa-seejoytea03:before {
+      content: '\f0e3';
+  }
+
+  .fa-seejoytea04:before {
+      content: '\f0e4';
+  }
+
+  .fa-seajoytea05:before {
+      content: '\f0e5';
+  }
+
+  .fa-seajoytea06:before {
+      content: '\f0e6';
+  }
+
+  .fa-seajoytea07:before {
+      content: '\f0e7';
+  }
+
+  .fa-seajoytea08:before {
+      content: '\f0e8';
+  }
+
+  .fa-st01:before {
+      content: '\f0e9';
+  }
+
+  .fa-st02:before {
+      content: '\f0ea';
+  }
+
+  .fa-st03:before {
+      content: '\f0eb';
+  }
+
+  .fa-st04:before {
+      content: '\f0ec';
+  }
+
+  .fa-st05:before {
+      content: '\f0ed';
+  }
+
+  .fa-st06:before {
+      content: '\f0ef';
+  }
+
+  .fa-fsh-10:before {
+      content: '\f0f0';
+  }
+
+  .fa-stea01:before {
+      content: '\f0f1';
+  }
+
+  .fa-stea02:before {
+      content: '\f0f2';
+  }
+
+  .fa-stea03:before {
+      content: '\f0f3';
+  }
+
+  .fa-stea04:before {
+      content: '\f0f4';
+  }
+
+  .fav-stea05:before {
+      content: '\f0f5';
+  }
+
+  .fa-stea06:before {
+      content: '\f0f6';
+  }
+
+  .fa-g1:before {
+      content: '\f0f7';
+  }
+
+  .fa-g-map:before {
+      content: '\f0f8';
+  }
+
+  .fa-g-pwd:before {
+      content: '\f0f9';
+  }
+
+  .fa-g-member:before {
+      content: '\f0fa';
+  }
+
+  .fa-g-mail:before {
+      content: '\f0fb';
+  }
+
+  .fa-g-phone:before {
+      content: '\f0fc';
+  }
+
+  .fa-stea07:before {
+      content: '\f0fd';
+  }
+
+  .fa-stea08:before {
+      content: '\f0fe';
+  }
+
+  .fa-stea09:before {
+      content: '\f0ff';
+  }
+
+  .fa-stea10:before {
+      content: '\f100';
+  }
+
+  .fa-stea11:before {
+      content: '\f101';
+  }
+
+  .fa-stea12:before {
+      content: '\f102';
+  }
+
+  .fa-stea13:before {
+      content: '\f103';
+  }
+
+  .fa-stea14:before {
+      content: '\f104';
+  }
+
+  .fa-stea15:before {
+      content: '\f105';
+  }
+
+  .fa-stea16:before {
+      content: '\f106';
+  }
+
+  .fa-stea17:before {
+      content: '\f107';
+  }
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto
+}

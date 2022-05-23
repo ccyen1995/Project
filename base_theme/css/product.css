@@ -37,6 +37,7 @@
 }
 
 .page_product_area {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,6 +80,7 @@
 }
 
 .page_product_area .tab-content {
+  width: 90%;
   margin-top: 2rem;
 }
 
@@ -94,7 +96,7 @@
 }
 
 .page_product_area .tab-content .items_list .items {
-  width: 25%;
+  width: 33.33%;
   text-align: center;
 }
 
@@ -115,7 +117,7 @@
     width: 33.33%;
   }
   .page_product_area .tab-content .items_list .items img {
-    width: 75%;
+    width: 80%;
   }
 }
 
@@ -127,7 +129,7 @@
     width: 50%;
   }
   .page_product_area .tab-content .items_list .items img {
-    width: 70%;
+    width: 75%;
   }
 }
 

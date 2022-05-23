@@ -29,12 +29,12 @@
 		</div>
 	</div>
 	<div class="maker_">
-		<p>Copyright&copy;艾芬波斯茶館, All rights reserved. </i>網站設計：橘野數位設計</p>
+		<span>Copyright&copy;艾芬波斯茶館, All rights reserved.</span>
+		<span> <i class="fak fa-geyes"></i>網站設計：橘野數位設計</span>
 	</div>
 </footer>
-<script src="./js/jsjs.js"></script>
-<!-- <script src="../js/bootstrap5.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.0/dist/index.bundle.min.js"></script>
+<script type="module" src="./js/jsjs.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.0/dist/index.bundle.min.js"></script> -->
 </body>
 
 </html>

@@ -72,6 +72,6 @@
             </div>
         </div>
     </section>
-    <button class="goback">回上一頁</button>
+    <button class="goback">1</button>
 </div>
 <?php include_once("php/foot.php"); ?>

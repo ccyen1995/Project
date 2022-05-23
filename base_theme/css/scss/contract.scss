@@ -114,16 +114,17 @@
 @media screen and (max-width: 767px) {
   .contract {
     > p {
-      padding: 0 1rem;
+      width: 80%;
     }
     .form_box {
       flex-direction: column;
       justify-content: space-between;
+      align-items: center;
       .form_input,
       .form_img {
         margin: 0;
-        width: 100%;
-        max-width: 100%;
+        width: 80%;
+        max-width: 80%;
       }
       .form_img {
         height: 15rem;

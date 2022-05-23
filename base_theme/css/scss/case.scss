@@ -51,6 +51,8 @@ h1 + img {
     padding: 0.5rem;
     width: 33.33%;
     .page_case_item {
+      position: relative;
+      height: 35rem;
       padding: 0.5rem;
       cursor: pointer;
       display: flex;
@@ -61,7 +63,7 @@ h1 + img {
       border: var(--font1) solid 1px;
       img {
         width: 100%;
-        height: 100%;
+        height: 40%;
         object-fit: cover;
         object-position: center;
       }
@@ -77,12 +79,14 @@ h1 + img {
       }
     }
     button {
-      margin: 1.5rem 0;
+      position: absolute;
+      bottom: 1.5rem;
+      // margin: 1.5rem 0;
       min-height: 3.2rem;
       min-width: 12rem;
     }
     .page_case_item:hover {
-      background-color: aqua;
+      // background-color: aqua;
     }
   }
 }
@@ -161,6 +165,15 @@ h1 + img {
 
 // @meida==============
 
+@media screen and (max-width: 1199px) {
+  .page_case_items {
+    .page_case_outbox {
+      .page_case_item {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
 @media screen and (max-width: 991px) {
   .page_case_topimg {
     height: 180px;
@@ -168,6 +181,9 @@ h1 + img {
   .page_case_items {
     .page_case_outbox {
       width: 50%;
+      .page_case_item {
+        height: 35rem;
+      }
     }
   }
   //case_contant
@@ -203,10 +219,16 @@ h1 + img {
   .page_case_items {
     justify-content: center;
     .page_case_outbox {
-      width: 80%;
+      width: 50%;
+      .page_case_item {
+        height: auto;
+        font-size: 1rem;
+      }
       button {
+        position: initial;
         min-height: 2.4rem;
         min-width: 8rem;
+        margin-top: 1rem;
       }
     }
   }

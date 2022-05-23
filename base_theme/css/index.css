@@ -79,7 +79,7 @@ header.header_ #toptop {
 }
 
 header.header_ .navbar_ {
-  width: 90%;
+  width: 92%;
   margin: auto;
   padding: 0.5rem 0;
   display: -webkit-box;
@@ -91,45 +91,16 @@ header.header_ .navbar_ {
 }
 
 header.header_ .navbar_ .logo {
-  min-width: 18rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 15rem;
 }
 
 header.header_ .navbar_ .logo img {
-  height: 6rem;
-  width: 6rem;
-}
-
-header.header_ .navbar_ .logo div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 0.5rem;
-}
-
-header.header_ .navbar_ .logo div p {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-header.header_ .navbar_ .logo div p:first-of-type {
-  line-height: 2rem;
-  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 header.header_ .navbar_ .links {
@@ -138,20 +109,21 @@ header.header_ .navbar_ .links {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 400;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.8rem;
 }
 
 header.header_ .navbar_ .links a {
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   color: var(--font1);
   text-decoration: none;
-  -webkit-transition: color 0.1s linear;
-  transition: color 0.1s linear;
-  height: 2rem;
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+  position: relative;
 }
 
 header.header_ .navbar_ .links a:link {
@@ -165,11 +137,49 @@ header.header_ .navbar_ .links a:visited {
 
 header.header_ .navbar_ .links a:hover {
   color: var(--link-hover);
-  border-bottom: var(--link-hover) solid 4px;
+}
+
+header.header_ .navbar_ .links a::before {
+  content: "";
+  background-color: var(--line);
+  width: 1px;
+  height: 0;
+  display: block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -3.8rem);
+          transform: translate(-50%, -3.8rem);
+}
+
+header.header_ .navbar_ .links a::after {
+  content: "";
+  background-color: var(--line);
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  display: block;
+  left: 50%;
+  -webkit-transform: translate(-50%, -2.6rem);
+          transform: translate(-50%, -2.6rem);
+}
+
+header.header_ .navbar_ .links a:hover::before {
+  -webkit-transition: all 0.17s linear;
+  transition: all 0.17s linear;
+  height: 3rem;
+}
+
+header.header_ .navbar_ .links a:hover::after {
+  width: 0.4rem;
+  height: 0.4rem;
+  -webkit-transition: all 0.05s linear 0.2s;
+  transition: all 0.05s linear 0.2s;
 }
 
 header.header_ .navbar_ .community {
-  font-size: 2.5rem;
+  font-size: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,12 +198,17 @@ header.header_ .navbar_ .community i {
   transition: all 0.1s linear;
 }
 
+header.header_ .navbar_ .community i:nth-child(2)::before {
+  font-size: 40px;
+  vertical-align: top;
+}
+
 header.header_ .navbar_ .community i:hover {
   color: var(--link-hover);
 }
 
 header.header_ .navbar_ .community i:not(:first-child) {
-  margin-left: 0.8rem;
+  margin-left: 0.7rem;
 }
 
 header.header_ .navbar_ .burger {
@@ -223,7 +238,7 @@ header.header_ .navbar_ .burger:hover {
 }
 
 .burger_nav .close_ {
-  position: relative;
+  position: absolute;
   top: 30px;
   left: -60px;
   border-radius: 50%;
@@ -390,11 +405,11 @@ header.header_ .navbar_ .burger:hover {
 }
 
 .about_area .about_area_1 {
-  background: url("./../img/about枕頭.jpg") no-repeat center/cover;
+  background: url("./../img/about_pillow.jpg") no-repeat center/cover;
 }
 
 .about_area .about_area_4 {
-  background: url("./../img/about客廳.jpg") no-repeat center/cover;
+  background: url("./../img/about_room.jpg") no-repeat center/cover;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -450,7 +465,7 @@ header.header_ .navbar_ .burger:hover {
 
 .product_area .product_area_bigimg {
   height: 518px;
-  background: url("./../img/商品服務大圖.jpg") no-repeat 50% 50%/cover;
+  background: url("./../img/product_bigimg.jpg") no-repeat center/cover;
   margin-bottom: 17rem;
 }
 
@@ -506,7 +521,7 @@ header.header_ .navbar_ .burger:hover {
 }
 
 .product_area #hahah button.slick-prev:before {
-  content: url("../../img/arrow.png");
+  content: url("./../img/arrow.png");
   display: block;
   rotate: 270deg;
   -webkit-transform: rotate(90deg) translate(-2%, 50%);
@@ -517,7 +532,7 @@ header.header_ .navbar_ .burger:hover {
 }
 
 .product_area #hahah button.slick-next:before {
-  content: url("../../img/arrow.png");
+  content: url("./../img/arrow.png");
   display: block;
   rotate: 270deg;
   -webkit-transform: rotate(270deg) translate(3%, -50%);
@@ -723,12 +738,8 @@ footer.footer_ .maker_ {
   background-color: var(--font1);
   border-top: var(--line) solid 8px;
   color: #ffffff;
-  line-height: 28px;
-  padding: 5px 0;
-}
-
-footer.footer_ .maker_ p {
-  margin: 0;
+  line-height: 1.6rem;
+  padding: 0.3rem 0;
 }
 
 @media screen and (min-width: 1550px) {
@@ -739,14 +750,13 @@ footer.footer_ .maker_ p {
 
 @media screen and (max-width: 1500px) {
   header.header_ .navbar_ .links {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   header.header_ .navbar_ .links a {
-    padding: 0 0.6rem;
+    padding: 0 0.8rem;
   }
   header.header_ .navbar_ .community {
-    font-size: 2.2rem;
-    padding-bottom: 0.8rem;
+    font-size: 2rem;
   }
   header.header_ .navbar_ .community i {
     margin-left: 0.6rem;
@@ -759,16 +769,49 @@ footer.footer_ .maker_ p {
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1300px) {
+  header.header_ .navbar_ .logo {
+    width: 12rem;
+  }
+  header.header_ .navbar_ .links {
+    padding-bottom: 0.5rem;
+  }
   header.header_ .navbar_ .links a {
-    margin: 0 0.5rem;
+    padding: 0 0.6rem;
+  }
+  header.header_ .navbar_ .links a::before {
+    -webkit-transform: translate(-50%, -3rem);
+            transform: translate(-50%, -3rem);
+  }
+  header.header_ .navbar_ .links a:hover::before {
+    height: 2.2rem;
+  }
+  header.header_ .navbar_ .links a::after {
+    -webkit-transform: translate(-50%, -2.3rem);
+            transform: translate(-50%, -2.3rem);
+  }
+  header.header_ .navbar_ .community {
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  header.header_ .navbar_ .links {
+    font-size: 16px;
+  }
+  header.header_ .navbar_ .links a {
+    padding: 0 0.5rem;
+  }
+  header.header_ .navbar_ .community {
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
   }
 }
 
 @media screen and (max-width: 991px) {
   header.header_ .navbar_ .logo img {
-    height: 5rem;
-    width: 5rem;
+    width: 12rem;
   }
   header.header_ .navbar_ .logo div {
     margin-left: 0.4rem;
@@ -851,6 +894,19 @@ footer.footer_ .maker_ p {
 }
 
 @media screen and (max-width: 767px) {
+  button.goback {
+    height: 2.4rem;
+    width: 8rem;
+    font-size: 18px;
+  }
+  button.readbtn {
+    height: 2.4rem;
+    width: 8rem;
+    border: var(--font1) solid 1px;
+    border-radius: 6px;
+    color: var(--font1);
+    font-size: 18px;
+  }
   .QA .QAimg p {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
@@ -874,19 +930,6 @@ footer.footer_ .maker_ p {
 }
 
 @media screen and (max-width: 575px) {
-  button.goback {
-    height: 2.4rem;
-    width: 8rem;
-    font-size: 18px;
-  }
-  button.readbtn {
-    height: 2.4rem;
-    width: 8rem;
-    border: var(--font1) solid 1px;
-    border-radius: 6px;
-    color: var(--font1);
-    font-size: 18px;
-  }
   .offcanvas.offcanvas-end {
     width: 50%;
   }
@@ -920,4 +963,65 @@ footer.footer_ .maker_ p {
   .QA .question .QAbox {
     width: 95%;
   }
+  footer.footer_ .maker_ {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+#overlay {
+  z-index: 4;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#overlay.acctive {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#lightbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  border: 1px solid black;
+  z-index: 5;
+  background-color: white;
+  /* 不設背景顏色會被fixed顏色穿透? */
+}
+
+#lightbox img {
+  opacity: 0;
+}
+
+#lightbox.acctive {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  opacity: 1;
+  /* transform記得全部都要再次設置，否則全部果將不會保留 */
+}
+
+#lightbox.acctive img {
+  opacity: 1;
 }

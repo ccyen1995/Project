@@ -66,9 +66,13 @@
                 </div>
             </div>
         </div>
-        <div class="page">page number</div>
+        <div class="page">
+            <i class="fak fak-chevron-thin-left"></i>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <i class="fak fak-chevron-thin-right"></i>
+        </div>
     </div>
-
-    <button class="goback">回上一頁</button>
 </div>
 <?php include_once("php/foot.php"); ?>

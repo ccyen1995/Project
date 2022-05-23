@@ -38,7 +38,6 @@
 
 .page_qa {
   margin-top: 3rem;
-  background-color: var(--grey);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,6 +112,7 @@
 
 .page_qa .question .qabox .Q :nth-child(3),
 .page_qa .question .qabox .A :nth-child(3) {
+  font-size: 3rem;
   width: 10%;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;

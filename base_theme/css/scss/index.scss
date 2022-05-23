@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  // width: 100%;
+  // width: 100vw;
   // width: calc(100% - 2rem);
   // overflow-x: hidden;
 }
@@ -74,50 +74,37 @@ header.header_ {
     background-color: var(--font1);
     border-bottom: var(--line) solid 8px;
   }
+
   .navbar_ {
-    width: 90%;
+    width: 92%;
     margin: auto;
     padding: 0.5rem 0;
     display: flex;
     justify-content: space-between;
     .logo {
-      min-width: 18rem;
-      // width: 18rem; 會被壓縮?
-      display: flex;
-      align-items: center;
+      width: 15rem;
       img {
-        height: 6rem;
-        width: 6rem;
-      }
-      div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0.5rem;
-        p {
-          margin: 0;
-          font-size: 1.2rem;
-        }
-        p:first-of-type {
-          line-height: 2rem;
-          font-size: 2rem;
-        }
+        width: 100%;
+        height: 100%;
+        // object-fit: contain;
+        object-fit: cover;
+        object-position: center;
+        // 為何cocer 與 contain沒有差別?
       }
     }
     .links {
       display: flex;
       flex-wrap: wrap;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 400;
       align-items: flex-end;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.8rem;
       a {
-        // margin: 0 1rem;
-        padding: 0 1rem;
+        padding: 0 1.5rem;
         color: var(--font1);
         text-decoration: none;
-        transition: color 0.1s linear;
-        height: 2rem;
+        transition: color 0.15s linear;
+        position: relative;
       }
       a:link {
         color: var(--font1);
@@ -128,11 +115,42 @@ header.header_ {
       }
       a:hover {
         color: var(--link-hover);
-        border-bottom: var(--link-hover) solid 4px;
+      }
+      a::before {
+        content: "";
+        background-color: var(--line);
+        width: 1px;
+        height: 0;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -3.8rem);
+      }
+      a::after {
+        content: "";
+        background-color: var(--line);
+        border-radius: 50%;
+        width: 0;
+        height: 0;
+        display: block;
+        position: absolute;
+        display: block;
+        left: 50%;
+        transform: translate(-50%, -2.6rem);
+      }
+      a:hover::before {
+        transition: all 0.17s linear;
+        height: 3rem;
+        //還有什麼動態方式
+      }
+      a:hover::after {
+        width: 0.4rem;
+        height: 0.4rem;
+        transition: all 0.05s linear 0.2s;
       }
     }
     .community {
-      font-size: 2.5rem;
+      font-size: 32px;
       display: flex;
       justify-content: center;
       align-items: flex-end;
@@ -141,11 +159,15 @@ header.header_ {
         cursor: pointer;
         transition: all 0.1s linear;
       }
+      i:nth-child(2)::before {
+        font-size: 40px;
+        vertical-align: top;
+      }
       i:hover {
         color: var(--link-hover);
       }
       i:not(:first-child) {
-        margin-left: 0.8rem;
+        margin-left: 0.7rem;
       }
     }
     .burger {
@@ -176,9 +198,9 @@ header.header_ {
 }
 .burger_nav {
   .close_ {
-    // position: absolute;
+    position: absolute;
     // 為何外層不設定 relative, absolute一樣是以父元素的相對位置放置
-    position: relative;
+    // position: relative;
     top: 30px;
     left: -60px;
     border-radius: 50%;
@@ -321,10 +343,10 @@ header.header_ {
     height: 539px;
   }
   .about_area_1 {
-    background: url("./../img/about枕頭.jpg") no-repeat center / cover;
+    background: url("./../img/about_pillow.jpg") no-repeat center / cover;
   }
   .about_area_4 {
-    background: url("./../img/about客廳.jpg") no-repeat center / cover;
+    background: url("./../img/about_room.jpg") no-repeat center / cover;
     order: 2;
   }
   .about_area_3 {
@@ -369,7 +391,7 @@ header.header_ {
   text-align: center;
   .product_area_bigimg {
     height: 518px;
-    background: url("./../img/商品服務大圖.jpg") no-repeat 50% 50% / cover;
+    background: url("./../img/product_bigimg.jpg") no-repeat center / cover;
     margin-bottom: 17rem;
     .product_area_icon {
       position: relative;
@@ -408,7 +430,7 @@ header.header_ {
     margin: auto;
     position: relative;
     button.slick-prev:before {
-      content: url("../../img/arrow.png");
+      content: url("./../img/arrow.png");
       display: block;
       rotate: 270deg;
       transform: rotate(90deg) translate(-2%, 50%);
@@ -416,7 +438,7 @@ header.header_ {
       // background-color: #b39f61;
     }
     button.slick-next:before {
-      content: url("../../img/arrow.png");
+      content: url("./../img/arrow.png");
       display: block;
       rotate: 270deg;
       transform: rotate(270deg) translate(3%, -50%);
@@ -520,12 +542,6 @@ header.header_ {
   }
 }
 
-// .QA > .QAimg,
-// .QA > .question,
-// .QA > button {
-//   position: relative;
-//   z-index: 1;
-// }
 .QA > * {
   position: relative;
   z-index: 1;
@@ -598,11 +614,8 @@ footer.footer_ {
     background-color: var(--font1);
     border-top: var(--line) solid 8px;
     color: #ffffff;
-    line-height: 28px;
-    padding: 5px 0;
-    p {
-      margin: 0;
-    }
+    line-height: 1.6rem;
+    padding: 0.3rem 0;
   }
 }
 
@@ -620,14 +633,13 @@ footer.footer_ {
   header.header_ {
     .navbar_ {
       .links {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         a {
-          padding: 0 0.6rem;
+          padding: 0 0.8rem;
         }
       }
       .community {
-        font-size: 2.2rem;
-        padding-bottom: 0.8rem;
+        font-size: 2rem;
         i {
           margin-left: 0.6rem;
         }
@@ -645,17 +657,44 @@ footer.footer_ {
 @media screen and (max-width: 1300px) {
   header.header_ {
     .navbar_ {
+      .logo {
+        width: 12rem;
+      }
+      .links {
+        padding-bottom: 0.5rem;
+        a {
+          padding: 0 0.6rem;
+        }
+        a::before {
+          transform: translate(-50%, -3rem);
+        }
+        a:hover::before {
+          height: 2.2rem;
+        }
+        a::after {
+          transform: translate(-50%, -2.3rem);
+        }
+      }
+      .community {
+        padding-bottom: 0.5rem;
+        font-size: 1.8rem;
+      }
     }
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1150px) {
   header.header_ {
     .navbar_ {
       .links {
+        font-size: 16px;
         a {
-          margin: 0 0.5rem;
+          padding: 0 0.5rem;
         }
+      }
+      .community {
+        padding-bottom: 0.5rem;
+        font-size: 1.8rem;
       }
     }
   }
@@ -665,8 +704,7 @@ footer.footer_ {
     .navbar_ {
       .logo {
         img {
-          height: 5rem;
-          width: 5rem;
+          width: 12rem;
         }
         div {
           margin-left: 0.4rem;
@@ -751,6 +789,20 @@ footer.footer_ {
 }
 
 @media screen and (max-width: 767px) {
+  button.goback {
+    height: 2.4rem;
+    width: 8rem;
+    font-size: 18px;
+  }
+
+  button.readbtn {
+    height: 2.4rem;
+    width: 8rem;
+    border: var(--font1) solid 1px;
+    border-radius: 6px;
+    color: var(--font1);
+    font-size: 18px;
+  }
   .QA {
     .QAimg {
       p {
@@ -778,20 +830,6 @@ footer.footer_ {
   }
 }
 @media screen and (max-width: 575px) {
-  button.goback {
-    height: 2.4rem;
-    width: 8rem;
-    font-size: 18px;
-  }
-
-  button.readbtn {
-    height: 2.4rem;
-    width: 8rem;
-    border: var(--font1) solid 1px;
-    border-radius: 6px;
-    color: var(--font1);
-    font-size: 18px;
-  }
   .offcanvas.offcanvas-end {
     width: 50%;
   }
@@ -827,6 +865,13 @@ footer.footer_ {
       }
     }
   }
+  footer.footer_ {
+    .maker_ {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -837,3 +882,48 @@ footer.footer_ {
 // Large (>=992px)
 // Extra Large (>=1200px)
 // XXL (>=1400px)
+#overlay {
+  z-index: 4;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+#overlay.acctive {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#lightbox {
+  // display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  border: 1px solid black;
+  z-index: 5;
+  background-color: white;
+  /* 不設背景顏色會被fixed顏色穿透? */
+  img {
+    // transform: scale(0);
+    opacity: 0;
+    // transition: 0.2s ease-in-out;
+  }
+}
+#lightbox.acctive {
+  // display: block;
+  transform: translate(-50%, -50%);
+  transition: 0.2s ease-in-out;
+  opacity: 1;
+  img {
+    // transform: scale(1);
+    opacity: 1;
+  }
+  /* transform記得全部都要再次設置，否則全部果將不會保留 */
+}

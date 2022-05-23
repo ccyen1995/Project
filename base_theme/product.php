@@ -16,7 +16,7 @@
                 <a class="nav-link" data-bs-toggle="pill" href="#menu2">波斯茶葉</a>
             </li>
             <li class="nav-item page_product_type4">
-                <a class="nav-link" data-bs-toggle="pill" href="#menu3">禮盒</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#menu3">　禮盒　</a>
             </li>
         </ul>
 
@@ -25,15 +25,15 @@
             <div id="home" class=" tab-pane active">
                 <div class="items_list">
                     <div class="items">
-                        <img src="./img/product/pillow.jpg" alt="">
+                        <img src="./img/product/pillow.jpg" alt="" data-modal-target="this">
                         <h3>方巾抱枕</h3>
                     </div>
                     <div class="items">
-                        <img src="./img/product/pillow.jpg" alt="">
+                        <img src="./img/product/pillow.jpg" alt="" data-modal-target='this'>
                         <h3>方巾抱枕</h3>
                     </div>
                     <div class="items">
-                        <img src="./img/product/pillow.jpg" alt="">
+                        <img src="./img/product/pillow.jpg" alt="" data-modal-target='this'>
                         <h3>方巾抱枕</h3>
                     </div>
                     <div class="items">
@@ -121,30 +121,11 @@
         </div>
     </div>
 </div>
-<!-- Nav pills -->
-
-<!-- <div class="row">
-    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-        <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
-    </a>
-    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-        <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
-    </a>
-    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-        <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
-    </a>
+<div class="lightbox" id="lightbox">
+    <i class="fak fak-chevron-thin-left"></i>
+    <img src="" alt="">
+    <i class="fak fak-chevron-thin-right"></i>
 </div>
-<div class="row">
-    <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-        <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
-    </a>
-    <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-        <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
-    </a>
-    <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-        <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
-    </a>
-</div> -->
-
-
+<div id="overlay"></div>
+<!-- Nav pills -->
 <?php include_once("php/foot.php"); ?>

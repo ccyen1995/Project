@@ -66,6 +66,8 @@ h1 + img {
 }
 
 .page_case_items .page_case_outbox .page_case_item {
+  position: relative;
+  height: 35rem;
   padding: 0.5rem;
   cursor: pointer;
   display: -webkit-box;
@@ -85,7 +87,7 @@ h1 + img {
 
 .page_case_items .page_case_outbox .page_case_item img {
   width: 100%;
-  height: 100%;
+  height: 40%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -105,13 +107,10 @@ h1 + img {
 }
 
 .page_case_items .page_case_outbox button {
-  margin: 1.5rem 0;
+  position: absolute;
+  bottom: 1.5rem;
   min-height: 3.2rem;
   min-width: 12rem;
-}
-
-.page_case_items .page_case_outbox .page_case_item:hover {
-  background-color: aqua;
 }
 
 .page_case_contant_title {
@@ -217,12 +216,21 @@ h1 + img {
      object-position: center;
 }
 
+@media screen and (max-width: 1199px) {
+  .page_case_items .page_case_outbox .page_case_item {
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .page_case_topimg {
     height: 180px;
   }
   .page_case_items .page_case_outbox {
     width: 50%;
+  }
+  .page_case_items .page_case_outbox .page_case_item {
+    height: 35rem;
   }
   .page_case_contant .page_case_carousel {
     height: auto;
@@ -263,11 +271,17 @@ h1 + img {
             justify-content: center;
   }
   .page_case_items .page_case_outbox {
-    width: 80%;
+    width: 50%;
+  }
+  .page_case_items .page_case_outbox .page_case_item {
+    height: auto;
+    font-size: 1rem;
   }
   .page_case_items .page_case_outbox button {
+    position: initial;
     min-height: 2.4rem;
     min-width: 8rem;
+    margin-top: 1rem;
   }
   .page_case_contant .page_case_imgs {
     -webkit-box-pack: center;
