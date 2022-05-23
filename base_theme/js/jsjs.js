@@ -102,13 +102,19 @@ products.forEach((product) => {
 //     closemodal(modal);
 //   });
 // });
-
-overlay.addEventListener("click", () => {
-  const modals = document.querySelectorAll(".acctive");
-  modals.forEach((modal) => {
-    closemodal(modal);
-  });
-});
+overlayy(overlay);
+function overlayy(overlay) {
+  if (overlay == null) {
+    return;
+  } else {
+    overlay.addEventListener("click", () => {
+      const modals = document.querySelectorAll(".acctive");
+      modals.forEach((modal) => {
+        closemodal(modal);
+      });
+    });
+  }
+}
 
 // function openmodal(modal) {
 //   if (modal == null) return;
@@ -121,3 +127,12 @@ function closemodal(modal) {
   lightbox.classList.remove("acctive");
   overlay.classList.remove("acctive");
 }
+
+const toTop = document.querySelector(".to-top");
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 200) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+});

@@ -70,7 +70,7 @@
                 <i class="fak fak-line"></i>
             </div>
             <button class="btn btn-primary burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                <i class="fap2 fa-bars"></i>
+                <i class="fap2 fap2-bars"></i>
             </button>
         </div>
     </header>

@@ -33,6 +33,11 @@
 		<span> <i class="fak fa-geyes"></i>網站設計：橘野數位設計</span>
 	</div>
 </footer>
+
+<a href="#" class="to-top">
+	<i class="fak fa-chevron-thin-up"></i>
+	TOP
+</a>
 <script type="module" src="./js/jsjs.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.0/dist/index.bundle.min.js"></script> -->
 </body>
