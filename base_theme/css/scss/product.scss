@@ -1,3 +1,4 @@
+//==========標題start==========
 .page_product_topimg {
   position: relative;
   background: url("../img/product/product_topimg.jpg") no-repeat center / cover;
@@ -16,7 +17,6 @@
   position: relative;
   z-index: 1;
 }
-
 .page_product_topimg:after {
   content: "";
   position: absolute;
@@ -29,6 +29,14 @@
   background: rgba(0, 0, 0, 0.3);
   opacity: 1;
 }
+@media screen and (max-width: 991px) {
+  .page_product_topimg {
+    height: 180px;
+  }
+}
+//==========標題end==========
+
+//==========產品start==========
 .page_product_area {
   width: 100%;
   display: flex;
@@ -76,7 +84,6 @@
     }
   }
 }
-
 @media screen and (max-width: 1400px) {
   .page_product_area {
     .tab-content {
@@ -92,9 +99,6 @@
   }
 }
 @media screen and (max-width: 991px) {
-  .page_product_topimg {
-    height: 180px;
-  }
   .page_product_area {
     .tab-content {
       .items_list {
@@ -111,8 +115,17 @@
 @media screen and (max-width: 767px) {
   .page_product_area {
     .page_product_types {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background-color: aqua;
       .nav-item {
-        width: 40%;
+        text-align: center;
+        width: 60%;
+        a.nav-link {
+          margin: 0;
+        }
       }
     }
 
@@ -142,3 +155,4 @@
     }
   }
 }
+//==========產品end==========

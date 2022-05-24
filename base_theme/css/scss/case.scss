@@ -1,3 +1,4 @@
+//============實際案例主頁start=============/
 .page_case_topimg {
   position: relative;
   background: url("../img/case/case_topimg.jpg") no-repeat center / cover;
@@ -29,6 +30,15 @@
   background: rgba(0, 0, 0, 0.3);
   opacity: 1;
 }
+
+@media screen and (max-width: 991px) {
+  .page_case_topimg {
+    height: 180px;
+  }
+}
+//===========標題===========
+
+//===========中間===========
 h1.page_case_title {
   text-align: center;
   color: var(--font1);
@@ -42,7 +52,6 @@ h1 + img {
   height: 4rem;
   margin-bottom: 2rem;
 }
-
 .page_case_items {
   display: flex;
   flex-wrap: wrap;
@@ -73,6 +82,8 @@ h1 + img {
         margin: 0;
       }
       p {
+        height: 33%;
+        overflow-x: scroll;
         padding: 0 1rem;
         margin: 0;
         line-height: 1.8rem;
@@ -90,8 +101,69 @@ h1 + img {
     }
   }
 }
+@media screen and (max-width: 1199px) {
+  .page_case_items {
+    .page_case_outbox {
+      .page_case_item {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .page_case_items {
+    .page_case_outbox {
+      width: 50%;
+      .page_case_item {
+        height: 35rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .page_case_items {
+    justify-content: center;
+    .page_case_outbox {
+      width: 50%;
+      .page_case_item {
+        height: 35rem;
+        font-size: 1rem;
+        p {
+          height: 45%;
+        }
+        img {
+          height: 30%;
+        }
+      }
+      button {
+        min-height: 2.4rem;
+        min-width: 8rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .page_case_items {
+    justify-content: center;
+    .page_case_outbox {
+      width: 100%;
+      .page_case_item {
+        height: auto;
+        font-size: 1rem;
+        p {
+          height: auto;
+        }
+        button {
+          position: initial;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+//============實際案例主頁end=============/
 
-// -------------page_case_contant--------------
+//============實際案例內頁start=============/
 .page_case_contant_title {
   margin: 3rem 0;
   padding-bottom: 0.5rem;
@@ -102,7 +174,6 @@ h1 + img {
     vertical-align: baseline;
   }
 }
-
 .page_case_contant {
   color: var(--font1);
   h3 {
@@ -163,30 +234,7 @@ h1 + img {
   }
 }
 
-// @meida==============
-
-@media screen and (max-width: 1199px) {
-  .page_case_items {
-    .page_case_outbox {
-      .page_case_item {
-        font-size: 1.2rem;
-      }
-    }
-  }
-}
 @media screen and (max-width: 991px) {
-  .page_case_topimg {
-    height: 180px;
-  }
-  .page_case_items {
-    .page_case_outbox {
-      width: 50%;
-      .page_case_item {
-        height: 35rem;
-      }
-    }
-  }
-  //case_contant
   .page_case_contant {
     .page_case_carousel {
       height: auto;
@@ -214,25 +262,7 @@ h1 + img {
     }
   }
 }
-
 @media screen and (max-width: 767px) {
-  .page_case_items {
-    justify-content: center;
-    .page_case_outbox {
-      width: 50%;
-      .page_case_item {
-        height: auto;
-        font-size: 1rem;
-      }
-      button {
-        position: initial;
-        min-height: 2.4rem;
-        min-width: 8rem;
-        margin-top: 1rem;
-      }
-    }
-  }
-  //case_contant
   .page_case_contant {
     .page_case_imgs {
       justify-content: center;
@@ -243,13 +273,6 @@ h1 + img {
   }
 }
 @media screen and (max-width: 575px) {
-  .page_case_items {
-    justify-content: center;
-    .page_case_outbox {
-      width: 100%;
-    }
-  }
-  //case_contant
   .page_case_contant {
     .page_case_imgs {
       justify-content: center;
@@ -259,3 +282,4 @@ h1 + img {
     }
   }
 }
+//============實際案例內頁end=============/

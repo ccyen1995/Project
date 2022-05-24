@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" href="./css/bootstrap5.min.css">
     <link rel="shortcut icon" href="favicon.ico">
-
+    <link rel="stylesheet" href="/css/lightbox.css">
     <link rel="stylesheet" href="css/external_v.css" />
     <link rel="stylesheet" href="css/external_i.css" />
     <link rel="stylesheet" href="css/external_k.css" />
@@ -35,8 +35,10 @@
     <link rel="stylesheet" href="css/gs.css?<?php echo time(); ?>" />
     <link rel="stylesheet" href="./css/index.css">
 
+
     <script src="./js/bootstrap5.bundle.min.js"></script>
     <script language="javascript" src="js/jquery-1.12.3.min.js"></script>
+    <script src="../js/lightbox.js"></script>
     <script language="javascript" src="js/slick.min.js"></script>
     <script src="js/js.js"></script>
     <script src="https://kit.fontawesome.com/71cf4654e7.js" crossorigin="anonymous"></script>

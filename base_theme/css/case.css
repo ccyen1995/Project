@@ -36,6 +36,12 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 991px) {
+  .page_case_topimg {
+    height: 180px;
+  }
+}
+
 h1.page_case_title {
   text-align: center;
   color: var(--font1);
@@ -101,6 +107,8 @@ h1 + img {
 }
 
 .page_case_items .page_case_outbox .page_case_item p {
+  height: 33%;
+  overflow-x: scroll;
   padding: 0 1rem;
   margin: 0;
   line-height: 1.8rem;
@@ -111,6 +119,68 @@ h1 + img {
   bottom: 1.5rem;
   min-height: 3.2rem;
   min-width: 12rem;
+}
+
+@media screen and (max-width: 1199px) {
+  .page_case_items .page_case_outbox .page_case_item {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .page_case_items .page_case_outbox {
+    width: 50%;
+  }
+  .page_case_items .page_case_outbox .page_case_item {
+    height: 35rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page_case_items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .page_case_items .page_case_outbox {
+    width: 50%;
+  }
+  .page_case_items .page_case_outbox .page_case_item {
+    height: 35rem;
+    font-size: 1rem;
+  }
+  .page_case_items .page_case_outbox .page_case_item p {
+    height: 45%;
+  }
+  .page_case_items .page_case_outbox .page_case_item img {
+    height: 30%;
+  }
+  .page_case_items .page_case_outbox button {
+    min-height: 2.4rem;
+    min-width: 8rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .page_case_items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .page_case_items .page_case_outbox {
+    width: 100%;
+  }
+  .page_case_items .page_case_outbox .page_case_item {
+    height: auto;
+    font-size: 1rem;
+  }
+  .page_case_items .page_case_outbox .page_case_item p {
+    height: auto;
+  }
+  .page_case_items .page_case_outbox .page_case_item button {
+    position: initial;
+    margin-top: 1rem;
+  }
 }
 
 .page_case_contant_title {
@@ -216,22 +286,7 @@ h1 + img {
      object-position: center;
 }
 
-@media screen and (max-width: 1199px) {
-  .page_case_items .page_case_outbox .page_case_item {
-    font-size: 1.2rem;
-  }
-}
-
 @media screen and (max-width: 991px) {
-  .page_case_topimg {
-    height: 180px;
-  }
-  .page_case_items .page_case_outbox {
-    width: 50%;
-  }
-  .page_case_items .page_case_outbox .page_case_item {
-    height: 35rem;
-  }
   .page_case_contant .page_case_carousel {
     height: auto;
     -webkit-box-orient: vertical;
@@ -265,24 +320,6 @@ h1 + img {
 }
 
 @media screen and (max-width: 767px) {
-  .page_case_items {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .page_case_items .page_case_outbox {
-    width: 50%;
-  }
-  .page_case_items .page_case_outbox .page_case_item {
-    height: auto;
-    font-size: 1rem;
-  }
-  .page_case_items .page_case_outbox button {
-    position: initial;
-    min-height: 2.4rem;
-    min-width: 8rem;
-    margin-top: 1rem;
-  }
   .page_case_contant .page_case_imgs {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -294,14 +331,6 @@ h1 + img {
 }
 
 @media screen and (max-width: 575px) {
-  .page_case_items {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .page_case_items .page_case_outbox {
-    width: 100%;
-  }
   .page_case_contant .page_case_imgs {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

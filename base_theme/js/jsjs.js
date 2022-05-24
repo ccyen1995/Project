@@ -1,3 +1,4 @@
+// ===========================QAbox
 let qaboxs = document.querySelectorAll(".qabox");
 qaboxs.forEach((qabox, index) => {
   qabox.addEventListener("click", () => {
@@ -23,7 +24,9 @@ QAboxs.forEach((QAbox, index) => {
     }
   });
 });
+// ===========================QAbox
 
+// =======================slick.js
 $(document).ready(function () {
   $(".carousell_area_img").slick({
     dots: true,
@@ -70,13 +73,15 @@ $(document).ready(function () {
 // You can unslick at a given breakpoint now by adding:
 // settings: "unslick"
 // instead of a settings object
+// =======================slick.js
+
+//======================light-box
 // 在使用javsscript操作CSS時可以用 data- attribute ，可避免跟CSS class混和再一起
 // data attribute 可以不設定其值? html第158行
 // const products = document.querySelectorAll("[data-modal-target]");
 const products = document.querySelectorAll(".items");
 const lightbox = document.querySelector("#lightbox");
 const overlay = document.getElementById("overlay");
-console.log(products);
 products.forEach((product) => {
   product.addEventListener("click", () => {
     console.log(product);
@@ -127,7 +132,9 @@ function closemodal(modal) {
   lightbox.classList.remove("acctive");
   overlay.classList.remove("acctive");
 }
+//======================light-box
 
+// back to top
 const toTop = document.querySelector(".to-top");
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 200) {
@@ -136,3 +143,46 @@ window.addEventListener("scroll", () => {
     toTop.classList.remove("active");
   }
 });
+// back to top
+
+// ===========================case輪播
+
+let z = carousell(4);
+// carousell(s);
+// s[number], s秒換一次圖
+
+let carouselpics = document.querySelectorAll(".page_case_carousel_small img");
+carouselpics.forEach((pic) => {
+  pic.addEventListener("click", () => {
+    let picsrc = pic.getAttribute("src");
+    let carouselpic = document.querySelector(".page_case_carousel_big img");
+    carouselpic.setAttribute("src", picsrc);
+    clearTimeout(resett);
+  });
+});
+
+let resett = setTimeout(z, 2);
+
+function carousell(time) {
+  let interval = function () {
+    setInterval(() => {
+      // $(".page_case_carousel_big img").animate({}, speed, callback);
+      let carouselpic = document.querySelector(".page_case_carousel_big img");
+      let picamount = carouselpics.length;
+      let src = carouselpic.getAttribute("src");
+      let picnumstr = src.slice(-5, -4);
+      let picnum = Number(picnumstr);
+      if (picnum < picamount) {
+      } else {
+        picnum = 0;
+      }
+      let src2 = src.replace(picnumstr, picnum + 1);
+      carouselpic.setAttribute("src", src2);
+      console.log(carouselpic.style.animation);
+      // carouselpic.style.animation = "hello 1s";
+      carouselpic.style.animation = `hello ${time}s linear infinite`;
+    }, time * 1000);
+  };
+  return interval;
+}
+// ===========================case輪播

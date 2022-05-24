@@ -1,3 +1,4 @@
+//============標題start==============
 .page_qa_topimg {
   position: relative;
   background: url("../img/QA/qa_topimg.jpg") no-repeat center / cover;
@@ -29,6 +30,14 @@
   background: rgba(0, 0, 0, 0.3);
   opacity: 1;
 }
+@media screen and (max-width: 991px) {
+  .page_qa_topimg {
+    height: 180px;
+  }
+}
+//============標題end==============
+
+//============QA start==============
 .page_qa {
   margin-top: 3rem;
   // background-color: var(--grey);
@@ -118,9 +127,6 @@
   }
 }
 @media screen and (max-width: 991px) {
-  .page_qa_topimg {
-    height: 180px;
-  }
   .page_qa {
     .question {
       .qabox {
@@ -173,3 +179,4 @@
     }
   }
 }
+//============QA end==============

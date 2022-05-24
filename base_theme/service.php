@@ -49,6 +49,6 @@
             <button class="readbtn">READ MORE</button>
         </div>
     </div>
-    <button class="goback">回上一頁</button>
+    <button class="goback">1.2.3</button>
 </div>
 <?php include_once("php/foot.php"); ?>

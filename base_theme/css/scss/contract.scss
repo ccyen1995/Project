@@ -1,3 +1,4 @@
+//==============標題start============
 .page_contract_topimg {
   position: relative;
   background: url("../img/contract/contract-topimg.jpg") no-repeat center /
@@ -30,6 +31,15 @@
   background: rgba(0, 0, 0, 0.3);
   opacity: 1;
 }
+
+@media screen and (max-width: 991px) {
+  .page_contract_topimg {
+    height: 180px;
+  }
+}
+//==============標題end============
+
+//==============表單start============
 .contract {
   width: 100%;
   display: flex;
@@ -96,11 +106,7 @@
     margin-top: 2.5rem;
   }
 }
-
 @media screen and (max-width: 991px) {
-  .page_contract_topimg {
-    height: 180px;
-  }
   .contract {
     .form_box {
       // justify-content: space-between;
@@ -132,3 +138,4 @@
     }
   }
 }
+//==============表單end============

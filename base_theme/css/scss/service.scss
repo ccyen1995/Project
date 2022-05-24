@@ -1,3 +1,4 @@
+//============標題start============
 .page_service_topimg {
   position: relative;
   background: url("../img/service/service_topimg.jpg") no-repeat center / cover;
@@ -29,6 +30,14 @@
   background: rgba(0, 0, 0, 0.3);
   opacity: 1;
 }
+@media screen and (max-width: 767px) {
+  .page_service_topimg {
+    height: 180px;
+  }
+}
+//============標題end============
+
+//============服務項目start============
 .page_service_title {
   padding: 2rem 0;
   color: var(--font1);
@@ -58,23 +67,7 @@
     top: 1rem;
   }
 }
-// product contant
-.page_service_product {
-  font-size: 1.6em;
-  line-height: 2rem;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    margin-bottom: 1rem;
-  }
-}
-
 @media screen and (max-width: 767px) {
-  .page_service_topimg {
-    height: 180px;
-  }
   .page_service_item {
     display: flex;
     flex-direction: column;
@@ -86,10 +79,25 @@
       align-self: flex-end;
     }
   }
+}
+//============服務項目end============
+
+//============服務項目子頁start============
+.page_service_product {
+  font-size: 1.6em;
+  line-height: 2rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
   .page_service_product {
     font-size: 1.2em;
     line-height: 1.5rem;
   }
 }
-@media screen and (max-width: 575px) {
-}
+//============服務項目子頁end============

@@ -36,6 +36,12 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 991px) {
+  .page_qa_topimg {
+    height: 180px;
+  }
+}
+
 .page_qa {
   margin-top: 3rem;
   display: -webkit-box;
@@ -143,9 +149,6 @@
 }
 
 @media screen and (max-width: 991px) {
-  .page_qa_topimg {
-    height: 180px;
-  }
   .page_qa .question .qabox {
     width: 80%;
   }

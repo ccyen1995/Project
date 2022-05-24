@@ -24,6 +24,13 @@ body {
 @import url(../css/place.css);
 @import url(../css/contract.css);
 
+img {
+  image-rendering: -moz-crisp-edges; /* Firefox        */
+  image-rendering: -o-crisp-edges; /* Opera          */
+  image-rendering: -webkit-optimize-contrast; /* Safari         */
+  image-rendering: optimize-contrast; /* CSS3 Proposed  */
+  -ms-interpolation-mode: nearest-neighbor; /* IE8+           */
+}
 //------button-------
 button.readbtn {
   height: 3.2rem;
@@ -256,13 +263,10 @@ header.header_ {
 @media screen and (max-width: 1150px) {
   header.header_ {
     .navbar_ {
-      width: 99%;
+      width: 98%;
       .links {
         padding-bottom: 0.5rem;
         font-size: 1rem;
-        a {
-          padding: 0 0.4rem;
-        }
       }
       .community {
         font-size: 1.6rem;
@@ -501,7 +505,6 @@ header.header_ {
     }
   }
 }
-
 @media screen and (max-width: 575px) {
   .about_area {
     margin: 2rem 0;
@@ -876,6 +879,7 @@ footer.footer_ {
     }
   }
 }
+//totop
 .to-top {
   background: white;
   position: fixed;
@@ -916,7 +920,6 @@ footer.footer_ {
     transform: translateY(-20%);
   }
 }
-
 @media screen and (max-width: 767px) {
   .to-top {
     width: 45px;
@@ -947,8 +950,6 @@ footer.footer_ {
 // Large (>=992px)
 // Extra Large (>=1200px)
 // XXL (>=1400px)
-@media screen and (max-width: 425px) {
-}
 #overlay {
   z-index: 4;
   position: fixed;
@@ -993,4 +994,22 @@ footer.footer_ {
     opacity: 1;
   }
   /* transform記得全部都要再次設置，否則全部果將不會保留 */
+}
+@keyframes hello {
+  0% {
+    transform: scale(0.99);
+    opacity: 0.7;
+  }
+  25% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  95% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.99);
+    opacity: 0.7;
+  }
 }

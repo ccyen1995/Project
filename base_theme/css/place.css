@@ -36,6 +36,12 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 991px) {
+  .page_place_topimg {
+    height: 180px;
+  }
+}
+
 .places {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,9 +101,6 @@
 }
 
 @media screen and (max-width: 991px) {
-  .page_place_topimg {
-    height: 180px;
-  }
   .places {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -123,7 +126,6 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
-    text-align: center;
     margin-bottom: 0.5rem;
   }
   .places .frt_place i,
@@ -134,6 +136,6 @@
   .places .sec_place p {
     position: static;
     margin: 0;
-    padding: 0;
+    padding: 0 2rem;
   }
 }

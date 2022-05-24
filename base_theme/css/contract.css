@@ -36,6 +36,12 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 991px) {
+  .page_contract_topimg {
+    height: 180px;
+  }
+}
+
 .contract {
   width: 100%;
   display: -webkit-box;
@@ -132,9 +138,6 @@
 }
 
 @media screen and (max-width: 991px) {
-  .page_contract_topimg {
-    height: 180px;
-  }
   .contract .form_box .form_input,
   .contract .form_box .form_img {
     width: 50%;
