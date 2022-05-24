@@ -5,7 +5,7 @@
 </div>
 <div class="container">
     <h1 class="page_case_title">實際案例</h1>
-    <img src="./img/logo2.png" alt="" />
+    <img src="./img/welcome/logo2.png" alt="" />
     <section class="page_case_items">
         <div class="page_case_outbox">
             <div class="page_case_item">
@@ -74,4 +74,5 @@
     </section>
     <button class="goback">1</button>
 </div>
+
 <?php include_once("php/foot.php"); ?>

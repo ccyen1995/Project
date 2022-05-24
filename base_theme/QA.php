@@ -7,7 +7,7 @@
     <div class="page_qa">
         <div class="qaimg">
             <p>常見問題</p>
-            <img src="./img/logo2.png" alt="" />
+            <img src="./img/welcome/logo2.png" alt="" />
         </div>
         <div class="question">
             <div class="qabox">

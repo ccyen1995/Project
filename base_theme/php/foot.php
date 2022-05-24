@@ -1,7 +1,7 @@
 <footer class="footer_">
 	<div class="contact_area">
 		<div class="logo_">
-			<img src="./img/logo.png" alt="" />
+			<img src="./img/welcome/logo.png" alt="" />
 			<div class="icon_area">
 				<p>艾芬波斯館</p>
 				<p>فروشگاه ایرانی عطفیان</p>
@@ -38,8 +38,7 @@
 	<i class="fak fa-chevron-thin-up"></i>
 	TOP
 </a>
-<script type="module" src="./js/jsjs.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.0/dist/index.bundle.min.js"></script> -->
+<script type="module" src="./js/js.js"></script>
 </body>
 
 </html>

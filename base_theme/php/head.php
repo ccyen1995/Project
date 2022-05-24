@@ -40,7 +40,7 @@
     <script language="javascript" src="js/jquery-1.12.3.min.js"></script>
     <script src="../js/lightbox.js"></script>
     <script language="javascript" src="js/slick.min.js"></script>
-    <script src="js/js.js"></script>
+    <!-- <script src="js/js.js"></script> -->
     <script src="https://kit.fontawesome.com/71cf4654e7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" /> -->
@@ -53,7 +53,7 @@
         <div id="toptop"></div>
         <div class="navbar_">
             <div class="logo">
-                <img src="./img/logoo.png" alt="" />
+                <img src="./img/welcome/logoo.png" alt="" />
             </div>
             <div class="links">
                 <a href="#">首頁</a>
