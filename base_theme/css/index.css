@@ -784,28 +784,12 @@ header.header_ .navbar_ .burger:hover {
   transition: all 0.1s linear;
 }
 
-.QA .question .QAbox .A span {
+.QA .question .QAbox .A {
   display: none;
 }
 
 .QA .question .QAbox hr {
   margin: 0.5rem 0;
-  display: none;
-}
-
-.QA .question .QAbox.active .Q :nth-child(3) {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.QA .question .QAbox.active .A span {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.QA .question .QAbox.active hr {
-  display: block;
 }
 
 .QA > * {
@@ -2265,7 +2249,7 @@ h1 + img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 2.4rem 0;
+  margin: 8rem 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2321,6 +2305,7 @@ h1 + img {
 
 @media screen and (max-width: 991px) {
   .places {
+    margin: 4rem 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

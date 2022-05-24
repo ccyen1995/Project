@@ -674,33 +674,34 @@ header.header_ {
         }
       }
       .A {
+        display: none;
         span {
-          display: none;
+          // display: none;
         }
       }
       hr {
         margin: 0.5rem 0;
-        display: none;
+        // display: none;
       }
     }
-    .QAbox.active {
-      .Q {
-        :nth-child(3) {
-          transform: rotate(180deg);
-        }
-      }
-      .A {
-        span {
-          display: inline-flex;
-          // 這樣對嗎?
-        }
-      }
-      hr {
-        display: block;
-      }
-      // height: fit-content;
-      // fit-content不納入transition的範圍內嗎?
-    }
+    // .QAbox.active {
+    //   .Q {
+    //     :nth-child(3) {
+    //       transform: rotate(180deg);
+    //     }
+    //   }
+    //   .A {
+    //     span {
+    //       display: inline-flex;
+    //       // 這樣對嗎?
+    //     }
+    //   }
+    //   hr {
+    //     display: block;
+    //   }
+    //   // height: fit-content;
+    //   // fit-content不納入transition的範圍內嗎?
+    // }
   }
 }
 
@@ -1959,7 +1960,7 @@ h1 + img {
 //----------地點start--------------
 .places {
   display: flex;
-  margin: 2.4rem 0;
+  margin: 8rem 0;
   justify-content: center;
   color: var(--font1);
   // 此margin是為了剛好使總高度符合 100vh
@@ -1998,6 +1999,7 @@ h1 + img {
 }
 @media screen and (max-width: 991px) {
   .places {
+    margin: 4rem 0;
     flex-direction: column;
     align-items: center;
     .frt_place,

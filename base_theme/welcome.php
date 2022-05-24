@@ -17,6 +17,7 @@
     </div>
     <!-- <img src="./img/light.png" alt="" id="carousell_light"> -->
 </section>
+
 <!-- -----carousel_area----- -->
 
 <!-- -----about_area----- -->
@@ -150,6 +151,5 @@
     <button class="readbtn">READ MORE</button>
 </section>
 <!-- -----QA----- -->
-
 
 <?php include_once("php/foot.php"); ?>

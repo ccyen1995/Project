@@ -126,5 +126,11 @@
     <i class="fak fak-chevron-thin-right"></i>
 </div>
 <div id="overlay"></div>
+<a href="img/product/pillow.jpg" data-lightbox="haha">
+    <img src="img/product/pillow.jpg" alt="">
+</a>
+<a href="./img/product/tea.jpg" data-lightbox="haha"><img src="./img/product/tea.jpg" alt=""></a>
+<a href="./img/product/carpet.jpg" data-lightbox="haha"><img src="./img/product/carpet.jpg" alt=""></a>
+<a class="example-image-link" href="/img/about/about_topimg.jpg" data-lightbox="example-2" data-title="Optional caption."><img class="example-image" src="/img/about/about_topimg.jpg" alt="image-1" /></a>
 <!-- Nav pills -->
 <?php include_once("php/foot.php"); ?>

@@ -38,7 +38,10 @@
 	<i class="fak fa-chevron-thin-up"></i>
 	TOP
 </a>
-<script type="module" src="./js/js.js"></script>
+<!-- <script src="./js/lightbox-plus-jquery.min.js"></script> -->
+
+<script src="./js/js.js"></script>
+<script src="js/lightbox.min.js"></script>
 </body>
 
 </html>

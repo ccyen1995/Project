@@ -24,7 +24,6 @@
 
     <link rel="stylesheet" href="./css/bootstrap5.min.css">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="/css/lightbox.css">
     <link rel="stylesheet" href="css/external_v.css" />
     <link rel="stylesheet" href="css/external_i.css" />
     <link rel="stylesheet" href="css/external_k.css" />
@@ -33,19 +32,21 @@
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/slick-theme.css" />
     <link rel="stylesheet" href="css/gs.css?<?php echo time(); ?>" />
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/lightbox.min.css" />
 
 
-    <script src="./js/bootstrap5.bundle.min.js"></script>
-    <script language="javascript" src="js/jquery-1.12.3.min.js"></script>
-    <script src="../js/lightbox.js"></script>
+    <!-- <script language="javascript" src="js/jquery-1.12.3.min.js"></script> -->
+    <script language="javascript" src="js/jquery-3.6.0.min.js"></script>
     <script language="javascript" src="js/slick.min.js"></script>
+    <!-- <script src="/js/lightbox.min.js"></script> -->
+    <!-- <script src="js/lightbox.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="js/slick.js" />
     <!-- <script src="js/js.js"></script> -->
     <script src="https://kit.fontawesome.com/71cf4654e7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" /> -->
+    <script src="./js/bootstrap5.bundle.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="./js/slick.js" />
 </head>
 
 <body>

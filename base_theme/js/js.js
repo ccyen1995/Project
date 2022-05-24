@@ -13,18 +13,18 @@ qaboxs.forEach((qabox, index) => {
   });
 });
 
-let QAboxs = document.querySelectorAll(".QAbox");
-QAboxs.forEach((QAbox, index) => {
-  QAbox.addEventListener("click", () => {
-    let QAbox_active = document.querySelector(".QAbox.active");
-    QAbox.classList.toggle("active");
-    if (QAbox_active == null) {
-      return;
-    } else {
-      QAbox_active.classList.remove("active");
-    }
-  });
-});
+// let QAboxs = document.querySelectorAll(".QAbox");
+// QAboxs.forEach((QAbox, index) => {
+//   QAbox.addEventListener("click", () => {
+//     let QAbox_active = document.querySelector(".QAbox.active");
+//     QAbox.classList.toggle("active");
+//     if (QAbox_active == null) {
+//       return;
+//     } else {
+//       QAbox_active.classList.remove("active");
+//     }
+//   });
+// });
 // ===========================QAbox
 
 // =======================slick.js
@@ -145,3 +145,8 @@ window.addEventListener("scroll", () => {
   }
 });
 // back to top
+
+//QA=================
+$(".Q").click(function () {
+  $(".A").slideToggle("slow");
+});
