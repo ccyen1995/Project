@@ -1,0 +1,55 @@
+body {
+  display: flex;
+}
+.a {
+  width: 500px;
+  height: 500px;
+  background-color: aqua;
+  display: flex;
+}
+.btn {
+  height: 20px;
+}
+.b {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  position: relative;
+}
+.boxin {
+  position: absolute;
+}
+#b1 {
+  background-color: tan;
+  display: none;
+}
+#b2 {
+  display: none;
+  background-color: teal;
+}
+#b3 {
+  display: none;
+  background-color: thistle;
+}
+#b4 {
+  display: none;
+  background-color: tomato;
+}
+#b1.active {
+  display: block;
+}
+#b2.active {
+  display: block;
+}
+#b3.active {
+  display: block;
+}
+#b4.active {
+  display: block;
+}
+
+#lightbox {
+  width: 200px;
+  height: 200px;
+  background-color: aquamarine;
+}
