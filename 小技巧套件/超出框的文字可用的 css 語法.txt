@@ -1,0 +1,10 @@
+div {
+	display: -webkit-box;
+	-webkit-line-clamp: x;  /*x 值代表要在第幾行的時候將後面的文字隱藏並出現 ...*/
+	-webkit-box-orient: vertical;
+	white-space: normal;
+	overflow: hidden;
+	/* 注意這層的高度要固定 */
+}
+
+注意：外層高度要鎖定
