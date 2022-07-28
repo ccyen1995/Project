@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+   .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 1px solid black;
+    z-index: 10;
+    background-color: aqua;
+    transition: 1s ease-in-out;
+   }
+   .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+   }
+   .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+   }
+
+   .modal-header .title {
+    font-size: 2rem;
+   }
+   .modal-body {
+    padding: 10px 15px;
+   }
+   #overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: 1s ease-in-out;
+   }
+   #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+   }
+   .modalimg {
+    width: 1000px;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+   }
+  </style>
+ </head>
+ <body>
+  <button data-modal-har="#modal">Open Modal</button>
+  <div class="modal" id="modal">
+   <div class="modal-header">
+    <div class="title">歡迎到蛇吞象官網看看唷</div>
+    <button data-close-button class="close-button">&times;</button>
+   </div>
+   <img class="modalimg" src="/img/product_gold_01 .png" alt="" />
+  </div>
+  <div id="overlay"></div>
+  <script>
+   const openmodalbtn = document.querySelectorAll("[data-modal-har]");
+   const closemodalbtn = document.querySelectorAll("[data-close-button]");
+   const oveylay = document.getElementById("overlay");
+   openmodalbtn.forEach((button) => {
+    button.addEventListener("click", () => {
+     const modal = document.querySelector(button.dataset.modalHar);
+     openmodal(modal);
+    });
+   });
+   closemodalbtn.forEach((button) => {
+    button.addEventListener("click", () => {
+     const modal = button.closest(".modal");
+     closemodal(modal);
+    });
+   });
+
+   overlay.addEventListener("click", () => {
+    const modals = document.querySelectorAll(".modal.active");
+    modals.forEach((modal) => {
+     closemodal(modal);
+    });
+   });
+
+   function openmodal(modal) {
+    if (modal == null) return;
+    modal.classList.add("active");
+    overlay.classList.add("active");
+   }
+   function closemodal(modal) {
+    if (modal == null) return;
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+   }
+   window.onload = function () {
+    modal.classList.add("active");
+    overlay.classList.add("active");
+    setTimeout(function () {
+     modal.classList.remove("active");
+     overlay.classList.remove("active");
+    }, 5000);
+   };
+  </script>
+ </body>
+</html>

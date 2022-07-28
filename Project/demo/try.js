@@ -60,3 +60,11 @@ prebtn.addEventListener("click", () => {
   console.log(gallery);
 });
 let nextbtn = document.querySelector("#next");
+
+let jj = [1, 2, 3];
+jj.forEach((element) => {
+  console.log(this);
+});
+jj.forEach(function (element) {
+  console.log(this);
+});
